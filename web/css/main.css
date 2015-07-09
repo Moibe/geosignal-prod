@@ -1,1 +1,16 @@
 html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+ul li{
+    display: none;
+}
+
+ul{
+    list-style: none;
+}
+
+form.do{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
