@@ -9,6 +9,9 @@ var fancyObject = {
     'closeBtn': false,
     'closeClick': false,
     'autoSize': false,
+    keys: {
+        close: null
+    },
     helpers: {
         overlay: {closeClick: false} // prevents closing when clicking OUTSIDE fancybox
     }
@@ -148,7 +151,7 @@ function firstResult() {
                 css: {'background-color': '#ffffff'}
             }
         };
-console.log(fancyObject);
+        console.log(fancyObject);
         $.fancybox(fancyObject);
     }, 5000);
 }
