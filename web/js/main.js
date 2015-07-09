@@ -1,4 +1,12 @@
 var map;
+var circle;
+var arrMarkers = new Array(0);
+var bounds;
+var zoom = 14;
+var markers = [];           // array to hold markers
+var kmRadius1 = {'min': 5, 'max': 10};
+var kmRadius2 = {'min': 0.5, 'max': 1};
+var last_point;
 var fancyObject = {
     'width': 700,
     'height': 500,
@@ -23,6 +31,28 @@ var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marc
 google.maps.event.addDomListener(window, 'load', initialize);
 
 $(document).ready(function() {
+
+    if ($('body').hasClass('homepage')) {
+        doStart();
+    }
+
+});
+
+function showResult() {
+    var latitude = $.cookie('user_latitude');
+    var longitude = $.cookie('user_longitude');
+
+    var lt = new google.maps.LatLng(latitude, longitude);
+
+    console.log(lt);
+
+    map.setZoom(zoom);
+    map.panTo(lt);
+
+    createMarker(lt);
+}
+
+function doStart() {
     setTimeout(function() {
         $.fancybox(fancyObject);
     }, 1000);
@@ -48,9 +78,7 @@ $(document).ready(function() {
 
         return false;
     });
-
-});
-
+}
 
 function animateList(funcToExecute) {
 
@@ -104,7 +132,9 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
-    //registrarPosicion();
+    if ($('body').hasClass('result')) {
+        google.maps.event.addListenerOnce(map, 'idle', showResult);
+    }
 }
 function registrarPosicion() {
     if (registrandoPosicion) {
@@ -129,10 +159,15 @@ function exitoRegistroPosicion(position) {
             position: ultimaPosicionUsuario,
             map: map
         });
+
+        $.cookie('user_latitude', position.coords.latitude, {expires: 7, path: '/'});
+        $.cookie('user_longitude', position.coords.longitude, {expires: 7, path: '/'});
     } else {
         var posicionActual = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         ultimaPosicionUsuario = posicionActual;
         marcadorUsuario.setPosition(posicionActual);
+        $.cookie('user_latitude', position.coords.latitude, {expires: 7, path: '/'});
+        $.cookie('user_longitude', position.coords.longitude, {expires: 7, path: '/'});
     }
     map.panTo(ultimaPosicionUsuario);
     firstResult();
@@ -140,7 +175,7 @@ function exitoRegistroPosicion(position) {
 }
 
 function firstResult() {
-    map.setZoom(17);
+    map.setZoom(zoom);
     navigator.geolocation.clearWatch(idRegistroPosicion);
     $.fancybox.close();
     setTimeout(function() {
@@ -159,4 +194,70 @@ function firstResult() {
 function falloRegistroPosicion() {
     alert('No se pudo determinar la ubicación');
     limpiarUbicacion();
+}
+
+
+function placeMarker(location, text)
+{
+    var iconFile = 'http://www.daftlogic.com/images/gmmarkersv3/stripes.png';
+    var marker = new google.maps.Marker({position: location, map: map, icon: iconFile, title: text.toString(), draggable: false});
+    return marker;
+}
+
+function createMarker(coord) {
+    var pos = new google.maps.LatLng(coord.lat(), coord.lng());
+    var marker = new google.maps.Marker({
+        position: pos,
+        map: map
+    });
+    markers.push(marker);
+
+
+
+    addRadious(Math.random() * (kmRadius1.max - kmRadius1.min) + kmRadius1.min, 1, map.getCenter(), '#088DA5');
+    addRadious(Math.random() * (kmRadius2.max - kmRadius2.min) + kmRadius2.min, 10, last_point, '#FFF68F');
+}
+
+function addRadious(kmR, maxPoints, center, hexa) {
+    console.log("KM+" + kmR);
+    circle = new google.maps.Circle({
+        center: center,
+        radius: kmR * 1000, // meters
+        strokeColor: "#0000FF",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: hexa,
+        fillOpacity: 0.26
+    });
+
+    circle.setMap(map);
+
+    var bounds = circle.getBounds();
+    map.fitBounds(bounds);
+    var sw = bounds.getSouthWest();
+    var ne = bounds.getNorthEast();
+    for (var i = 0; i < maxPoints; i++) {
+        var ptLat = Math.random() * (ne.lat() - sw.lat()) + sw.lat();
+        var ptLng = Math.random() * (ne.lng() - sw.lng()) + sw.lng();
+        var point = new google.maps.LatLng(ptLat, ptLng);
+        last_point = point;
+        if (google.maps.geometry.spherical.computeDistanceBetween(point, circle.getCenter()) < circle.getRadius()) {
+            addMarker(map, point, "marker " + i);
+        }
+    }
+}
+
+function addMarker(map, point, content) {
+    var iconFile = 'http://www.daftlogic.com/images/gmmarkersv3/stripes.png';
+
+    var marker = new google.maps.Marker({
+        position: point,
+        map: map,
+        icon: iconFile
+    });
+    google.maps.event.addListener(marker, "click", function(evt) {
+        infowindow.setContent(content + "<br>" + marker.getPosition().toUrlValue(6));
+        infowindow.open(map, marker);
+    });
+    return marker;
 }

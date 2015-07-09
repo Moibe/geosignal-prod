@@ -7,8 +7,10 @@
         <link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.cookie.js') }}"></script>
+
         <script type="text/javascript"
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwsHZ8W9eeW3tSpHShm-m79wJsILEnC-U">
+                src="https://maps.googleapis.com/maps/api/js?libraries=geometry">
         </script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <script type="text/javascript" src="{{ asset('fancybox/jquery.fancybox.pack.js') }}"></script>
@@ -20,7 +22,6 @@
 
         <link rel="stylesheet" href="{{ asset('fancybox/helpers/jquery.fancybox-thumbs.css') }}" type="text/css" media="screen" />
         <script type="text/javascript" src="{{ asset('fancybox/helpers/jquery.fancybox-thumbs.js') }}"></script>
-
 
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -37,7 +38,7 @@
             })();
         </script>
     </head>
-    <body>
+    <body class="{{app.request_stack.masterRequest.get('_route')}}">
     {% block content %}{% endblock %}
 </body>
 </html>
