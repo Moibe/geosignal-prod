@@ -3,43 +3,54 @@
     <head>
         <title>{% block title 'GeoSignal' %} - {%trans%}Localizador de Móviles{% endtrans %}</title>
 
-        <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="{{ asset('js/jquery.cookie.js') }}"></script>
-
-        <script type="text/javascript"
-                src="https://maps.googleapis.com/maps/api/js?libraries=geometry">
-        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script type="text/javascript" src="{{ asset('fancybox/jquery.fancybox.pack.js') }}"></script>
-
-        <!-- Optionally add helpers - button, thumbnail and/or media -->
-        <link rel="stylesheet" href="{{ asset('fancybox/helpers/jquery.fancybox-buttons.css') }}" type="text/css" media="screen" />
-        <script type="text/javascript" src="{{ asset('fancybox/helpers/jquery.fancybox-buttons.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('fancybox/helpers/jquery.fancybox-media.js') }}"></script>
-
-        <link rel="stylesheet" href="{{ asset('fancybox/helpers/jquery.fancybox-thumbs.css') }}" type="text/css" media="screen" />
         <script type="text/javascript" src="{{ asset('fancybox/helpers/jquery.fancybox-thumbs.js') }}"></script>
-
         <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-19071509-34']);
-            _gaq.push(['_trackPageview']);
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-19071509-34']);
+                    _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })();
+                    (function () {
+                        var ga = document.createElement('script');
+                        ga.type = 'text/javascript';
+                        ga.async = true;
+                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(ga, s);
+                    })();
         </script>
     </head>
     <body class="{{app.request_stack.masterRequest.get('_route')}}">
-    {% block content %}{% endblock %}
-</body>
+        <div class="header-wrap">
+            <div class="header-content container">
+                <a href="{{ path('homepage') }}" class="logo"></a>
+                <ul class="nav-main list-inline">
+                    <li><a href="#">Sobre  Localizador de Móviles</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+
+        <div class="footer-wrap">
+            <div class="footer-content container">
+                <a class="logo"></a>
+                <ul class="nav-main list-inline">
+                    <li><a href="#">Sobre  Localizador de Móviles</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
 </html>

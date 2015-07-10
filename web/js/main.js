@@ -12,8 +12,8 @@ var kmRadius1 = {'min': 5, 'max': 10};
 var kmRadius2 = {'min': 0.5, 'max': 1};
 var last_point;
 var fancyObject = {
-    'width': 700,
-    'height': 500,
+    'width': 820,
+    'height': 450,
     'padding': 10,
     'href': '#mainContent',
     'transitionIn': 'elastic',
@@ -34,39 +34,34 @@ var i = 0,
 var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marcadorUsuario;
 google.maps.event.addDomListener(window, 'load', initialize);
 
-$(document).ready(function() {
+$(document).ready(function () {
     if ($('body').hasClass('homepage')) {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
-
 });
 
 function showResult() {
     var latitude = $.cookie('user_latitude');
     var longitude = $.cookie('user_longitude');
-
     var lt = new google.maps.LatLng(latitude, longitude);
-
-    console.log(lt);
-
+    //console.log(lt);
     map.setZoom(zoom);
     map.panTo(lt);
-
     createMarker(lt);
 }
 
 function doStart(element, funcToExecute, array, label) {
-    setTimeout(function() {
+    setTimeout(function () {
         $.fancybox(fancyObject);
     }, 1000);
 
     $('form.register').unbind();
-    $('form.register').submit(function() {
+    $('form.register').submit(function () {
         i = 0;
-        var ul = $('<ul></ul>');
+        var ul = $('<ul class="steps"></ul>');
         element.html(ul);
-        element.append("<form class='do'><input type='submit' value='" + label + "'></form>");
-        $.each(array, function(index, value) {
+        element.append("<form class='do'><input type='submit' value='" + label + "' class='btn-locate'></form>");
+        $.each(array, function (index, value) {
             ul.append('<li>' + value + '</li>');
         });
         animateList(funcToExecute);
@@ -75,13 +70,13 @@ function doStart(element, funcToExecute, array, label) {
 }
 
 function animateList(funcToExecute) {
-    var list = $('ul');
+    var list = $('ul.steps');
     var imax = list.find("li").length - 1;
     list.find("li:eq(" + i + ")")
             .show()
-            .animate({"fontSize": "80px"}, animate)
-            .animate({"fontSize": "80px"}, delay)
-            .animate({"fontSize": "30px"}, animate, function() {
+            .animate({"fontSize": "2.5rem"}, animate)
+            .animate({"fontSize": "2.5rem"}, delay)
+            .animate({"fontSize": "1.9rem"}, animate, function () {
                 i++;
                 if (i <= imax) {
                     animateList(funcToExecute);
@@ -101,13 +96,13 @@ function toPaypal() {
 
 function showButton() {
     $('form.do').show();
-    $('form.do').submit(function() {
+    $('form.do').submit(function () {
         i = 0;
-        var ul = $('<ul></ul>');
+        var ul = $('<ul class="steps"></ul>');
 
         $('#mainContent').html(ul);
 
-        $.each(labels2, function(index, value) {
+        $.each(labels2, function (index, value) {
 
             ul.append('<li>' + value + '</li>');
         });
@@ -147,7 +142,7 @@ function registrarPosicion() {
 
 function exitoRegistroPosicion(position) {
     if (!registrandoPosicion) {
-        // Es la primera vez 
+        // Es la primera vez
         registrandoPosicion = true;
         ultimaPosicionUsuario = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         marcadorUsuario = new google.maps.Marker({
@@ -174,7 +169,7 @@ function firstResult() {
     navigator.geolocation.clearWatch(idRegistroPosicion);
     $.fancybox.close();
 
-    setTimeout(function() {
+    setTimeout(function () {
         fancyObject.content = $("#paypalContent");
         doStart($('#paypalContentInner'), toPaypal, labels3, label_submit);
     }, 2000);
@@ -244,7 +239,7 @@ function addMarker(map, point, content) {
         map: map,
         icon: iconFile
     });
-    google.maps.event.addListener(marker, "click", function(evt) {
+    google.maps.event.addListener(marker, "click", function (evt) {
         infowindow.setContent(content + "<br>" + marker.getPosition().toUrlValue(6));
         infowindow.open(map, marker);
     });
