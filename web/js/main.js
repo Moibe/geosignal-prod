@@ -3,6 +3,10 @@ var circle;
 var arrMarkers = new Array(0);
 var bounds;
 var zoom = 14;
+var labels;
+var labels2;
+var labels3;
+var label_submit;
 var markers = [];           // array to hold markers
 var kmRadius1 = {'min': 5, 'max': 10};
 var kmRadius2 = {'min': 0.5, 'max': 1};
@@ -25,15 +29,14 @@ var fancyObject = {
     }
 };
 var i = 0,
-        delay = 1000,
+        delay = 500,
         animate = 200;
 var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marcadorUsuario;
 google.maps.event.addDomListener(window, 'load', initialize);
 
 $(document).ready(function() {
-
     if ($('body').hasClass('homepage')) {
-        doStart();
+        doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
 });
@@ -52,36 +55,26 @@ function showResult() {
     createMarker(lt);
 }
 
-function doStart() {
+function doStart(element, funcToExecute, array, label) {
     setTimeout(function() {
         $.fancybox(fancyObject);
     }, 1000);
 
-
+    $('form.register').unbind();
     $('form.register').submit(function() {
         i = 0;
         var ul = $('<ul></ul>');
-
-        $('#mainContent').html(ul);
-        $('#mainContent').append("<form class='do'><input type='submit' value='enviar'></form>");
-
-        ul.append('<li>Buscando</li>');
-
-        var labels = ["Saab", "Volvo", "BMW"];
-
-        $.each(labels, function(index, value) {
-
+        element.html(ul);
+        element.append("<form class='do'><input type='submit' value='" + label + "'></form>");
+        $.each(array, function(index, value) {
             ul.append('<li>' + value + '</li>');
         });
-
-        animateList(showButton);
-
+        animateList(funcToExecute);
         return false;
     });
 }
 
 function animateList(funcToExecute) {
-
     var list = $('ul');
     var imax = list.find("li").length - 1;
     list.find("li:eq(" + i + ")")
@@ -96,23 +89,25 @@ function animateList(funcToExecute) {
                     funcToExecute();
                 }
             });
-
 }
-;
+
+function toPaypal() {
+    $('.paypalForm').show();
+
+    $('.fancybox-overlay').css({'background-color': "#ffffff"});
+
+    $('.fancybox-overlay').animate({'background-color': "#db1a35"}, 1200);
+}
 
 function showButton() {
     $('form.do').show();
-
     $('form.do').submit(function() {
         i = 0;
         var ul = $('<ul></ul>');
 
         $('#mainContent').html(ul);
 
-
-        var labels = ["Saab", "Volvo", "Generando Mapa"];
-
-        $.each(labels, function(index, value) {
+        $.each(labels2, function(index, value) {
 
             ul.append('<li>' + value + '</li>');
         });
@@ -178,17 +173,11 @@ function firstResult() {
     map.setZoom(zoom);
     navigator.geolocation.clearWatch(idRegistroPosicion);
     $.fancybox.close();
+
     setTimeout(function() {
         fancyObject.content = $("#paypalContent");
-        fancyObject.helpers = {
-            overlay: {
-                opacity: 1,
-                css: {'background-color': '#ffffff'}
-            }
-        };
-        console.log(fancyObject);
-        $.fancybox(fancyObject);
-    }, 5000);
+        doStart($('#paypalContentInner'), toPaypal, labels3, label_submit);
+    }, 2000);
 }
 
 function falloRegistroPosicion() {

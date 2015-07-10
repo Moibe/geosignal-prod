@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title 'Geosignal' %} - Location Services</title>
+        <title>{% block title 'GeoSignal' %} - {%trans%}Localizador de Móviles{% endtrans %}</title>
 
         <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
@@ -13,6 +13,7 @@
                 src="https://maps.googleapis.com/maps/api/js?libraries=geometry">
         </script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script type="text/javascript" src="{{ asset('fancybox/jquery.fancybox.pack.js') }}"></script>
 
         <!-- Optionally add helpers - button, thumbnail and/or media -->

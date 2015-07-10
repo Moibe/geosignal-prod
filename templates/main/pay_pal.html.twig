@@ -1,10 +1,27 @@
 <div class="hidden">
     <div id="paypalContent">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <div id='paypalContentInner'>
+            <h1>{%trans%}Tu ubicación.{%endtrans%}</h1>
+            <p>{%trans%}ésta es tu posición, ahora ingresa el número que deseas buscar.{%endtrans%}</p>
+
+            <form class='register'>
+                <input type="text" name="telefono" />
+                <input type="submit" value="{%trans%}Localizar{%endtrans%}" />
+            </form>
+        </div>
+        <form class='hidden paypalForm' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <p>{%trans%}Para obtener la ubicación realiza el pago a través de un mensaje de texto.{%endtrans%}</p>
+            <p>{%trans%}Solo se te cobrará una vez una pequeña cantidad.{%endtrans%}</p>
             <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="HYCZXQYWB6G6Q">
-            <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal, la forma m·s segura y r·pida de pagar en lÌnea.">
-            <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            <input type="hidden" name="hosted_button_id" value="{%trans%}HYCZXQYWB6G6Q{%endtrans%}">
+            <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="{%trans%}PayPal, la forma más segura y rápida de pagar en línea.{%endtrans%}">
+            <img alt="{%trans%}Obtener Ubicación{%endtrans%}" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            <p>{%trans%}Da click en el botón para obtener más información.{%endtrans%}</p>
         </form>
     </div>
 </div>
+
+<script type='text/javascript'>
+    labels3 = labels2.slice();
+    labels3.push("{%trans%}Número localizado.{%endtrans%}");
+</script>
