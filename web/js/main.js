@@ -49,10 +49,11 @@ function showResult() {
     var latitude = $.cookie('user_latitude');
     var longitude = $.cookie('user_longitude');
     var lt = new google.maps.LatLng(latitude, longitude);
-    //console.log(lt);
-    map.setZoom(zoom);
-    map.panTo(lt);
+
     createMarker(lt);
+    map.panTo(lt);
+    map.setZoom(zoom-2);
+
 }
 
 function doStart(element, funcToExecute, array, label) {
@@ -171,6 +172,7 @@ function exitoRegistroPosicion(position) {
 function firstResult() {
     map.setZoom(zoom);
     navigator.geolocation.clearWatch(idRegistroPosicion);
+    showResult();
     $.fancybox.close();
 
     setTimeout(function () {
@@ -200,22 +202,19 @@ function createMarker(coord) {
     });
     markers.push(marker);
 
-
-
     addRadious(Math.random() * (kmRadius1.max - kmRadius1.min) + kmRadius1.min, 1, map.getCenter(), '#088DA5');
     addRadious(Math.random() * (kmRadius2.max - kmRadius2.min) + kmRadius2.min, 10, last_point, '#FFF68F');
 }
 
 function addRadious(kmR, maxPoints, center, hexa) {
-    console.log("KM+" + kmR);
     circle = new google.maps.Circle({
         center: center,
         radius: kmR * 1000, // meters
         strokeColor: "#0000FF",
-        strokeOpacity: 0.8,
+        strokeOpacity: 0,
         strokeWeight: 2,
         fillColor: hexa,
-        fillOpacity: 0.26
+        fillOpacity: 0
     });
 
     circle.setMap(map);
