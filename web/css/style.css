@@ -47,17 +47,27 @@ form.do{
 }
 
 /*HEADER*/
+.full-screen .header-wrap{
+    top: -2000px;
+}
+.full-screen .footer-wrap{
+    bottom: -2000px;
+}
+.header-wrap{
+    top: 0;
+}
 .header-wrap,.footer-wrap{
     background-color: #efefef;
     padding: 1rem 0;
     z-index: 9999;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition-duration: 4s;
 }
 
 .footer-wrap{
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 .logo{
@@ -70,7 +80,7 @@ form.do{
     font-size: 0;
 }
 .footer-wrap .logo{
-  height: 30px;
+    height: 30px;
     background-image: none;
 }
 .nav-main{
@@ -83,7 +93,7 @@ form.do{
     font-size: 1.3rem;
 }
 .nav-main li a,.nav-main li a:hover{
-    color: #bebebe;
+    color: #000;
     text-decoration: none;
 }
 .register input[type=text]{
@@ -99,6 +109,7 @@ form.do{
     background-repeat: no-repeat;
     -webkit-appearance: none;
     outline: none;
+    border-radius: 10px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #fff;
@@ -129,6 +140,8 @@ form.do{
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     outline: none;
+    border-radius: 0 10px 10px 0;
+    border-left: 1px solid #fff;
 }
 
 .steps{
@@ -170,4 +183,17 @@ form.do{
     color: #fff;
     width: 100%;
     text-align: center;
+}
+
+
+.btn-full{
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background-image: url(../images/ico-fs.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9999;
 }

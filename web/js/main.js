@@ -38,6 +38,11 @@ $(document).ready(function () {
     if ($('body').hasClass('homepage')) {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
+
+    $(".btn-full").click(function () {
+        $("html").toggleClass('full-screen');
+    });
+
 });
 
 function showResult() {
@@ -61,6 +66,7 @@ function doStart(element, funcToExecute, array, label) {
         var ul = $('<ul class="steps"></ul>');
         element.html(ul);
         element.append("<form class='do'><input type='submit' value='" + label + "' class='btn-locate'></form>");
+
         $.each(array, function (index, value) {
             ul.append('<li>' + value + '</li>');
         });
@@ -103,10 +109,8 @@ function showButton() {
         $('#mainContent').html(ul);
 
         $.each(labels2, function (index, value) {
-
             ul.append('<li>' + value + '</li>');
         });
-
         animateList(registrarPosicion);
 
         return false;
