@@ -14,12 +14,12 @@ var last_point;
 var height = 450;
 
 if (bowser.mobile) {
-    height = 650;
+    height = 700;
 }
 
 var fancyObject = {
     'width': 820,
-    'height': 450,
+    'height': height,
     'padding': 10,
     'href': '#mainContent',
     'transitionIn': 'elastic',
@@ -51,6 +51,10 @@ $(document).ready(function () {
 
     $(".btn-full").click(function () {
         $("html").toggleClass('full-screen');
+    });
+
+     $(".ico-menu").click(function () {
+        $(".header-wrap .nav-main").toggleClass('active');
     });
 
 });
