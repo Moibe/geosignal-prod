@@ -11,6 +11,12 @@ var markers = [];           // array to hold markers
 var kmRadius1 = {'min': 5, 'max': 10};
 var kmRadius2 = {'min': 0.5, 'max': 1};
 var last_point;
+var height = 450;
+
+if (bowser.mobile) {
+    height = 650;
+}
+
 var fancyObject = {
     'width': 820,
     'height': 450,
@@ -35,6 +41,10 @@ var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marc
 google.maps.event.addDomListener(window, 'load', initialize);
 
 $(document).ready(function () {
+    if (bowser.mobile) {
+        $("html").addClass('mobile');
+    }
+
     if ($('body').hasClass('homepage')) {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }

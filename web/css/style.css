@@ -38,7 +38,7 @@ p,li{
 
 #map-canvas { height: 100%; margin: 0; padding: 0;}
 
-.content ul li{
+.content ul li,.steps li{
     display: none;
 }
 
@@ -190,7 +190,7 @@ form.do{
     width: 39px;
     height: 39px;
     position: absolute;
-    top: 90px;
+    top: 9rem;
     right: 20px;
     background-image: url(../images/ico-fs.png);
     background-position: center;

@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jul 10, 2015, 8:38:46 PM
+    Author     : zero
+*/
+html.mobile{
+    font-size: 16px;
+}
+
+.mobile .ico-menu{
+    background-image: url(../images/ico-menu.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.mobile .nav-main{
+    position: relative;
+    right: auto;
+    width: 100%;
+    background-color: #efefef;
+    display: none;
+}
+.mobile .nav-main li{
+    display: block;
+}

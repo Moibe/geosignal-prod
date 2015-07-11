@@ -6,15 +6,19 @@
         <link href="{{ asset('bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/mobile.css') }}" rel="stylesheet" type="text/css" />
 
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="{{ asset('js/jquery.cookie.js') }}"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script type="text/javascript" src="{{ asset('fancybox/jquery.fancybox.pack.js') }}"></script>
         <script type="text/javascript" src="{{ asset('fancybox/helpers/jquery.fancybox-thumbs.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bowser.min.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-19071509-34']);
@@ -38,6 +42,7 @@
                     <li><a href="#">Sobre  Localizador de Móviles</a></li>
                     <li><a href="#">Términos y Condiciones</a></li>
                 </ul>
+                <a href="#" class="ico-menu"></a>
             </div>
         </div>
         <a href="#" class="btn-full"></a>
