@@ -40,7 +40,7 @@ var i = 0,
 var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marcadorUsuario;
 google.maps.event.addDomListener(window, 'load', initialize);
 
-$(document).ready(function () {
+$(document).ready(function() {
     if (bowser.mobile) {
         $("html").addClass('mobile');
     }
@@ -49,11 +49,11 @@ $(document).ready(function () {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
-    $(".btn-full").click(function () {
+    $(".btn-full").click(function() {
         $("html").toggleClass('full-screen');
     });
 
-     $(".ico-menu").click(function () {
+    $(".ico-menu").click(function() {
         $(".header-wrap .nav-main").toggleClass('active');
     });
 
@@ -64,25 +64,27 @@ function showResult() {
     var longitude = $.cookie('user_longitude');
     var lt = new google.maps.LatLng(latitude, longitude);
 
-    createMarker(lt);
+    console.log(lt);
     map.panTo(lt);
-    map.setZoom(zoom-2);
+    createMarker(lt);
+
+    //map.setZoom(zoom-2);
 
 }
 
 function doStart(element, funcToExecute, array, label) {
-    setTimeout(function () {
+    setTimeout(function() {
         $.fancybox(fancyObject);
     }, 1000);
 
     $('form.register').unbind();
-    $('form.register').submit(function () {
+    $('form.register').submit(function() {
         i = 0;
         var ul = $('<ul class="steps"></ul>');
         element.html(ul);
         element.append("<form class='do'><input type='submit' value='" + label + "' class='btn-locate'></form>");
 
-        $.each(array, function (index, value) {
+        $.each(array, function(index, value) {
             ul.append('<li>' + value + '</li>');
         });
         animateList(funcToExecute);
@@ -97,7 +99,7 @@ function animateList(funcToExecute) {
             .show()
             .animate({"fontSize": "2.5rem"}, animate)
             .animate({"fontSize": "2.5rem"}, delay)
-            .animate({"fontSize": "1.9rem"}, animate, function () {
+            .animate({"fontSize": "1.9rem"}, animate, function() {
                 i++;
                 if (i <= imax) {
                     animateList(funcToExecute);
@@ -117,13 +119,13 @@ function toPaypal() {
 
 function showButton() {
     $('form.do').show();
-    $('form.do').submit(function () {
+    $('form.do').submit(function() {
         i = 0;
         var ul = $('<ul class="steps"></ul>');
 
         $('#mainContent').html(ul);
 
-        $.each(labels2, function (index, value) {
+        $.each(labels2, function(index, value) {
             ul.append('<li>' + value + '</li>');
         });
         animateList(registrarPosicion);
@@ -186,10 +188,17 @@ function exitoRegistroPosicion(position) {
 function firstResult() {
     map.setZoom(zoom);
     navigator.geolocation.clearWatch(idRegistroPosicion);
-    showResult();
+
+
+    var latitude = $.cookie('user_latitude');
+    var longitude = $.cookie('user_longitude');
+    var lt = new google.maps.LatLng(latitude, longitude);
+
+    addRadious(Math.random() * (kmRadius2.max - kmRadius2.min) + kmRadius2.min, 10, lt, '#FFF68F');
+
     $.fancybox.close();
 
-    setTimeout(function () {
+    setTimeout(function() {
         fancyObject.content = $("#paypalContent");
         doStart($('#paypalContentInner'), toPaypal, labels3, label_submit);
     }, 2000);
@@ -208,15 +217,29 @@ function placeMarker(location, text)
     return marker;
 }
 
-function createMarker(coord) {
+function createMarker(coord, current) {
     var pos = new google.maps.LatLng(coord.lat(), coord.lng());
-    var marker = new google.maps.Marker({
-        position: pos,
-        map: map
-    });
-    markers.push(marker);
+
+
+    if (current) {
+        var marker = new google.maps.Marker({
+            position: pos,
+            map: map
+        });
+        markers.push(marker);
+    }
 
     addRadious(Math.random() * (kmRadius1.max - kmRadius1.min) + kmRadius1.min, 1, map.getCenter(), '#088DA5');
+
+
+    if (!current) {
+        var marker = new google.maps.Marker({
+            position: last_point,
+            map: map
+        });
+        markers.push(marker);
+    }
+
     addRadious(Math.random() * (kmRadius2.max - kmRadius2.min) + kmRadius2.min, 10, last_point, '#FFF68F');
 }
 
@@ -242,8 +265,10 @@ function addRadious(kmR, maxPoints, center, hexa) {
         var ptLng = Math.random() * (ne.lng() - sw.lng()) + sw.lng();
         var point = new google.maps.LatLng(ptLat, ptLng);
         last_point = point;
-        if (google.maps.geometry.spherical.computeDistanceBetween(point, circle.getCenter()) < circle.getRadius()) {
+        if (google.maps.geometry.spherical.computeDistanceBetween(point, circle.getCenter()) < circle.getRadius() && maxPoints > 1) {
             addMarker(map, point, "marker " + i);
+        } else if (maxPoints > 1) {
+            i--;
         }
     }
 }
@@ -256,7 +281,7 @@ function addMarker(map, point, content) {
         map: map,
         icon: iconFile
     });
-    google.maps.event.addListener(marker, "click", function (evt) {
+    google.maps.event.addListener(marker, "click", function(evt) {
         infowindow.setContent(content + "<br>" + marker.getPosition().toUrlValue(6));
         infowindow.open(map, marker);
     });
