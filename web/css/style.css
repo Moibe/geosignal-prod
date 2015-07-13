@@ -197,3 +197,14 @@ form.do{
     background-repeat: no-repeat;
     z-index: 9900;
 }
+
+
+#paypalContentInner{
+    position: absolute;
+    bottom: 15%;
+    background: rgba(0, 0, 0, 0) url("../fancybox/fancybox_overlay.png") repeat scroll 0 0;
+    padding: 10px;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+}

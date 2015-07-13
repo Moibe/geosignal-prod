@@ -199,9 +199,38 @@ function firstResult() {
     $.fancybox.close();
 
     setTimeout(function() {
-        fancyObject.content = $("#paypalContent");
-        doStart($('#paypalContentInner'), toPaypal, labels3, label_submit);
+        prevFancy();
     }, 2000);
+}
+
+function prevFancy() {
+    fancyObject.content = $("#paypalContent");
+    $('#paypalContentInner').hide();
+    $('body').append($('#paypalContentInner'));
+    $('#paypalContentInner').fadeIn();
+
+
+
+    $('form.register').unbind();
+    $('form.register').submit(function() {
+        $('#paypalContentInner').fadeOut();
+        fancyObject.href = '#paypalContent';
+
+        var element = $('#paypalContent');
+
+        $.fancybox(fancyObject);
+
+        i = 0;
+        var ul = $('<ul class="steps"></ul>');
+        element.prepend(ul);
+
+        $.each(labels3, function(index, value) {
+            ul.append('<li>' + value + '</li>');
+        });
+        animateList(toPaypal);
+
+        return false;
+    });
 }
 
 function falloRegistroPosicion() {
