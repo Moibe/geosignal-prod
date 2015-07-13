@@ -45,8 +45,12 @@ html.mobile{
     padding: 4rem 2rem 0;
 }
 
-#paypalContentInner{
+.mobile #paypalContentInner{
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+}
+
+.mobile .register input[type=text]{
+    width: 30px;
 }

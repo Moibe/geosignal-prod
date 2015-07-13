@@ -110,7 +110,7 @@ form.do{
     border-radius: 10px;
     padding: 2rem 2rem 2rem 6rem;
     text-align: center;
-    width: 77%;
+    width: 100%;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #fff;
