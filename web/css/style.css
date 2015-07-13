@@ -152,7 +152,7 @@ form.do{
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    min-height: 432px;
+    min-height: 425px;
     list-style: none;
 }
 .steps li{
@@ -207,4 +207,10 @@ form.do{
     width: 600px;
     left: 50%;
     margin-left: -300px;
+}
+
+
+#paypalContentInner form.register input[type="submit"]{
+    width:  9rem;
+
 }

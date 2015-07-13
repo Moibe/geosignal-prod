@@ -44,3 +44,9 @@ html.mobile{
     min-height: 690px;
     padding: 4rem 2rem 0;
 }
+
+#paypalContentInner{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
