@@ -50,7 +50,3 @@ html.mobile{
     padding-right: 30px;
     padding-bottom: 30px;
 }
-
-.mobile .register input[type=text]{
-    width: 30px;
-}
