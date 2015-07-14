@@ -305,7 +305,6 @@ function addRadious(kmR, maxPoints, center, hexa) {
 function addMarker(map, point, content) {
     var iconFile = primary_domain + 'icons/antenas.png';
 
-    alert(iconFile);
 
     var marker = new google.maps.Marker({
         position: point,
