@@ -110,11 +110,17 @@ function animateList(funcToExecute) {
 }
 
 function toPaypal() {
-    $('.paypalForm').show();
+    //
 
-    $('.fancybox-overlay').css({'background-color': "#ffffff"});
+    showResult();
+    $('#paypalContent').fadeOut('fast', function() {
+        $('.paypalForm').delay(800).show();
+    });
 
-    $('.fancybox-overlay').animate({'background-color': "#db1a35"}, 1200);
+    $('#paypalContent').delay(800).fadeIn();
+
+    $('.fancybox-overlay').delay(1600).css({'background-color': "rgb(0,0,0,.2)"});
+    $('.fancybox-overlay').delay(1600).animate({'background-color': "#db1a35"}, 1200);
 }
 
 function showButton() {
