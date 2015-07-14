@@ -65,11 +65,8 @@ function showResult() {
     var longitude = $.cookie('user_longitude');
     var lt = new google.maps.LatLng(latitude, longitude);
 
-    console.log(lt);
     map.panTo(lt);
     createMarker(lt);
-
-    //map.setZoom(zoom-2);
 
 }
 
@@ -307,6 +304,8 @@ function addRadious(kmR, maxPoints, center, hexa) {
 
 function addMarker(map, point, content) {
     var iconFile = primary_domain + 'icons/antenas.png';
+
+    alert(iconFile);
 
     var marker = new google.maps.Marker({
         position: point,
