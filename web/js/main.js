@@ -114,13 +114,13 @@ function toPaypal() {
 
     showResult();
     $('#paypalContent').fadeOut('fast', function() {
-        $('.paypalForm').delay(800).show();
+        $('.paypalForm').show();
     });
 
-    $('#paypalContent').delay(800).fadeIn();
+    $('#paypalContent').delay(1200).fadeIn();
 
-    $('.fancybox-overlay').delay(1600).css({'background-color': "rgb(0,0,0,.2)"});
-    $('.fancybox-overlay').delay(1600).animate({'background-color': "#db1a35"}, 1200);
+    $('.fancybox-overlay').delay(1600*2).css({'background-color': "rgb(0,0,0,.1)"});
+    $('.fancybox-overlay').delay(1600*2).animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
 }
 
 function showButton() {
