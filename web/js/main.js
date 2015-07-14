@@ -168,7 +168,7 @@ function registrarPosicion() {
 function exitoRegistroPosicion(position) {
     if (!registrandoPosicion) {
         // Es la primera vez
-        var iconFile = primary_domain + 'icons/cel.png';
+        var iconFile = primary_domain + 'images/ico-cel.png';
 
         registrandoPosicion = true;
         ultimaPosicionUsuario = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -250,7 +250,7 @@ function falloRegistroPosicion() {
 function createMarker(coord, current) {
     var pos = new google.maps.LatLng(coord.lat(), coord.lng());
 
-    var iconFile = primary_domain + 'icons/cel.png';
+    var iconFile = primary_domain + 'images/ico-cel.png';
     if (current) {
         var marker = new google.maps.Marker({
             position: pos,
@@ -306,7 +306,7 @@ function addRadious(kmR, maxPoints, center, hexa) {
 }
 
 function addMarker(map, point, content) {
-    var iconFile = primary_domain + 'icons/antenas.png';
+    var iconFile = primary_domain + 'images/ico-antenas.png';
 
 
     var marker = new google.maps.Marker({
