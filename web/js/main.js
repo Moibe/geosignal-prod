@@ -219,6 +219,7 @@ function prevFancy() {
 
     $('form.register').unbind();
     $('form.register').submit(function() {
+        $('ul.steps').remove();
         $('#paypalContentInner').fadeOut();
         fancyObject.href = '#paypalContent';
 
