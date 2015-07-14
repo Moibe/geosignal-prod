@@ -12,6 +12,7 @@ var kmRadius1 = {'min': 5, 'max': 10};
 var kmRadius2 = {'min': 0.5, 'max': 1};
 var last_point;
 var height = 450;
+var primary_domain = "http://geosignal.spraystudio.com.mx";
 
 if (bowser.mobile) {
     height = 700;
@@ -40,7 +41,7 @@ var i = 0,
 var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marcadorUsuario;
 google.maps.event.addDomListener(window, 'load', initialize);
 
-$(document).ready(function() {
+$(document).ready(function () {
     if (bowser.mobile) {
         $("html").addClass('mobile');
     }
@@ -49,11 +50,11 @@ $(document).ready(function() {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
-    $(".btn-full").click(function() {
+    $(".btn-full").click(function () {
         $("html").toggleClass('full-screen');
     });
 
-    $(".ico-menu").click(function() {
+    $(".ico-menu").click(function () {
         $(".header-wrap .nav-main").toggleClass('active');
     });
 
@@ -73,18 +74,18 @@ function showResult() {
 }
 
 function doStart(element, funcToExecute, array, label) {
-    setTimeout(function() {
+    setTimeout(function () {
         $.fancybox(fancyObject);
     }, 1000);
 
     $('form.register').unbind();
-    $('form.register').submit(function() {
+    $('form.register').submit(function () {
         i = 0;
         var ul = $('<ul class="steps"></ul>');
         element.html(ul);
         element.append("<form class='do'><input type='submit' value='" + label + "' class='btn-locate'></form>");
 
-        $.each(array, function(index, value) {
+        $.each(array, function (index, value) {
             ul.append('<li>' + value + '</li>');
         });
         animateList(funcToExecute);
@@ -99,7 +100,7 @@ function animateList(funcToExecute) {
             .show()
             .animate({"fontSize": "2.5rem"}, animate)
             .animate({"fontSize": "2.5rem"}, delay)
-            .animate({"fontSize": "1.9rem"}, animate, function() {
+            .animate({"fontSize": "1.9rem"}, animate, function () {
                 i++;
                 if (i <= imax) {
                     animateList(funcToExecute);
@@ -113,25 +114,25 @@ function toPaypal() {
     //
 
     showResult();
-    $('#paypalContent').fadeOut('fast', function() {
+    $('#paypalContent').fadeOut('fast', function () {
         $('.paypalForm').show();
     });
 
     $('#paypalContent').delay(1200).fadeIn();
 
-    $('.fancybox-overlay').delay(1600*2).css({'background-color': "rgb(0,0,0,.1)"});
-    $('.fancybox-overlay').delay(1600*2).animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
+    $('.fancybox-overlay').delay(1600 * 2).css({'background-color': "rgb(0,0,0,.1)"});
+    $('.fancybox-overlay').delay(1600 * 2).animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
 }
 
 function showButton() {
     $('form.do').show();
-    $('form.do').submit(function() {
+    $('form.do').submit(function () {
         i = 0;
         var ul = $('<ul class="steps"></ul>');
 
         $('#mainContent').html(ul);
 
-        $.each(labels2, function(index, value) {
+        $.each(labels2, function (index, value) {
             ul.append('<li>' + value + '</li>');
         });
         animateList(registrarPosicion);
@@ -204,7 +205,7 @@ function firstResult() {
 
     $.fancybox.close();
 
-    setTimeout(function() {
+    setTimeout(function () {
         prevFancy();
     }, 2000);
 }
@@ -218,7 +219,7 @@ function prevFancy() {
 
 
     $('form.register').unbind();
-    $('form.register').submit(function() {
+    $('form.register').submit(function () {
         $('ul.steps').remove();
         $('#paypalContentInner').fadeOut();
         fancyObject.href = '#paypalContent';
@@ -231,7 +232,7 @@ function prevFancy() {
         var ul = $('<ul class="steps"></ul>');
         element.prepend(ul);
 
-        $.each(labels3, function(index, value) {
+        $.each(labels3, function (index, value) {
             ul.append('<li>' + value + '</li>');
         });
         animateList(toPaypal);
@@ -246,21 +247,15 @@ function falloRegistroPosicion() {
 }
 
 
-function placeMarker(location, text)
-{
-    var iconFile = 'http://www.daftlogic.com/images/gmmarkersv3/stripes.png';
-    var marker = new google.maps.Marker({position: location, map: map, icon: iconFile, title: text.toString(), draggable: false});
-    return marker;
-}
-
 function createMarker(coord, current) {
     var pos = new google.maps.LatLng(coord.lat(), coord.lng());
 
-
+    var iconFile = primary_domain + 'icons/cel.png';
     if (current) {
         var marker = new google.maps.Marker({
             position: pos,
-            map: map
+            map: map,
+            icon: iconFile
         });
         markers.push(marker);
     }
@@ -271,7 +266,8 @@ function createMarker(coord, current) {
     if (!current) {
         var marker = new google.maps.Marker({
             position: last_point,
-            map: map
+            map: map,
+            icon: iconFile
         });
         markers.push(marker);
     }
@@ -310,14 +306,14 @@ function addRadious(kmR, maxPoints, center, hexa) {
 }
 
 function addMarker(map, point, content) {
-    var iconFile = 'http://www.daftlogic.com/images/gmmarkersv3/stripes.png';
+    var iconFile = primary_domain + 'icons/antenas.png';
 
     var marker = new google.maps.Marker({
         position: point,
         map: map,
         icon: iconFile
     });
-    google.maps.event.addListener(marker, "click", function(evt) {
+    google.maps.event.addListener(marker, "click", function (evt) {
         infowindow.setContent(content + "<br>" + marker.getPosition().toUrlValue(6));
         infowindow.open(map, marker);
     });
