@@ -168,11 +168,14 @@ function registrarPosicion() {
 function exitoRegistroPosicion(position) {
     if (!registrandoPosicion) {
         // Es la primera vez
+        var iconFile = primary_domain + 'icons/cel.png';
+
         registrandoPosicion = true;
         ultimaPosicionUsuario = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         marcadorUsuario = new google.maps.Marker({
             position: ultimaPosicionUsuario,
-            map: map
+            map: map,
+            icon: iconFile
         });
 
         $.cookie('user_latitude', position.coords.latitude, {expires: 7, path: '/'});
