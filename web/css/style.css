@@ -176,6 +176,7 @@ form.do{
     border: none;
     padding: 1rem 2rem;
     cursor: pointer;
+    color: #000 !important;
 }
 
 .paypalForm{
