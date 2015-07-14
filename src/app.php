@@ -23,7 +23,7 @@ $app->register(new SessionServiceProvider, array(
 
 $app->register(new TranslationServiceProvider(), array(
     'locale' => "es",
-    'locale_fallbacks' => array('en', 'it', 'de', 'fr', 'nl', 'pt'),
+    'locale_fallbacks' => array('en', 'it', 'de', 'fr', 'nl', 'pt', 'uk', 'eu'),
 ));
 
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
@@ -38,18 +38,12 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
 
 if ($app['session']->get('current_language')) {
     $app['translator'] = $app->extend('translator', function($translator, $app) {
-        
-        $code = $app['session']->get('current_language');
-        
-        $translator->addLoader('yaml', new YamlFileLoader());
-        $translator->addResource('yaml', __DIR__ . '/../resources/locales/'.$code.'.yml', $code);
 
-        /*
-          $translator->addResource('yaml', __DIR__ . '/../resources/locales/it.yml', 'it');
-          $translator->addResource('yaml', __DIR__ . '/../resources/locales/pt.yml', 'pt');
-          $translator->addResource('yaml', __DIR__ . '/../resources/locales/fr.yml', 'fr');
-          $translator->addResource('yaml', __DIR__ . '/../resources/locales/nl.yml', 'nl');
-         */
+        $code = $app['session']->get('current_language');
+
+        $translator->addLoader('yaml', new YamlFileLoader());
+        $translator->addResource('yaml', __DIR__ . '/../resources/locales/' . $code . '.yml', $code);
+
         return $translator;
     });
 }
