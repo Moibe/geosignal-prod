@@ -4,8 +4,8 @@
             <h1>{%trans%}Tu ubicación.{%endtrans%}</h1>
             <p>{%trans%}ésta es tu posición, ahora ingresa el número que deseas buscar.{%endtrans%}</p>
 
-            <form class='register'>
-                <input type="text" maxlength="13" name="telefono" />
+            <form class='register validate' >
+                <input type="text" class="required internationalPhone" minlength="8" maxlength="13" name="telefono" />
                 <input type="submit" value="{%trans%}Localizar{%endtrans%}" />
             </form>
         </div>

@@ -1,8 +1,8 @@
 <div class="hidden">
     <div id="mainContent" class="content text-center">
         <h1>{%trans%}Localizador de Móviles{% endtrans %}</h1>
-        <form class="register">
-            <input type="text" name="telefono" maxlength="13" placeholder="{%trans%}Escribe tu número para localizarte.{%endtrans%}" autocomplete="off" />
+        <form class="register validate">
+            <input type="text" name="telefono" class="required internationalPhone" minlength="8" maxlength="15" placeholder="{%trans%}Escribe tu número para localizarte.{%endtrans%}" autocomplete="off" />
             <input type="submit" value="{%trans%}Iniciar{%endtrans%}" />
         </form>
     </div>
@@ -11,5 +11,5 @@
 <script type='text/javascript'>
     label_submit = "{%trans%}Localizar{%endtrans%}";
     labels = ["{%trans%}Evaluando.{%endtrans%}", "{%trans%}Comparando dispositivo.{%endtrans%}", "{%trans%}Su dispositivo cumple con los requerimientos mínimos.{%endtrans%}"];
-    labels2 = ["{%trans%}Triangulando antenas.{%endtrans%}", "{%trans%}Leyendo frecuencia gsm.{%endtrans%}", "{%trans%}Calculando posición.{%endtrans%}","{%trans%}Creando mapa.{%endtrans%}"];
+    labels2 = ["{%trans%}Triangulando antenas.{%endtrans%}", "{%trans%}Leyendo frecuencia gsm.{%endtrans%}", "{%trans%}Calculando posición.{%endtrans%}", "{%trans%}Creando mapa.{%endtrans%}"];
 </script>
