@@ -23,7 +23,7 @@ $app->register(new SessionServiceProvider, array(
 
 $app->register(new TranslationServiceProvider(), array(
     'locale' => "es",
-    'locale_fallbacks' => array('en', 'it', 'de', 'fr', 'nl', 'pt', 'uk', 'eu'),
+    'locale_fallbacks' => array('en', 'it', 'de', 'fr', 'nl', 'pt', 'uk', 'eu','in','asia'),
 ));
 
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
