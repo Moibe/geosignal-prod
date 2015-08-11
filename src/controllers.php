@@ -18,7 +18,7 @@ $app->get('/', function () use ($app) {
         ->bind('homepage')
 ;
 
-$app->get('/signal-result', function () use ($app) {
+$app->get('/output-success', function () use ($app) {
             $lang = $app['session']->get('current_language') ? $app['session']->get('current_language') : 'es';
             return $app['twig']->render('result.html.twig', array('language' => $lang));
         })
