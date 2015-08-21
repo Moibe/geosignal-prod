@@ -25,6 +25,8 @@ $app->get('/output-success', function () use ($app) {
         ->bind('result')
 ;
 
+$app->match('/payment', 'Controller\ExchangeController::indexAction')->bind('payment');
+
 $app->get('/{lang}', function($lang) use($app) {
     /*
      * check if language exists
@@ -32,6 +34,8 @@ $app->get('/{lang}', function($lang) use($app) {
     $app['session']->set('current_language', $lang);
     return $app->redirect($app['url_generator']->generate('homepage'));
 });
+
+
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
@@ -48,3 +52,5 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 
     return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
 });
+
+

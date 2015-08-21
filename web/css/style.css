@@ -9,6 +9,19 @@
     box-sizing: border-box;
     position: relative;
 }
+
+input[type="text"], textarea {
+    background-color: #dbdbdb;
+    border: medium none;
+    color: #999999;
+    display: block;
+    font-size: 1.4rem;
+    margin: 3% auto 0;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+
 .bx-wrapper,.bx-wrapper *{
     position: initial;
 }
@@ -229,4 +242,139 @@ form.do{
 
 .footer-wrap{
     padding: .5rem;
+}
+
+
+/*PAYMENT*/
+#showForm{
+    width: 60rem;
+    min-height: 100%;
+    background-color: #e8e8e8;
+}
+.payment-wrap{
+    background-color: #e8e8e8;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+.payment-header-wrap{
+    background-color: #e12f00;
+    color: #fff;
+    padding: 1%;
+}
+.ico-lock{
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 32px;
+    margin-right: 1%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.payment-header-wrap h1{
+    display: inline-block;
+    margin: 0 1%;
+    vertical-align: middle;
+}
+.payment-steps-wrap{
+    width: 480px;
+    display: inline-block;
+    margin: 0 1% 0 10%;
+    vertical-align: middle;
+}
+.payment-header-wrap ul{
+    display: block;
+}
+.payment-header-wrap ul li{
+    display: inline-block;
+    width: 100px;
+    margin-right: 90px;
+    font-size: 1.2rem;
+}
+.payment-header-wrap ul li:first-child{
+    padding-left: 10px;
+}
+.payment-header-wrap ul li:last-child{
+    margin-right: 0;
+}
+
+
+.payment-step-1 .payment-steps-wrap span{background-image: url("/images/template/s-1.png");}
+.payment-step-2 .payment-steps-wrap span{background-image: url("/images/template/s-2.png");}
+.payment-step-3 .payment-steps-wrap span{background-image: url("/images/template/s-3.png");}
+
+.payment-steps-wrap span{
+    width: 441px;
+    height: 21px;
+    display: block;
+    margin: 10px auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+
+.payment-content-wrap input[type="text"]{
+    color: #999999;
+}
+.payment-content-wrap legend{
+    margin-bottom: 15px;
+}
+.payment-content-wrap .btn-red,.payment-content-wrap .btn-green{
+    width: 35%;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4%;
+}
+.btn-block{
+    display: block !important;
+    margin: 4% auto !important;
+}
+.w-80p{
+    width: 80%;
+    margin: 5% auto 0;
+}
+.w-50p{
+    width: 50%;
+    margin: 5% auto 0;
+}
+.step3 .w-50p{
+    margin-top: 0;
+}
+.bg-solid{
+    padding: 5%;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+.logo-pago-facil{
+    background-image: url("/images/template/logo-pago-facil.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 187px;
+    height: 105px;
+    display: block;
+    margin: 5% auto;
+}
+
+.mb-25-childs > div{
+    margin-bottom: 25px;
+}
+.btn-red.reduce-padding{
+    padding: 1%;
+}
+
+
+.btn-red {
+    background-color: #e12f00;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 1.2rem;
+    margin: 4% auto;
+    padding: 4% 1%;
+    text-align: center;
+    width: 100%;
 }

@@ -10,6 +10,10 @@ use Silex\Provider\TranslationServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Silex\Provider\SessionServiceProvider;
 
+define('API_PAGO_SUCURSAL', 'bb1e6c86c6c45c1c8626b9515612187b11790756');
+define('API_PAGO_USUARIO', '9079c5db838b0ae4db80fee22a70d579e4eb29af');
+
+
 $app = new Application();
 $app->register(new RoutingServiceProvider());
 $app->register(new ValidatorServiceProvider());
@@ -23,7 +27,7 @@ $app->register(new SessionServiceProvider, array(
 
 $app->register(new TranslationServiceProvider(), array(
     'locale' => "es",
-    'locale_fallbacks' => array('en', 'it', 'de', 'fr', 'nl', 'pt', 'uk', 'eu','in','asia'),
+    'locale_fallbacks' => array('en', 'it', 'de', 'fr', 'nl', 'pt', 'uk', 'eu', 'in', 'asia'),
 ));
 
 $app['twig'] = $app->extend('twig', function ($twig, $app) {

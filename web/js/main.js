@@ -47,7 +47,8 @@ $(document).ready(function() {
     }
 
     if ($('body').hasClass('homepage')) {
-        doStart($('#mainContent'), showButton, labels, label_submit);
+        $.fancybox('#showForm');
+        //doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
     $(".btn-full").click(function() {
@@ -118,6 +119,15 @@ function toPaypal() {
     showResult();
     $('#paypalContent').fadeOut('fast', function() {
         $('.paypalForm').show();
+
+        $('.show-payment').click(function() {
+          
+            fancyObject.href = "#showForm";
+            $.fancybox(fancyObject);
+        
+            return false;
+        });
+
     });
 
     $('#paypalContent').delay(1200).fadeIn();
