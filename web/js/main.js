@@ -28,7 +28,6 @@ var fancyObject = {
     'closeBtn': false,
     'closeClick': false,
     'autoSize': false,
-    'type': 'ajax',
     keys: {
         close: null
     },
@@ -48,11 +47,8 @@ $(document).ready(function() {
     }
 
     if ($('body').hasClass('homepage')) {
-        $.fancybox('#showForm',{
-    'width': 820,
-
-    'padding': 10});
-        //doStart($('#mainContent'), showButton, labels, label_submit);
+        //$.fancybox('#showForm');
+        doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
     $(".btn-full").click(function() {
@@ -125,14 +121,72 @@ function toPaypal() {
         $('.paypalForm').show();
 
         $('.show-payment').click(function() {
-          
-            fancyObject.href = "#showForm";
-            $.fancybox(fancyObject);
-        
+
+            var e = {
+                'width': 820,
+                'height': height,
+                'padding': 10,
+                'href': '#paymentSelector',
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'closeBtn': false,
+                'closeClick': false,
+                'autoSize'
+                        : false,
+                keys: {
+                    close: null
+                }
+                ,
+                beforeShow: function() {
+                    $('.fancybox-overlay').css({'background-color': "rgb(0,0,0,.1)"});
+                    $('.fancybox-overlay').animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
+                },
+                helpers: {
+                    overlay: {
+                        closeClick: false
+                    } // prevents closing when clicking OUTSIDE fancybox
+                }
+            };
+
+            $.fancybox(e);
+            return false;
+        });
+
+        $('.card-payment').click(function() {
+
+            var e = {
+                'width': 820,
+                'height': height,
+                'padding': 10,
+                'href': '#paymentForm',
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'closeBtn': false,
+                'closeClick': false,
+                'autoSize'
+                        : false,
+                keys: {
+                    close: null
+                }
+                ,
+                beforeShow: function() {
+                    $('.fancybox-overlay').css({'background-color': "rgb(0,0,0,.1)"});
+                    $('.fancybox-overlay').animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
+                },
+                helpers: {
+                    overlay: {
+                        closeClick: false
+                    } // prevents closing when clicking OUTSIDE fancybox
+                }
+            };
+
+            $.fancybox(e);
             return false;
         });
 
     });
+
+
 
     $('#paypalContent').delay(1200).fadeIn();
 
