@@ -16,7 +16,7 @@ input[type="text"], textarea {
     color: #999999;
     display: block;
     font-size: 1.4rem;
-    margin: 3% auto 0;
+    margin: 1rem auto 0;
     padding: 10px;
     resize: none;
     width: 100%;
@@ -57,6 +57,17 @@ p,li{
 
 form.do{
     display: none;
+}
+
+/*GRIDS*/
+
+.grid-6-12{
+    width: 45%;
+    display: inline-block;
+}
+.grid-12-12{
+    width: 100%;
+    display: inline-block;
 }
 
 /*HEADER*/
@@ -247,7 +258,7 @@ form.do{
 
 /*PAYMENT*/
 #showForm{
-    width: 60rem;
+    
     min-height: 100%;
     background-color: #e8e8e8;
 }
@@ -315,16 +326,70 @@ form.do{
 
 .payment-content-wrap input[type="text"]{
     color: #999999;
+  
+    
+   
+   
+}
+
+.step1 .grid-6-12{
+    margin-right: 1rem;
+}
+
+
+
+
+.payment-content-wrap .step2 .special_input{
+  
+ 
+
+}
+
+.payment-content-wrap .step2 .special_input:last-child{
+    margin-right: 0;
+}
+
+
+.payment-content-wrap .step1 .grid-12-12 input:last-child, .payment-content-wrap .step2 .grid-12-12 input:last-child{
+    margin-right: 0;
+}
+
+
+::-webkit-input-placeholder {
+   color: #000;
+   font-weight: 300;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #000;  
+   font-weight: 300;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000; 
+   font-weight: 300;
+}
+
+:-ms-input-placeholder {  
+   color: #000;  
+   font-weight: 300;
+}
+.formulario-pal{
+    width: 800px;
+    
 }
 .payment-content-wrap legend{
     margin-bottom: 15px;
 }
 .payment-content-wrap .btn-red,.payment-content-wrap .btn-green{
-    width: 35%;
+    /*width: 35%;*/
+    width: 100%;
+    
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     margin: 4%;
+    font-weight: 300;
 }
 .btn-block{
     display: block !important;
@@ -332,6 +397,10 @@ form.do{
 }
 .w-80p{
     width: 80%;
+    margin: 5% auto 0;
+}
+.w-90p{
+    width: 90%;
     margin: 5% auto 0;
 }
 .w-50p{
@@ -378,3 +447,5 @@ form.do{
     text-align: center;
     width: 100%;
 }
+
+.m-t-1{margin-top: 1rem;}
