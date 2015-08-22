@@ -47,7 +47,6 @@ $(document).ready(function() {
     }
 
     if ($('body').hasClass('homepage')) {
-        //$.fancybox('#showForm');
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
@@ -184,14 +183,30 @@ function toPaypal() {
             return false;
         });
 
+        $("form.jpayment").validate({
+            submitHandler: function(form) {
+                $.ajax({
+                    type: "POST",
+                    url: form.attr('action'),
+                    data: $('form.contact').serialize(),
+                    success: function(msg) {
+
+                    },
+                    error: function() {
+                        alert("failure");
+                    }
+                })
+            }
+        });
+
+
+
+
+        $('#paypalContent').delay(1200).fadeIn();
+
+        $('.fancybox-overlay').delay(1600 * 2).css({'background-color': "rgb(0,0,0,.1)"});
+        $('.fancybox-overlay').delay(1600 * 2).animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
     });
-
-
-
-    $('#paypalContent').delay(1200).fadeIn();
-
-    $('.fancybox-overlay').delay(1600 * 2).css({'background-color': "rgb(0,0,0,.1)"});
-    $('.fancybox-overlay').delay(1600 * 2).animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
 }
 
 function showButton() {
