@@ -28,6 +28,7 @@ var fancyObject = {
     'closeBtn': false,
     'closeClick': false,
     'autoSize': false,
+    'type': 'ajax',
     keys: {
         close: null
     },
@@ -47,7 +48,10 @@ $(document).ready(function() {
     }
 
     if ($('body').hasClass('homepage')) {
-        $.fancybox('#showForm');
+        $.fancybox('#showForm',{
+    'width': 820,
+
+    'padding': 10});
         //doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
