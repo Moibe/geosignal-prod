@@ -175,7 +175,7 @@ function toPaypal() {
                 helpers: {
                     overlay: {
                         closeClick: false
-                    } // prevents closing when clicking OUTSIDE fancybox
+                    }
                 }
             };
 
@@ -188,8 +188,8 @@ function toPaypal() {
                 $.ajax({
                     type: "POST",
                     url: form.attr('action'),
-                    data: $('form.contact').serialize(),
-                    success: function(msg) {
+                    data: form.serialize(),
+                    success: function(data) {
 
                     },
                     error: function() {
