@@ -13,7 +13,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 $app->get('/', function () use ($app) {
             $lang = $app['session']->get('current_language') ? $app['session']->get('current_language') : 'es';
-            return $app['twig']->render('index.html.twig', array('language' => $lang));
+            $payment = (object) array('number' => 100, 'string' => '$100.00 MXN');
+            return $app['twig']->render('index.html.twig', array('language' => $lang, 'payment' => $payment));
         })
         ->bind('homepage')
 ;

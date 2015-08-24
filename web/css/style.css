@@ -450,6 +450,7 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 
 .m-t-1{margin-top: 1rem;}
 
+
 .monto_pagar, .cantidad_pagar{
     color: rgb(0, 0, 0);
     font-weight: 300;  
@@ -637,4 +638,8 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 
 .step1 .col-xs-6, .step2 .col-xs-6{
     margin-bottom: 1rem;
+}
+
+.resume-wrap{
+    color: black;
 }

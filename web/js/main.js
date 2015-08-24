@@ -60,10 +60,6 @@ $(document).ready(function () {
 
 });
 
-$(".btn-red .submit").click(function () {
-    $('.p-loader').fadeIn();
-});
-
 function showResult() {
     var latitude = $.cookie('user_latitude');
     var longitude = $.cookie('user_longitude');
@@ -188,17 +184,17 @@ function toPaypal() {
         });
 
         $("form.jpayment").validate({
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 $.ajax({
                     type: "POST",
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function(data) {
-
+                    url: $(form).attr('action'),
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        $('.payment-success').fadeIn();
+                        $('.do-payment').fadeOut();
                     },
-                    error: function() {
-                        alert("failure");
-                        $('.p-loader').fadeOut();
+                    error: function () {
+
                     }
                 })
             }
@@ -422,12 +418,6 @@ function showError(element, errorClass, validClass) {
     $(element).animate({backgroundColor: "#FA9C05"}, "slow", function () {
         $(element).animate({backgroundColor: "#e12f00"}, "slow");
     });
-}
-
-
-
-function closeLoader() {
-    $('.p-loader').fadeOut();
 }
 
 jQuery.validator.addMethod("internationalPhone", function (value, element) {
