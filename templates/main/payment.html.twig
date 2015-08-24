@@ -1,5 +1,6 @@
 <div class="hidden">
     <div id="paymentForm" >
+         {% include 'loader/loader.html.twig' with {'class':'p-loader'} %}
         <div class='payment-wrap payment-step-1'>
             <div class='payment-header-wrap'>
                 <h3>{%trans%}Transacción Segura{%endtrans%}</h3>
@@ -7,30 +8,24 @@
             <div class='payment-content-wrap'>
                 <div class='clearfix'>
 
-                    <form method="post" action="{{path('payment')}}"  class="jpayment w-90p">
+                    <form method="post" action="{{path('payment')}}"  class="j-validate jpayment w-90p">
                         <div class="step1">
                             <fieldset class="col-xs-12">
                                 <legend>{%trans%}Los campos señalados con * son obligatorios{%endtrans%}</legend>
-
-
-
                             </fieldset>
-                            <fieldset class="col-xs-6">
+                            <fieldset class="col-xs-6 ">
                                 <input type='text' class="required" name='nombre' placeholder='{%trans%}Nombre*{%endtrans%}' />
                             </fieldset>
-                            <fieldset class="col-xs-6">
+                            <fieldset class="col-xs-6 ">
                                 <input type='text' class="required" name='apellidos' placeholder='{%trans%}Apellidos*{%endtrans%}' />
                             </fieldset>
-                            <fieldset class="col-xs-6">
+                            <fieldset class="col-xs-6 ">
                                 <input type='text' class="required email" name='email' placeholder='{%trans%}Email*{%endtrans%}' />
-
-
                             </fieldset>
-                            <fieldset class="col-xs-6">
+                            <fieldset class="col-xs-6 ">
                                 <input type='text' class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='telefono' placeholder='{%trans%}Teléfono*{%endtrans%}' />
                             </fieldset>
-                            <fieldset class="col-xs-6">
-
+                            <fieldset class="col-xs-6 ">
                                 <input type='text' class="required" data-rule-digits="true" data-rule-minlength="10" data-rule-maxlength="10" name='celular' placeholder='{%trans%}Celular*{%endtrans%}' />
                             </fieldset>
                         </div>
@@ -38,63 +33,46 @@
                         <div class="step2">
                             <fieldset class='col-xs-6'>
                                 <input type='text' class="required number" autocomplete="off" name='numeroTarjeta' placeholder='{%trans%}Número de tarjeta*{%endtrans%}' />
-
                             </fieldset>
                             <fieldset class='col-xs-6'>
-
-                                <input type='text' class="required number" autocomplete="off" name='cvt' placeholder='{%trans%}CVT*{%endtrans%}' />
+                                <input type='text' class="required" name='calleyNumero' placeholder='{%trans%}Calle y número*{%endtrans%}' />
                             </fieldset>
                             <fieldset class="col-xs-6 clearfix">
                                 <div class='row'>     
                                     <fieldset class='col-xs-6'>
                                         <input type='text' class="required number special_input" autocomplete="off" name='mesExpiracion' placeholder='{%trans%}Mes de Expiracion*{%endtrans%}' />
-
-                            </fieldset>
+                                    </fieldset>
                                     <fieldset class='col-xs-6'>
-
                                         <input type='text' class="required number special_input" autocomplete="off" name='anyoExpiracion' placeholder='{%trans%}Año de Expiracion*{%endtrans%}' />
-
-                            </fieldset>
+                                    </fieldset>
                                 </div>
                             </fieldset>
-
                             <fieldset class='col-xs-6'>
-
                                 <input type='text' class="required" name='pais' placeholder='{%trans%}Pais*{%endtrans%}' />
                             </fieldset>
-
-
-
                             <fieldset class='col-xs-6'>
-                                <input type='text' class="required" name='calleyNumero' placeholder='{%trans%}Calle y número*{%endtrans%}' />
-                                
+                                <input type='text' class="required number" autocomplete="off" name='cvt' placeholder='{%trans%}CVT*{%endtrans%}' />
                             </fieldset>
-                             <fieldset class='col-xs-6'>
+                            <fieldset class='col-xs-6'>
                                 <input type='text' class="required" name='colonia' placeholder='{%trans%}Colonia*{%endtrans%}' />
                             </fieldset>
                             <fieldset class='col-xs-6'>
-                                <input type='text' class="required number" name='cp' placeholder='{%trans%}CP*{%endtrans%}' />
-                              
+                                <input type='text' class="required" name='estado' placeholder='{%trans%}Estado*{%endtrans%}' />
                             </fieldset>
-                            
-                             <fieldset class='col-xs-6'>
-                              
+                            <fieldset class='col-xs-6'>
                                 <input type='text' class="required" name='municipio' placeholder='{%trans%}Municipio*{%endtrans%}' />
                             </fieldset>
-
                             <fieldset class='col-xs-6'>
-                                <input type='text' class="required" name='estado' placeholder='{%trans%}Estado*{%endtrans%}' />
-
-
+                                <input type='text' class="required number" name='cp' placeholder='{%trans%}CP*{%endtrans%}' />
                             </fieldset> 
-                                <input type="hidden" name="param1" value="{%trans%}Geosignal Services{%endtrans%}" />
-                                <input type="hidden" name="monto" value="100" />
-                            <div class="col-xs-12"><p class="m-t-1">Pagar </p><h1>$400.00</h1></div>
+                            <input type="hidden" name="param1" value="{%trans%}Geosignal Services{%endtrans%}" />
+                            <input type="hidden" name="monto" value="100" />
+                            <div class="col-xs-12"><p class="m-t-1 monto_pagar">{%trans%}Cantidad a Pagar{%endtrans%} </p><h1 class="cantidad_pagar">$400.00</h1></div>
                             <fieldset class='col-xs-12'>
                                 <div class="col-xs-6"> <input type='button' value='{%trans%}Regresar{%endtrans%}' class='btn-red btn-payment-step-forward' /></div>
                                 <div class="col-xs-6"> <input type='submit' value='{%trans%}Realizar Pago{%endtrans%}' class='btn-red submit' /></div>
                             </fieldset>
-                           
+
                         </div>
                     </form>
 
