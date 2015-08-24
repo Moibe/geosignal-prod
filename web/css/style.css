@@ -451,7 +451,7 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 .m-t-1{margin-top: 1rem;}
 
 
-.monto_pagar, .cantidad_pagar{
+.monto_pagar, .cantidad_pagar, .thanks-wrap{
     color: rgb(0, 0, 0);
     font-weight: 300;  
 }
@@ -460,6 +460,12 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     color: red;
     /*margin-top: 2rem;*/
     font-size: 1.2rem;
+}
+
+#floatingBarsG {
+    height: 77px;
+    position: relative;
+    width: 62px;
 }
 
 .blockG{
@@ -619,6 +625,31 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     transform:rotate(-135deg);
 }
 
+@-moz-keyframes fadeG{
+    0%{background-color:#000000;}
+    100%{background-color:#FFFFFF;}
+}
+
+@-webkit-keyframes fadeG{
+    0%{background-color:#000000;}
+    100%{background-color:#FFFFFF;}
+}
+
+@-ms-keyframes fadeG{
+    0%{background-color:#000000;}
+    100%{background-color:#FFFFFF;}
+}
+
+@-o-keyframes fadeG{
+    0%{background-color:#000000;}
+    100%{background-color:#FFFFFF;}
+}
+
+@keyframes fadeG{
+    0%{background-color:#000000;}
+     100%{background-color:#FFFFFF;}
+}
+
 .p-loader, .p-ios{
     width: 100%;
     height: 100%;
@@ -628,12 +659,24 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     z-index: 9999;
     display: none;
 }
+
+.p-ios{
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+}
 .p-loader-container{
     position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -77px;
     margin-left: -62px;
+}
+
+.post-action{
+    margin: 0;
+    float: none;
+    width: 100%;
+    display: block;
 }
 
 .step1 .col-xs-6, .step2 .col-xs-6{

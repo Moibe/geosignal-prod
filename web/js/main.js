@@ -185,6 +185,7 @@ function toPaypal() {
 
         $("form.jpayment").validate({
             submitHandler: function (form) {
+                $('.p-loader').fadeIn();
                 $.ajax({
                     type: "POST",
                     url: $(form).attr('action'),
@@ -192,9 +193,10 @@ function toPaypal() {
                     success: function (data) {
                         $('.payment-success').fadeIn();
                         $('.do-payment').fadeOut();
+                        $('.p-loader').fadeOut();
                     },
                     error: function () {
-
+                        $('.p-loader').fadeIn();
                     }
                 })
             }
@@ -418,6 +420,11 @@ function showError(element, errorClass, validClass) {
     $(element).animate({backgroundColor: "#FA9C05"}, "slow", function () {
         $(element).animate({backgroundColor: "#e12f00"}, "slow");
     });
+}
+
+
+function closeLoader() {
+    $('.p-loader').fadeOut();
 }
 
 jQuery.validator.addMethod("internationalPhone", function (value, element) {
