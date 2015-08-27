@@ -41,7 +41,7 @@ var i = 0,
 var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marcadorUsuario;
 google.maps.event.addDomListener(window, 'load', initialize);
 
-$(document).ready(function () {
+$(document).ready(function() {
     if (bowser.mobile) {
         $("html").addClass('mobile');
     }
@@ -50,11 +50,11 @@ $(document).ready(function () {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
-    $(".btn-full").click(function () {
+    $(".btn-full").click(function() {
         $("html").toggleClass('full-screen');
     });
 
-    $(".ico-menu").click(function () {
+    $(".ico-menu").click(function() {
         $(".header-wrap .nav-main").toggleClass('active');
     });
 
@@ -71,20 +71,20 @@ function showResult() {
 }
 
 function doStart(element, funcToExecute, array, label) {
-    setTimeout(function () {
+    setTimeout(function() {
         $.fancybox(fancyObject);
     }, 1000);
 
     $('form.register').unbind();
 
     $("form.register").validate({
-        submitHandler: function (form) {
+        submitHandler: function(form) {
             i = 0;
             var ul = $('<ul class="steps"></ul>');
             element.html(ul);
             element.append("<form class='do'><input type='submit' value='" + label + "' class='btn-locate'></form>");
 
-            $.each(array, function (index, value) {
+            $.each(array, function(index, value) {
                 ul.append('<li>' + value + '</li>');
             });
             animateList(funcToExecute);
@@ -102,7 +102,7 @@ function animateList(funcToExecute) {
             .show()
             .animate({"fontSize": "2.5rem"}, animate)
             .animate({"fontSize": "2.5rem"}, delay)
-            .animate({"fontSize": "1.9rem"}, animate, function () {
+            .animate({"fontSize": "1.9rem"}, animate, function() {
                 i++;
                 if (i <= imax) {
                     animateList(funcToExecute);
@@ -116,10 +116,10 @@ function toPaypal() {
     //
 
     showResult();
-    $('#paypalContent').fadeOut('fast', function () {
+    $('#paypalContent').fadeOut('fast', function() {
         $('.paypalForm').show();
 
-        $('.show-payment').click(function () {
+        $('.show-payment').click(function() {
 
             var e = {
                 'width': 820,
@@ -136,7 +136,7 @@ function toPaypal() {
                     close: null
                 }
                 ,
-                beforeShow: function () {
+                beforeShow: function() {
                     $('.fancybox-overlay').css({'background-color': "rgb(0,0,0,.1)"});
                     $('.fancybox-overlay').animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
                 },
@@ -151,7 +151,7 @@ function toPaypal() {
             return false;
         });
 
-        $('.card-payment').click(function () {
+        $('.card-payment').click(function() {
 
             var e = {
                 'width': 820,
@@ -168,7 +168,7 @@ function toPaypal() {
                     close: null
                 }
                 ,
-                beforeShow: function () {
+                beforeShow: function() {
                     $('.fancybox-overlay').css({'background-color': "rgb(0,0,0,.1)"});
                     $('.fancybox-overlay').animate({'background-color': "rgb(0,0,0,.6)"}, 1200);
                 },
@@ -184,18 +184,20 @@ function toPaypal() {
         });
 
         $("form.jpayment").validate({
-            submitHandler: function (form) {
+            submitHandler: function(form) {
                 $('.p-loader').fadeIn();
                 $.ajax({
                     type: "POST",
                     url: $(form).attr('action'),
                     data: $(form).serialize(),
-                    success: function (data) {
-                        $('.payment-success').fadeIn();
-                        $('.do-payment').fadeOut();
+                    success: function(data) {
+                        if (data.response.autorizado === "1") {
+                            $('.payment-success').fadeIn();
+                            $('.do-payment').fadeOut();
+                        }
                         $('.p-loader').fadeOut();
                     },
-                    error: function () {
+                    error: function() {
                         $('.p-loader').fadeIn();
                     }
                 })
@@ -216,13 +218,13 @@ function showButton() {
     $('form.do').show();
     $('form.do').unbind();
     $("form.do").validate({
-        submitHandler: function (form) {
+        submitHandler: function(form) {
             i = 0;
             var ul = $('<ul class="steps"></ul>');
 
             $('#mainContent').html(ul);
 
-            $.each(labels2, function (index, value) {
+            $.each(labels2, function(index, value) {
                 ul.append('<li>' + value + '</li>');
             });
             animateList(registrarPosicion);
@@ -299,7 +301,7 @@ function firstResult() {
 
     $.fancybox.close();
 
-    setTimeout(function () {
+    setTimeout(function() {
         prevFancy();
     }, 2000);
 }
@@ -312,7 +314,7 @@ function prevFancy() {
 
     $('form.register').unbind();
     $("form.register").validate({
-        submitHandler: function (form) {
+        submitHandler: function(form) {
             $('ul.steps').remove();
             $('#paypalContentInner').fadeOut();
             fancyObject.href = '#paypalContent';
@@ -325,7 +327,7 @@ function prevFancy() {
             var ul = $('<ul class="steps"></ul>');
             element.prepend(ul);
 
-            $.each(labels3, function (index, value) {
+            $.each(labels3, function(index, value) {
                 ul.append('<li>' + value + '</li>');
             });
             animateList(toPaypal);
@@ -408,7 +410,7 @@ function addMarker(map, point, content) {
         map: map,
         icon: iconFile
     });
-    google.maps.event.addListener(marker, "click", function (evt) {
+    google.maps.event.addListener(marker, "click", function(evt) {
         infowindow.setContent(content + "<br>" + marker.getPosition().toUrlValue(6));
         infowindow.open(map, marker);
     });
@@ -417,7 +419,7 @@ function addMarker(map, point, content) {
 
 function showError(element, errorClass, validClass) {
     $(element).stop();
-    $(element).animate({backgroundColor: "#FA9C05"}, "slow", function () {
+    $(element).animate({backgroundColor: "#FA9C05"}, "slow", function() {
         $(element).animate({backgroundColor: "#e12f00"}, "slow");
     });
 }
@@ -427,7 +429,7 @@ function closeLoader() {
     $('.p-loader').fadeOut();
 }
 
-jQuery.validator.addMethod("internationalPhone", function (value, element) {
+jQuery.validator.addMethod("internationalPhone", function(value, element) {
     // allow any non-whitespace characters as the host part
     return this.optional(element) || /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/.test(value);
 }, 'Please enter a valid phone');

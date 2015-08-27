@@ -26,31 +26,31 @@ $app->get('/', function () use ($app) {
                     $payment = (object) array('number' => 10 * $dolar, 'string' => '$10.00 USD');
                     break;
                 case "de":
-                    $payment = (object) array('number' => 14 * $euro, 'string' => '$14.00 EUR');
+                    $payment = (object) array('number' => 14 * $euro, 'string' => '€14.00 EUR');
                     break;
                 case "en":
                     $payment = (object) array('number' => 14 * $dolar, 'string' => '$10.00 USD');
                     break;
                 case "eu":
-                    $payment = (object) array('number' => 10 * $euro, 'string' => '$10.00 EUR');
+                    $payment = (object) array('number' => 10 * $euro, 'string' => '€10.00 EUR');
                     break;
                 case "fr":
-                    $payment = (object) array('number' => 9 * $euro, 'string' => '$9.00 EUR');
+                    $payment = (object) array('number' => 9 * $euro, 'string' => '€9.00 EUR');
                     break;
                 case "in":
                     $payment = (object) array('number' => 7 * $euro, 'string' => '$7.00 USD');
                     break;
                 case "it":
-                    $payment = (object) array('number' => 11 * $euro, 'string' => '$11.00 EUR');
+                    $payment = (object) array('number' => 11 * $euro, 'string' => '€11.00 EUR');
                     break;
                 case "nl":
-                    $payment = (object) array('number' => 14 * $euro, 'string' => '$14.00 EUR');
+                    $payment = (object) array('number' => 14 * $euro, 'string' => '€14.00 EUR');
                     break;
                 case "pt":
-                    $payment = (object) array('number' => 11 * $euro, 'string' => '$11.00 EUR');
+                    $payment = (object) array('number' => 11 * $euro, 'string' => '€11.00 EUR');
                     break;
                 case "uk":
-                    $payment = (object) array('number' => 14 * $libra, 'string' => '$14.00 GBP');
+                    $payment = (object) array('number' => 14 * $libra, 'string' => '£14.00 GBP');
                     break;
             }
 

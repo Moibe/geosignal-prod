@@ -20,14 +20,14 @@
                                     <input type='text' class="required" name='apellidos' placeholder='{%trans%}Apellidos*{%endtrans%}' />
                                 </fieldset>
                                 <fieldset class="col-xs-6">
-                                    <input type='text' class="required email" name='email' placeholder='{%trans%}Email*{%endtrans%}' />
+                                    <input type='hidden' value="guillermo@spraystudio.com.mx" class="required email" name='email' placeholder='{%trans%}Email*{%endtrans%}' />
                                 </fieldset>
                                 <fieldset class="col-xs-6">
-                                    <input type='text' class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='telefono' placeholder='{%trans%}Teléfono*{%endtrans%}' />
+                                    <input type='hidden' value="59143515" class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='telefono' placeholder='{%trans%}Teléfono*{%endtrans%}' />
                                 </fieldset>
                                 <fieldset class="col-xs-6">
 
-                                    <input type='text' class="required" data-rule-digits="true" data-rule-minlength="10" data-rule-maxlength="10" name='celular' placeholder='{%trans%}Celular*{%endtrans%}' />
+                                    <input value="5540889044" type='hidden' class="required" data-rule-digits="true" data-rule-minlength="10" data-rule-maxlength="10" name='celular' placeholder='{%trans%}Celular*{%endtrans%}' />
                                 </fieldset>
                             </div>
 
@@ -37,8 +37,8 @@
 
                                 </fieldset>
                                 <fieldset class='col-xs-6'>
-                                     <input type='text' class="required" name='calleyNumero' placeholder='{%trans%}Calle y número*{%endtrans%}' />
-                                    
+                                    <input type='hidden' value="N/A" class="required" name='calleyNumero' placeholder='{%trans%}Calle y número*{%endtrans%}' />
+
                                 </fieldset>
                                 <fieldset class="col-xs-6 clearfix">
                                     <div class='row'>     
@@ -56,31 +56,30 @@
 
                                 <fieldset class='col-xs-6'>
 
-                                    <input type='text' class="required" name='pais' placeholder='{%trans%}Pais*{%endtrans%}' />
+                                    <input type='hidden' value="N/A" class="required" name='pais' placeholder='{%trans%}Pais*{%endtrans%}' />
                                 </fieldset>
 
 
 
                                 <fieldset class='col-xs-6'>
-                                   <input type='text' class="required number" autocomplete="off" name='cvt' placeholder='{%trans%}CVT*{%endtrans%}' />
+                                    <input type='text' class="required number" autocomplete="off" name='cvt' placeholder='{%trans%}CVT*{%endtrans%}' />
 
                                 </fieldset>
                                 <fieldset class='col-xs-6'>
-                                    <input type='text' class="required" name='colonia' placeholder='{%trans%}Colonia*{%endtrans%}' />
+                                    <input type='hidden' class="required" value="N/A" name='colonia' placeholder='{%trans%}Colonia*{%endtrans%}' />
                                 </fieldset>
                                 <fieldset class='col-xs-6'>
-                                    <input type='text' class="required" name='estado' placeholder='{%trans%}Estado*{%endtrans%}' />
+                                    <input type='hidden' class="required" name='estado' value="N/A" placeholder='{%trans%}Estado*{%endtrans%}' />
 
-                                </fieldset>
-
-                                <fieldset class='col-xs-6'>
-
-                                    <input type='text' class="required" name='municipio' placeholder='{%trans%}Municipio*{%endtrans%}' />
                                 </fieldset>
 
                                 <fieldset class='col-xs-6'>
-                                    
-                                    <input type='text' class="required number" name='cp' placeholder='{%trans%}CP*{%endtrans%}' />
+                                    <input type='hidden' class="required" name='municipio' value="N/A" placeholder='{%trans%}Municipio*{%endtrans%}' />
+                                </fieldset>
+
+                                <fieldset class='col-xs-6'>
+
+                                    <input type='hidden' name="cp" class="required number" value="53278" name='cp' placeholder='{%trans%}CP*{%endtrans%}' />
 
                                 </fieldset> 
                                 <input type="hidden" name="param1" value="{%trans%}Geosignal Services{%endtrans%}" />
@@ -100,10 +99,10 @@
                     <div class='resume-wrap bg-solid w-80p'>
                         <span class='logo-pago-facil'></span>
                         <div class='w-50p text-center '>
-                            <h1 class="thanks-wrap">¡Gracias!</h1>
-                            <p class="thanks-wrap">Pago exitoso</p>
+                            <h1 class="thanks-wrap">{% trans %}¡Gracias!{%endtrans%}</h1>
+                            <p class="thanks-wrap">{% trans %}Pago exitoso{%endtrans%}</p>
                         </div>
-                        <div class=""><a href="{{path('result')}}" class='btn-red btn-close'>Finalizar</a></div>
+                        <div class=""><a href="{{path('result')}}" class='btn-red btn-close'>{% trans %}Finalizar{%endtrans%}</a></div>
                     </div>
                 </div>
             </div>
