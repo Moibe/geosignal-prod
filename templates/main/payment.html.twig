@@ -46,12 +46,12 @@
                                         </div>
                                     </fieldset>#}
                                     <fieldset class='col-xs-6'>
-                                        <input type='text' class="required number special_input" autocomplete="off" name='mesExpiracion' placeholder='{%trans%}Mes de Expiracion*{%endtrans%}' />
+                                        <input type='text' class="required number special_input" autocomplete="off" name='mesExpiracion' placeholder='{%trans%}MM*{%endtrans%}' />
 
                                     </fieldset>
                                     <fieldset class='col-xs-6'>
 
-                                        <input type='text' class="required number special_input" autocomplete="off" name='anyoExpiracion' placeholder='{%trans%}Año de Expiracion*{%endtrans%}' />
+                                        <input type='text' class="required number special_input" autocomplete="off" name='anyoExpiracion' placeholder='{%trans%}YY*{%endtrans%}' />
 
                                     </fieldset>
                                     <fieldset class='col-xs-6'>
@@ -117,12 +117,12 @@
 
                 <div class='hidden step3 payment-success'>
                     <div class='resume-wrap bg-solid w-80p'>
-                        <span class='logo-pago-facil'></span>
+                        {#<span class='logo-pago-facil'></span>#}
                         <div class='w-50p text-center '>
                             <h1 class="thanks-wrap">{% trans %}¡Gracias!{%endtrans%}</h1>
                             <p class="thanks-wrap">{% trans %}Pago exitoso{%endtrans%}</p>
                         </div>
-                        <div class=""><a href="{{path('result')}}" class='btn-red btn-close'>{% trans %}Finalizar{%endtrans%}</a></div>
+                        <div class=""><a href="{{path('result')}}" class='btn-red btn-close'>{%trans%}Obtener Ubicación{%endtrans%}</a></div>
                     </div>
                 </div>
             </div>
