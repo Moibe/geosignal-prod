@@ -8,87 +8,107 @@
             <div class='payment-content-wrap'>
                 <div class='clearfix'>
                     <div class="do-payment">
+
+
                         <form method="post" action="{{path('payment')}}"  class="jpayment w-90p">
-                            <div class="step1">
-                                <fieldset class="col-xs-12">
-                                    <legend>{%trans%}Los campos señalados con * son obligatorios{%endtrans%}</legend>
-                                </fieldset>
-                                <fieldset class="col-xs-6">
-                                    <input type='text' class="required" name='nombre' placeholder='{%trans%}Nombre*{%endtrans%}' />
-                                </fieldset>
-                                <fieldset class="col-xs-6">
-                                    <input type='text' class="required" name='apellidos' placeholder='{%trans%}Apellidos*{%endtrans%}' />
-                                </fieldset>
-                                <fieldset class="col-xs-6">
-                                    <input type='hidden' value="guillermo@spraystudio.com.mx" class="required email" name='email' placeholder='{%trans%}Email*{%endtrans%}' />
-                                </fieldset>
-                                <fieldset class="col-xs-6">
-                                    <input type='hidden' value="59143515" class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='telefono' placeholder='{%trans%}Teléfono*{%endtrans%}' />
-                                </fieldset>
-                                <fieldset class="col-xs-6">
-
-                                    <input value="5540889044" type='hidden' class="required" data-rule-digits="true" data-rule-minlength="10" data-rule-maxlength="10" name='celular' placeholder='{%trans%}Celular*{%endtrans%}' />
-                                </fieldset>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-xs-12 col-md-12">
+                                    <p class="m-t-1 monto_pagar">{%trans%}Cantidad a Pagar*{%endtrans%}</p>
+                                    <h1 class="cantidad_pagar">{{payment.string}}</h1>
+                                </div>
                             </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="step1">
+                                    <fieldset class="col-xs-12">
+                                        <legend>{%trans%}Los campos señalados con * son obligatorios{%endtrans%}</legend>
+                                    </fieldset>
+                                    <fieldset class="col-xs-12">
+                                        <input type='text' class="required" name='nombre' placeholder='{%trans%}Nombre*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class="col-xs-12">
+                                        <input type='text' class="required" name='apellidos' placeholder='{%trans%}Apellidos*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-12'>
+                                        <input type='text' class="required number" autocomplete="off" name='numeroTarjeta' placeholder='{%trans%}Número de tarjeta*{%endtrans%}' />
 
-                            <div class="step2">
-                                <fieldset class='col-xs-6'>
-                                    <input type='text' class="required number" autocomplete="off" name='numeroTarjeta' placeholder='{%trans%}Número de tarjeta*{%endtrans%}' />
+                                    </fieldset>
+                                    {#<fieldset class="col-xs-6 clearfix">
+                                        <div class='row'>     
+                                            <fieldset class='col-xs-6'>
+                                                <input type='text' class="required number special_input" autocomplete="off" name='mesExpiracion' placeholder='{%trans%}Mes de Expiracion*{%endtrans%}' />
 
-                                </fieldset>
-                                <fieldset class='col-xs-6'>
+                                            </fieldset>
+                                            <fieldset class='col-xs-6'>
+
+                                                <input type='text' class="required number special_input" autocomplete="off" name='anyoExpiracion' placeholder='{%trans%}Año de Expiracion*{%endtrans%}' />
+
+                                            </fieldset>
+                                        </div>
+                                    </fieldset>#}
+                                    <fieldset class='col-xs-6'>
+                                        <input type='text' class="required number special_input" autocomplete="off" name='mesExpiracion' placeholder='{%trans%}Mes de Expiracion*{%endtrans%}' />
+
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+
+                                        <input type='text' class="required number special_input" autocomplete="off" name='anyoExpiracion' placeholder='{%trans%}Año de Expiracion*{%endtrans%}' />
+
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='text' class="required number" autocomplete="off" name='cvt' placeholder='{%trans%}CVT*{%endtrans%}' />
+
+                                    </fieldset>
+
+                                </div>
+
+                                <div class="step2"> 
+
+                                    {#<fieldset class="col-xs-6">
+                                        <input type='hidden' value="guillermo@spraystudio.com.mx" class="required email" name='email' placeholder='{%trans%}Email*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class="col-xs-6">
+                                        <input type='hidden' value="59143515" class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='telefono' placeholder='{%trans%}Teléfono*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class="col-xs-6">
+                                        <input value="5540889044" type='hidden' class="required" data-rule-digits="true" data-rule-minlength="10" data-rule-maxlength="10" name='celular' placeholder='{%trans%}Celular*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='hidden' value="N/A" class="required" name='calleyNumero' placeholder='{%trans%}Calle y número*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='hidden' value="N/A" class="required" name='pais' placeholder='{%trans%}Pais*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='hidden' class="required" value="N/A" name='colonia' placeholder='{%trans%}Colonia*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='hidden' class="required" name='estado' value="N/A" placeholder='{%trans%}Estado*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='hidden' class="required" name='municipio' value="N/A" placeholder='{%trans%}Municipio*{%endtrans%}' />
+                                    </fieldset>
+                                    <fieldset class='col-xs-6'>
+                                        <input type='hidden' name="cp" class="required number" value="53278" name='cp' placeholder='{%trans%}CP*{%endtrans%}' />
+                                    </fieldset> 
+                                    #}
+                                    <input type='hidden' value="guillermo@spraystudio.com.mx" class="required email" name='email' placeholder='{%trans%}Email*{%endtrans%}' />
+                                    <input type='hidden' value="59143515" class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='telefono' placeholder='{%trans%}Teléfono*{%endtrans%}' />
+                                    <input value="5540889044" type='hidden' class="required" data-rule-digits="true" data-rule-minlength="10" data-rule-maxlength="10" name='celular' placeholder='{%trans%}Celular*{%endtrans%}' />
                                     <input type='hidden' value="N/A" class="required" name='calleyNumero' placeholder='{%trans%}Calle y número*{%endtrans%}' />
-
-                                </fieldset>
-                                <fieldset class="col-xs-6 clearfix">
-                                    <div class='row'>     
-                                        <fieldset class='col-xs-6'>
-                                            <input type='text' class="required number special_input" autocomplete="off" name='mesExpiracion' placeholder='{%trans%}Mes de Expiracion*{%endtrans%}' />
-
-                                        </fieldset>
-                                        <fieldset class='col-xs-6'>
-
-                                            <input type='text' class="required number special_input" autocomplete="off" name='anyoExpiracion' placeholder='{%trans%}Año de Expiracion*{%endtrans%}' />
-
-                                        </fieldset>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class='col-xs-6'>
-
                                     <input type='hidden' value="N/A" class="required" name='pais' placeholder='{%trans%}Pais*{%endtrans%}' />
-                                </fieldset>
-
-
-
-                                <fieldset class='col-xs-6'>
-                                    <input type='text' class="required number" autocomplete="off" name='cvt' placeholder='{%trans%}CVT*{%endtrans%}' />
-
-                                </fieldset>
-                                <fieldset class='col-xs-6'>
                                     <input type='hidden' class="required" value="N/A" name='colonia' placeholder='{%trans%}Colonia*{%endtrans%}' />
-                                </fieldset>
-                                <fieldset class='col-xs-6'>
                                     <input type='hidden' class="required" name='estado' value="N/A" placeholder='{%trans%}Estado*{%endtrans%}' />
-
-                                </fieldset>
-
-                                <fieldset class='col-xs-6'>
                                     <input type='hidden' class="required" name='municipio' value="N/A" placeholder='{%trans%}Municipio*{%endtrans%}' />
-                                </fieldset>
-
-                                <fieldset class='col-xs-6'>
-
                                     <input type='hidden' name="cp" class="required number" value="53278" name='cp' placeholder='{%trans%}CP*{%endtrans%}' />
+                                    <input type="hidden" name="param1" value="{%trans%}Geosignal Services{%endtrans%}" />
+                                    <input type="hidden" name="monto" value="{{payment.number}}" />
 
-                                </fieldset> 
-                                <input type="hidden" name="param1" value="{%trans%}Geosignal Services{%endtrans%}" />
-                                <input type="hidden" name="monto" value="{{payment.number}}" />
-                                <div class="col-xs-12"><p class="m-t-1 monto_pagar">{%trans%}Cantidad a Pagar*{%endtrans%}</p><h1 class="cantidad_pagar">{{payment.string}}</h1></div>
-                                <fieldset class='col-xs-12'>
-                                    <div class="col-xs-6"> <input type='button' value='{%trans%}Regresar{%endtrans%}' class='btn-red btn-payment-step-forward' /></div>
-                                    <div class="col-xs-6"> <input type='submit' value='{%trans%}Realizar Pago{%endtrans%}' class='btn-red submit' /></div>
-                                </fieldset>
+
+                                </div>
+                            </div>
+                            <div class='col-xs-12'>
+                                {#<div class="col-xs-6"> <input type='button' value='{%trans%}Regresar{%endtrans%}' class='btn-red btn-payment-step-forward' /></div>#}
+                                <div class=""> <input type='submit' value='{%trans%}Realizar Pago{%endtrans%}' class='btn-red submit' /></div>
                             </div>
                         </form>
                     </div>

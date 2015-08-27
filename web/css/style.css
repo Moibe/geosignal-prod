@@ -647,7 +647,7 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 
 @keyframes fadeG{
     0%{background-color:#000000;}
-     100%{background-color:#FFFFFF;}
+    100%{background-color:#FFFFFF;}
 }
 
 .p-loader, .p-ios{
@@ -686,3 +686,16 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 .resume-wrap{
     color: black;
 }
+
+/**/
+.fancy1 .error, #paypalContentInner .error{
+    display: none !important;
+}
+
+.btn-red.submit{
+    margin: 1rem auto;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+/**/
