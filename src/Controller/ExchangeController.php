@@ -42,7 +42,7 @@ class ExchangeController {
         foreach ($data as $key => $valor) {
             $cadena.="&data[$key]=$valor";
         }
-        $url = 'https://www.pagofacil.net/st/public/Wsrtransaccion/index/format/json/?method=transaccion' . $cadena;
+        $url = 'https://www.pagofacil.net/ws/public/Wsrtransaccion/index/format/json/?method=transaccion' . $cadena;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

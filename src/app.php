@@ -10,8 +10,8 @@ use Silex\Provider\TranslationServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Silex\Provider\SessionServiceProvider;
 
-define('API_PAGO_SUCURSAL', 'bb1e6c86c6c45c1c8626b9515612187b11790756');
-define('API_PAGO_USUARIO', '9079c5db838b0ae4db80fee22a70d579e4eb29af');
+define('API_PAGO_SUCURSAL', '4e076438fafdade3ebb2e55ffa95fe696192c005');
+define('API_PAGO_USUARIO', '3582f00572adc32f2d225793fdcd9a47d1f572cb');
 
 
 $app = new Application();
