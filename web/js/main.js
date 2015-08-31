@@ -435,3 +435,7 @@ jQuery.validator.addMethod("internationalPhone", function(value, element) {
 }, 'Please enter a valid phone');
 
 ;
+
+  $(function() {
+    $( "#tabs" ).tabs();
+  });

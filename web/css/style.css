@@ -698,4 +698,110 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     display: block;
     text-align: center;
 }
+
+.do-payment{
+    background-color: #e8e8e8;
+}
+.payment2-header-wrap{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.ico-tarjeta{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 6rem;
+    height: 5rem;
+}
+
+.ico-american{background-image: url("/images/template/tarjeta-american.png");}
+.ico-master{background-image: url("/images/template/tarjeta-master.png");}
+.ico-visa{background-image: url("/images/template/tarjeta-visa.png");}
+
+.special-border{
+    border-right: 1px solid #e8e8e8;
+}
+
+.candado-wrap{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-40%);
+}
+.candado-wrap .candado{
+    background-image: url("/images/template/candado.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7.2rem;
+    height: 7.2rem;
+    font-size: 2rem;
+    display: block;
+}
+
+.tarjetas{
+    margin-top: 2rem;
+    margin-left: 32%;
+}
+
+ul.menu-tabs{
+    display: inline-block;
+    width: 100%;
+    font-size: 0.4rem;
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.menu-tabs li{
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: #000;
+}
+
+.pago-tarjetas{
+    background-image: url("/images/template/pago_tarjeta.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5.8rem;
+    height: 4rem;
+    display: block;
+}
+
+.pago-paypal{
+    background-image: url("/images/template/pago_paypal.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5.8rem;
+    height: 4rem;
+    display: block;
+}
+
+.cvv{
+    background-image: url("/images/template/cvv.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem;
+    height: 6rem;
+    display: block;
+}
+.m-t-2{
+    margin-top: 2rem;
+}
+
+.do-payment label{
+    font-size: 12px;
+}
+
+.payment-pagos{
+    padding: 4rem;
+}
 /**/
