@@ -5,6 +5,7 @@
 
         <link href="{{ asset('bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ asset('bxslider/jquery.bxslider.css') }}" type="text/css" media="screen" />
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('css/mobile.css') }}" rel="stylesheet" type="text/css" />
 
@@ -20,6 +21,7 @@
         <script type="text/javascript" src="{{ asset('validate/jquery.validate.min.js') }}"></script>  
         <script type="text/javascript" src="{{ asset('js/messages_es.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/jquery-ui.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bxslider/jquery.bxslider.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <script>
             (function (i, s, o, g, r, a, m) {
@@ -42,7 +44,7 @@
     <body class="{{app.request_stack.masterRequest.get('_route')}}">
         <div class="header-wrap">
             <div class="header-content container">
-                <a href="{{ path('homepage') }}" class="logo"></a>
+                <a href="{% block url_home %} {{ path('homepage') }} {% endblock %}" class="logo"></a>
                 {#
                 <ul class="nav-main list-inline">
                     <li><a href="#">Sobre  Localizador de Móviles</a></li>
@@ -57,12 +59,14 @@
         {% endblock %}
 
         <div class="footer-wrap">
-            <div class="footer-content container">
-                <p>
-                    <img src="{{asset('images/ico-cel.png')}}" /><span>{%trans%}Dispositivo{%endtrans%}</span>
-                    <img src="{{asset('images/ico-antenas.png')}}" /><span>{%trans%}Antenas Celulares{%endtrans%}</span>
-                </p>
-            </div>
+            {% block footer %}
+                <div class="footer-content container">
+                    <p>
+                        <img src="{{asset('images/ico-cel.png')}}" /><span>{%trans%}Dispositivo{%endtrans%}</span>
+                        <img src="{{asset('images/ico-antenas.png')}}" /><span>{%trans%}Antenas Celulares{%endtrans%}</span>
+                    </p>
+                </div>
+            {% endblock %}
         </div>
 
         {% block remarketing %}
