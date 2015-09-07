@@ -9,13 +9,13 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 
-$app->get('/', function () use ($app) {
+$app->get('/alt', function () use ($app) {
     $lang = $app['session']->get('current_language') ? $app['session']->get('current_language') : 'es';
     return $app['twig']->render('alterno.html.twig', array('language' => $lang));
 })->bind('alt')
 ;
 
-$app->get('/home', function () use ($app) {
+$app->get('/', function () use ($app) {
             $lang = $app['session']->get('current_language') ? $app['session']->get('current_language') : 'es';
 
             $dolar = 19;
