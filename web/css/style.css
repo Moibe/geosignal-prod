@@ -326,24 +326,12 @@ form.do{
 
 .payment-content-wrap input[type="text"]{
     color: #999999;
-
-
-
-
 }
 
 .step1 .grid-6-12{
     margin-right: 1rem;
 }
 
-
-
-
-.payment-content-wrap .step2 .special_input{
-
-
-
-}
 
 .payment-content-wrap .step2 .special_input:last-child{
     margin-right: 0;
@@ -680,7 +668,7 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 }
 
 .step1 .col-xs-6, .step2 .col-xs-6{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .resume-wrap{
@@ -697,6 +685,8 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     width: 50%;
     display: block;
     text-align: center;
+    padding: 2% 1%;
+    font-weight: 600;
 }
 
 .do-payment{
@@ -704,7 +694,7 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 }
 .payment2-header-wrap{
     background-color: #fff;
-    padding: 1rem;
+    padding: 0rem;
     border-radius: 10px;
 }
 
@@ -715,8 +705,10 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 6rem;
-    height: 5rem;
+    /*    width: 6rem;
+        height: 5rem;*/
+    width: 4rem;
+    height: 3rem;
 }
 
 .ico-american{background-image: url("/images/template/tarjeta-american.png");}
@@ -738,15 +730,18 @@ jpayment :-moz-placeholder { /* Firefox 18- */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 7.2rem;
-    height: 7.2rem;
+    /*    width: 7.2rem;
+        height: 7.2rem;*/
+    width: 4rem;
+    height: 4rem;
     font-size: 2rem;
     display: block;
 }
 
 .tarjetas{
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     margin-left: 32%;
+    margin-bottom: 0.5rem;
 }
 
 ul.menu-tabs{
@@ -764,33 +759,17 @@ ul.menu-tabs{
     color: #000;
 }
 
-.pago-tarjetas{
-    background-image: url("/images/template/pago_tarjeta.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 5.8rem;
-    height: 4rem;
-    display: block;
-}
 
-.pago-paypal{
-    background-image: url("/images/template/pago_paypal.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 5.8rem;
-    height: 4rem;
-    display: block;
-}
 
 .cvv{
     background-image: url("/images/template/cvv.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 10rem;
-    height: 6rem;
+    /*    width: 10rem;
+        height: 6rem;*/
+    width: 13rem;
+    height: 5rem;
     display: block;
 }
 .m-t-2{
@@ -802,6 +781,151 @@ ul.menu-tabs{
 }
 
 .payment-pagos{
-    padding: 4rem;
+    /*    padding: 4rem;*/
+    padding: 1rem 2rem 1rem 2rem;
 }
 /**/
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links{
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: #E8E8E8;
+}
+
+.tab-links .btn-locate{
+    /*    background-color: #fff;*/
+}
+
+.tab-links li {
+    margin:0px 5px;
+    float:left;
+    list-style:none;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tab-links li:first-child{
+    margin: 0px;
+}
+
+.tab-links a {
+    padding:9px 15px;
+    display:inline-block;
+    border-radius:3px 3px 0px 0px;
+    font-size:16px;
+    font-weight:600;
+    transition:all linear 0.15s;
+}
+
+.tab-links .pago-tarjetas{
+    background-image: url("/images/template/pago_tarjeta.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5.8rem;
+    height: 4rem;
+    /*    display: block;*/
+}
+
+.tab-links .pago-paypal{
+    background-image: url("/images/template/pago_paypal.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5.8rem;
+    height: 4rem;
+    /*    display: block;*/
+}
+
+.tab-links a:hover {
+    /*    background:#a7cce5;
+        text-decoration:none;*/
+}
+
+.tab-links li a{
+    background-color: #dddddd;
+}
+.tab-links li.active a{
+    background-color: #fff;
+}
+
+li.active a, li.active a:hover {
+    /*    background:#fff;
+    */
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    /*    padding:15px;*/
+    border-radius:3px;
+    /*    box-shadow:-1px 1px 1px rgba(0,0,0,0.15);*/
+    background:#fff;
+    margin-top: -1rem;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+/*FORM PAYMENT*/
+.cantidad_pagar{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.do-payment .w-100p{
+    width: 100%;
+    margin: 0% auto 0px;
+}
+
+.do-payment .form-group{
+    margin-bottom: 0.5rem;
+}
+
+.do-payment input[type="text"]{
+    background-color: #fff;
+    border:1px solid #d3d7dc;
+    border-radius: 5px;
+}
+
+.jpayment.jpayment2 ::-webkit-input-placeholder {
+    color: #dee1e5;
+    font-weight: 300;
+}
+
+.jpayment.jpayment2 :-moz-placeholder { /* Firefox 18- */
+    color: #dee1e5;  
+    font-weight: 300;
+}
+
+.jpayment.jpayment2 ::-moz-placeholder {  /* Firefox 19+ */
+    color: #dee1e5; 
+    font-weight: 300;
+}
+
+.jpayment.jpayment2 :-ms-input-placeholder {  
+    color: #dee1e5;  
+    font-weight: 300;
+}
+
+.col-xs-6.special-col6{
+    padding-right: 0; 
+}

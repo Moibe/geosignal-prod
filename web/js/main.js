@@ -85,6 +85,18 @@ $(document).ready(function () {
     $(".ico-menu").click(function () {
         $(".header-wrap .nav-main").toggleClass('active');
     });
+    
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
 
 });
 
@@ -153,7 +165,7 @@ function toPaypal() {
                 'width': 820,
                 'height': height,
                 'padding': 10,
-                'href': '#paymentSelector',
+                'href': '#paymentForm',
                 'transitionIn': 'elastic',
                 'transitionOut': 'elastic',
                 'closeBtn': false,
