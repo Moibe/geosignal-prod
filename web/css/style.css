@@ -906,6 +906,10 @@ li.active a, li.active a:hover {
     border-radius: 5px;
 }
 
+.do-payment input[type="text"].error{
+    border-color: red;
+}
+
 .jpayment.jpayment2 ::-webkit-input-placeholder {
     color: #dee1e5;
     font-weight: 300;
@@ -928,4 +932,15 @@ li.active a, li.active a:hover {
 
 .col-xs-6.special-col6{
     padding-right: 0; 
+}
+
+.jpayment input[type="text"]{
+    margin: 0 !important;
+}
+
+.payment-result{
+    color: red;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
 }

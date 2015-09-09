@@ -78,7 +78,7 @@ $app->get('/{lang}', function($lang) use($app) {
      * check if language exists
      */
     $app['session']->set('current_language', $lang);
-    return $app->redirect($app['url_generator']->generate('alt'));
+    return $app->redirect($app['url_generator']->generate('homepage'));
 });
 
 

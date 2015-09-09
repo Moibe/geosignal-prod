@@ -45,13 +45,13 @@
                                                     <div class="step1">
                                                         <fieldset class='col-xs-12 form-group'>
                                                             <label for="numeroTarjeta">{%trans%}Número de tarjeta*{%endtrans%}</label>
-                                                            <input type='text' class="required number" autocomplete="off" name='numeroTarjeta' placeholder='' />
+                                                            <input type='text' class="required creditcard" autocomplete="off" name='numeroTarjeta' placeholder='' />
 
                                                         </fieldset>
                                                         <fieldset class="col-xs-12 form-group">
                                                             <fieldset class="col-xs-6 clearfix form-group">
                                                                 <div class="row">         
-                                                                    <div class=""><label for="numeroTarjeta">{%trans%}Fecha de Caducidad*{%endtrans%}</label></div>
+                                                                    <div class=""><label for="numeroTarjeta">{%trans%}Fecha de Expiración*{%endtrans%}</label></div>
 
                                                                     <div class="row">
                                                                         <fieldset class='col-xs-6'>
@@ -76,7 +76,7 @@
                                                                 </fieldset>
                                                                 <fieldset class='col-xs-6 form-group special-col6'>
 
-                                                                    <a href="#" class="cvv"></a>
+                                                                    <span href="#" class="cvv"></span>
 
                                                                 </fieldset>
                                                             </fieldset>
@@ -96,6 +96,11 @@
                                                                 </div>
                                                             </div>
 
+                                                        </fieldset>
+                                                        <fieldset class='col-xs-12 form-group'>
+                                                            <div class="row">
+                                                                <p class="payment-result"></p>
+                                                            </div>
                                                         </fieldset>
                                                         {# <fieldset class='col-xs-12 form-group'>
                                                              <label for="numeroTarjeta">{%trans%}Dirección de Email*{%endtrans%}</label>
