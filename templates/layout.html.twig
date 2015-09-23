@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{{app.request_stack.masterRequest.HttpHost}}
 <html class="{{ app.request_stack.masterRequest.HttpHost == 'geopositioningservices.com' ? 'scheme-blue' : 'scheme-red' }}">
     <head>
         <title>{% block title app.request_stack.masterRequest.HttpHost == 'geopositioningservices.com' ? 'Gepositioning':'Geosignal' %} - {%trans%}Localizador de Móviles{% endtrans %}</title>
