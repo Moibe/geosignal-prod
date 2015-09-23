@@ -101,6 +101,8 @@ $(document).ready(function() {
 });
 
 function showResult() {
+
+
     var latitude = $.cookie('user_latitude');
     var longitude = $.cookie('user_longitude');
     var lt = new google.maps.LatLng(latitude, longitude);
@@ -338,6 +340,7 @@ function exitoRegistroPosicion(position) {
 }
 
 function firstResult() {
+    $(".bg-lock").fadeOut();
     map.setZoom(zoom);
     navigator.geolocation.clearWatch(idRegistroPosicion);
 

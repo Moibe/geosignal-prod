@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="{{ app.request_stack.masterRequest.get('_host') == 'geopositioningservices.com' ? 'scheme-blue' : 'scheme-red' }}">
     <head>
         <title>{% block title 'GeoSignal' %} - {%trans%}Localizador de Móviles{% endtrans %}</title>
 
@@ -18,7 +18,7 @@
         <script type="text/javascript" src="{{ asset('fancybox/jquery.fancybox.pack.js') }}"></script>
         <script type="text/javascript" src="{{ asset('fancybox/helpers/jquery.fancybox-thumbs.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/bowser.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('validate/jquery.validate.min.js') }}"></script>  
+        <script type="text/javascript" src="{{ asset('validate/jquery.validate.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/messages_es.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/jquery-ui.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bxslider/jquery.bxslider.min.js') }}"></script>
@@ -57,6 +57,8 @@
         <a href="#" class="btn-full"></a>
         {% block content %}
         {% endblock %}
+
+        <div class="bg-lock"></div>
 
         <div class="footer-wrap">
             {% block footer %}

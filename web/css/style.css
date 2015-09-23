@@ -349,17 +349,17 @@ form.do{
 }
 
 jpayment :-moz-placeholder { /* Firefox 18- */
-    color: #000;  
+    color: #000;
     font-weight: 300;
 }
 
 .jpayment ::-moz-placeholder {  /* Firefox 19+ */
-    color: #000; 
+    color: #000;
     font-weight: 300;
 }
 
-.jpayment :-ms-input-placeholder {  
-    color: #000;  
+.jpayment :-ms-input-placeholder {
+    color: #000;
     font-weight: 300;
 }
 .formulario-pal{
@@ -441,7 +441,7 @@ jpayment :-moz-placeholder { /* Firefox 18- */
 
 .monto_pagar, .cantidad_pagar, .thanks-wrap{
     color: rgb(0, 0, 0);
-    font-weight: 300;  
+    font-weight: 300;
 }
 
 .error {
@@ -916,22 +916,22 @@ li.active a, li.active a:hover {
 }
 
 .jpayment.jpayment2 :-moz-placeholder { /* Firefox 18- */
-    color: #dee1e5;  
+    color: #dee1e5;
     font-weight: 300;
 }
 
 .jpayment.jpayment2 ::-moz-placeholder {  /* Firefox 19+ */
-    color: #dee1e5; 
+    color: #dee1e5;
     font-weight: 300;
 }
 
-.jpayment.jpayment2 :-ms-input-placeholder {  
-    color: #dee1e5;  
+.jpayment.jpayment2 :-ms-input-placeholder {
+    color: #dee1e5;
     font-weight: 300;
 }
 
 .col-xs-6.special-col6{
-    padding-right: 0; 
+    padding-right: 0;
 }
 
 .jpayment input[type="text"]{
@@ -943,4 +943,32 @@ li.active a, li.active a:hover {
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
+}
+
+/*SCHEME BLUE*/
+.scheme-blue .logo{
+    background-image: url("../images/blue-scheme/logo-geoposition.png");
+    width: 210px;
+    height: 70px;
+}
+.scheme-blue .register input[type="text"],
+.scheme-blue .register input[type="submit"]{
+    background-color: #3498db;
+}
+.scheme-blue .steps{
+    background-color: #3498db;
+}
+.scheme-blue .btn-full{
+    background-image: url(../images/blue-scheme/ico-fs.png);
+}
+.scheme-blue .bg-lock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/blue-scheme/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
