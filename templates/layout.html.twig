@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="{{ app.request_stack.masterRequest.get('_host') == 'geopositioningservices.com' ? 'scheme-blue' : 'scheme-red' }}">
+<html class="{{ app.request_stack.masterRequest.HttpHost == 'geopositioningservices.com' ? 'scheme-blue' : 'scheme-red' }}">
     <head>
-        <title>{% block title 'GeoSignal' %} - {%trans%}Localizador de Móviles{% endtrans %}</title>
+        <title>{% block title app.request_stack.masterRequest.HttpHost == 'geopositioningservices.com' ? 'Gepositioning':'Geosignal' %} - {%trans%}Localizador de Móviles{% endtrans %}</title>
 
         <link href="{{ asset('bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ asset('fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
