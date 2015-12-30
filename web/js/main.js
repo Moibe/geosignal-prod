@@ -46,7 +46,7 @@ $(document).ready(function() {
         $("html").addClass('mobile');
     }
 
-    if ($('body').hasClass('homepage')) {
+    if ($('body').hasClass('homepage') || $('body').hasClass('GET_lang')) {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
