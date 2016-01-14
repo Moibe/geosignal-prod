@@ -1,0 +1,11 @@
+{% extends 'GeosignalWebBundle::base.html.twig' %}
+{% block content %}
+    <div id="map-canvas"></div>
+    {% include 'GeosignalWebBundle:Main:videos.html.twig' %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
+
+{% block url_home %}
+    {{path('alt')}}
+{% endblock %}

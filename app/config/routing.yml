@@ -1,0 +1,4 @@
+geosignal_web:
+    resource: "@GeosignalWebBundle/Controller/"
+    type:     annotation
+    prefix:   /

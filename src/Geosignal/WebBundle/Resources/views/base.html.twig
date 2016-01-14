@@ -1,0 +1,55 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    {% stylesheets
+    "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
+    "bundles/geosignalweb/bootstrap/css/bootstrap.css"
+    "bundles/geosignalweb/zetter/css/zetter.css"
+    "bundles/geosignalweb/bxslider/jquery.bxslider.css"
+    "bundles/geosignalweb/fancybox/jquery.fancybox.css"
+    "bundles/geosignalweb/css/style.css"
+    "bundles/geosignalweb/css/mediaqueries.css"
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+{% block content %}
+
+    {% include 'GeosignalWebBundle:Default:header.html.twig' %}
+
+    {% block body %}
+    {% endblock %}
+
+    <div class="bg-lock"></div>
+
+    {% include 'GeosignalWebBundle:Default:footer.html.twig' %}
+
+    {% block remarketing %}
+
+    {% endblock %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+    {% javascripts
+    "@GeosignalWebBundle/Resources/public/js/jquery-1.11.3.min.js"
+    "@GeosignalWebBundle/Resources/public/js/jquery.cookie.js"
+    "@GeosignalWebBundle/Resources/public/bootstrap/js/bootstrap.min.js"
+    "@GeosignalWebBundle/Resources/public/bxslider/jquery.bxslider.min.js"
+    "@GeosignalWebBundle/Resources/public/fancybox/jquery.fancybox.pack.js"
+    "@GeosignalWebBundle/Resources/public/fancybox/helpers/jquery.fancybox-thumbs.js"
+    "@GeosignalWebBundle/Resources/public/js/bowser.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/jquery.validate.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/additional-methods.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/localization/messages_es.min.js"
+    "@GeosignalWebBundle/Resources/public/js/jquery-ui.js"
+    "@GeosignalWebBundle/Resources/public/js/main.js"
+    %}
+    <script src="{{ asset_url }}"></script>
+
+    {% endjavascripts %}
+    <!--[if lt IE 9]>
+          <script src="html5shiv/html5shiv.min.js"></script>
+          <script src="respond/respond.min.js"></script>
+    <![endif]-->
+{% endblock %}

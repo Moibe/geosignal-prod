@@ -1,0 +1,15 @@
+{% extends 'GeosignalWebBundle::base.html.twig' %}
+{% block body %}
+    <div id="map-canvas"></div>
+    {% include 'GeosignalWebBundle:Main:payment.html.twig' %}
+    {% include 'GeosignalWebBundle:Main:payment_selector.html.twig' %}
+    {% include 'GeosignalWebBundle:Main:register.html.twig' %}
+    {% include 'GeosignalWebBundle:Main:pay_pal.html.twig' %}
+    
+    <script type="text/javascript">
+        {#var mapOptions = {
+            center: {lat: {{producto.map[0]}}, lng: {{producto.map[1]}}},
+            zoom: {{producto.map[2]}}
+        };#}
+    </script>
+{% endblock %}
