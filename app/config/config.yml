@@ -81,5 +81,5 @@ swiftmailer:
     
 jms_i18n_routing:
     default_locale: es
-    locales: [es_ES,es_MX,es_US,en_US,en_GB,it,de,fr,nl,pt,en,es]
+    locales: [es,de,en,fr,it,nl,pt,eu,asia,in,uk]
     strategy: prefix
