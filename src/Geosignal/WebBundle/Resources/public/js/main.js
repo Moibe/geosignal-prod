@@ -12,7 +12,7 @@ var kmRadius1 = {'min': 5, 'max': 10};
 var kmRadius2 = {'min': 0.5, 'max': 1};
 var last_point;
 var height = 450;
-var primary_domain = "http://geosignal.services/";
+var primary_domain = "https://geosignalservices.com/";
 
 if (bowser.mobile) {
     height = 700;
