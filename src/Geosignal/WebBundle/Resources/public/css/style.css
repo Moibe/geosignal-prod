@@ -37,6 +37,7 @@ html, body {
 body {
     font-size: 0;
     background-color: transparent;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 h1{
     font-size: 4.6rem;

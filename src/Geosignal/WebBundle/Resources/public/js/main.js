@@ -50,22 +50,6 @@ $(document).ready(function () {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
 
-    if ($('body').hasClass('result')) {
-        window.onbeforeunload = function (evt) {
-            var message = 'Está a punto de abandonar la localización actual, si continúa perderá la información obtenida y deberá realizar otro pago en caso de querer hacer otra localización';
-            if (typeof evt == 'undefined') {
-                evt = window.event;
-            }
-            if (evt) {
-                evt.returnValue = message;
-            }
-
-            return message;
-        }
-    }
-
-
-
     if ($('body').hasClass('alt')) {
         var e = {
             'width': 820,

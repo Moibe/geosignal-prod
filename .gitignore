@@ -10,4 +10,3 @@
 /vendor/
 /web/bundles/
 /tmp/sessions/*
-/var/cache/*
