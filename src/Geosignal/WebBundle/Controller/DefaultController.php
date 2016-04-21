@@ -21,15 +21,10 @@ class DefaultController extends Controller {
      * @Route("/output-success", name="result")
      * @Template("GeosignalWebBundle::result.html.twig")
      */
-
-
- 
-		public function resultAction() {
-		    //   return $_COOKIE['result_showed'] == "false" && isset($_COOKIE['user_latitude']) && isset($_COOKIE['user_longitude']) ? array() : $this->redirect($this->generateUrl('homepage'));
-		 return array();
-	}
-	
-
- 
+    public function resultAction(Request $request) {
+        $cookies = $request->cookies;
+        $location = array($cookies->get('cookie_user_result_latitude'), $cookies->get('cookie_user_result_longitude'));
+        return array('resultado' => $location);
+    }
 
 }
