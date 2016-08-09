@@ -2,4 +2,4 @@ geosignal_web:
     resource: "@GeosignalWebBundle/Controller/"
     type:     annotation
     prefix:   /
-    schemes:  [%httpProtocol%]   
+    schemes:  [https]   
