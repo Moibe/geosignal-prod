@@ -16998,7 +16998,7 @@ var kmRadius1 = {'min': 5, 'max': 10};
 var kmRadius2 = {'min': 0.5, 'max': 1};
 var last_point;
 var height = 450;
-var primary_domain = "http://geosignal.services/";
+var primary_domain = "https://geopositioningservices.com/";
 
 if (bowser.mobile) {
     height = 700;
@@ -17035,22 +17035,6 @@ $(document).ready(function () {
     if ($('body').hasClass('homepage') || $('body').hasClass('GET_lang')) {
         doStart($('#mainContent'), showButton, labels, label_submit);
     }
-
-    if ($('body').hasClass('result')) {
-        window.onbeforeunload = function (evt) {
-            var message = 'Está a punto de abandonar la localización actual, si continúa perderá la información obtenida y deberá realizar otro pago en caso de querer hacer otra localización';
-            if (typeof evt == 'undefined') {
-                evt = window.event;
-            }
-            if (evt) {
-                evt.returnValue = message;
-            }
-
-            return message;
-        }
-    }
-
-
 
     if ($('body').hasClass('alt')) {
         var e = {
@@ -17298,7 +17282,7 @@ function initialize() {
             mapOptions);
 
     if ($('body').hasClass('result')) {
-        google.maps.event.addListenerOnce(map, 'idle', showResult);
+        google.maps.event.addListenerOnce(map, 'idle', showFinalResult);
         $.cookie("result_showed", true, {path: '/'});
     }
 
@@ -17424,6 +17408,8 @@ function createMarker(coord, current) {
         });
         markers.push(marker);
     }
+    $.cookie('cookie_user_result_latitude', last_point.lat(), {expires: 7, path: '/'});
+    $.cookie('cookie_user_result_longitude', last_point.lng(), {expires: 7, path: '/'});
 
     addRadious(Math.random() * (kmRadius2.max - kmRadius2.min) + kmRadius2.min, 10, last_point, '#FFF68F');
 }
@@ -17481,6 +17467,45 @@ function showError(element, errorClass, validClass) {
     });
 }
 
+function showFinalResult() {
+    var lt = new google.maps.LatLng(user_result_latitude, user_result_longitude);
+
+    map.panTo(lt);
+    doMarker(lt);
+}
+
+
+function showResult() {
+
+
+    var latitude = $.cookie('user_latitude');
+    var longitude = $.cookie('user_longitude');
+    var lt = new google.maps.LatLng(latitude, longitude);
+
+    map.panTo(lt);
+    createMarker(lt);
+
+}
+
+function doMarker(coord) {
+    var pos = new google.maps.LatLng(coord.lat(), coord.lng());
+
+
+
+    var iconFile = primary_domain + 'images/ico-cel.png';
+           
+
+    var marker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            icon: iconFile
+        });
+    markers.push(marker);
+
+
+    addRadious(Math.random() * (kmRadius2.max - kmRadius2.min) + kmRadius2.min, 10, pos, '#FFF68F');
+
+}
 
 function closeLoader() {
     $('.p-loader').fadeOut();
@@ -17495,4 +17520,4 @@ jQuery.validator.addMethod("internationalPhone", function (value, element) {
 
 $(function () {
     $("#tabs").tabs();
-});
+});c
