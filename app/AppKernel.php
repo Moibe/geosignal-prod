@@ -22,7 +22,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Geosignal\WebBundle\GeosignalWebBundle(),
-            new JMS\I18nRoutingBundle\JMSI18nRoutingBundle()
+            new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            new FOS\UserBundle\FOSUserBundle(),   
+            new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
