@@ -52,14 +52,12 @@ class Product {
      */
     private $currency;
 
-
     /**
      * Get id
      *
      * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -70,8 +68,7 @@ class Product {
      *
      * @return Product
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -82,8 +79,7 @@ class Product {
      *
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -94,8 +90,7 @@ class Product {
      *
      * @return Product
      */
-    public function setPrice($price)
-    {
+    public function setPrice($price) {
         $this->price = $price;
 
         return $this;
@@ -106,8 +101,7 @@ class Product {
      *
      * @return float
      */
-    public function getPrice()
-    {
+    public function getPrice() {
         return $this->price;
     }
 
@@ -118,8 +112,7 @@ class Product {
      *
      * @return Product
      */
-    public function setLocale($locale)
-    {
+    public function setLocale($locale) {
         $this->locale = $locale;
 
         return $this;
@@ -130,8 +123,7 @@ class Product {
      *
      * @return string
      */
-    public function getLocale()
-    {
+    public function getLocale() {
         return $this->locale;
     }
 
@@ -142,8 +134,7 @@ class Product {
      *
      * @return Product
      */
-    public function setCurrency(\Geosignal\WebBundle\Entity\Currency $currency = null)
-    {
+    public function setCurrency(\Geosignal\WebBundle\Entity\Currency $currency = null) {
         $this->currency = $currency;
 
         return $this;
@@ -154,8 +145,12 @@ class Product {
      *
      * @return \Geosignal\WebBundle\Entity\Currency
      */
-    public function getCurrency()
-    {
+    public function getCurrency() {
         return $this->currency;
     }
+
+    public function __tostring() {
+        return $this->getName();
+    }
+
 }

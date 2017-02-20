@@ -36,6 +36,9 @@
 <body class="{{ app.request.attributes.get('_route') }}">
     {% block content %}
     {% endblock %}
+    <script type="text/javascript">
+    var conekta_public_key = "{{ conekta_api_public_key }}";
+</script>
     {% block javascripts %}
     {% endblock %}
 </body>

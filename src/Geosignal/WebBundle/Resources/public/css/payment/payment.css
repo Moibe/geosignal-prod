@@ -1,0 +1,216 @@
+
+#showForm{
+    min-height: 100%;
+    background-color: #e8e8e8;
+}
+.payment-wrap{
+    background-color: #e8e8e8;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+.payment-header-wrap{
+    background-color: #33528e;
+    color: #fff;
+    padding: .2%;
+}
+
+.step-list-wrap li{
+    color: #fff;
+}
+
+.ico-lock{
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 32px;
+    margin-right: 1%;
+    margin-left: 2%;
+    background-image: url("../images/template/ico-lock.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.payment-header-wrap h3{
+    display: inline-block;
+    margin: 0 1%;
+    vertical-align: middle;
+}
+.payment-steps-wrap{
+    width: 480px;
+    display: inline-block;
+    margin: 0 1% 0 10%;
+    vertical-align: middle;
+}
+@media (max-device-width : 736px){
+    .payment-steps-wrap{
+        width: 98%;
+        margin: 0 1%;
+    }
+}
+.payment-header-wrap ul{
+    display: block;
+}
+.payment-header-wrap ul li{
+    display: inline-block;
+    width: 100px;
+    margin-right: 90px;
+    font-size: 1.2rem;
+}
+@media (max-device-width : 736px){
+    .payment-header-wrap ul li{
+        width: 33%;
+        margin: 1% 0;
+    }
+}
+.payment-header-wrap ul li:first-child{
+    padding-left: 10px;
+}
+.payment-header-wrap ul li:last-child{
+    margin-right: 0;
+}
+
+
+.payment-step-1 .payment-steps-wrap span{background-image: url("../images/template/s-1.png");}
+.payment-step-2 .payment-steps-wrap span{background-image: url("../images/template/s-2.png");}
+.payment-step-3 .payment-steps-wrap span{background-image: url("../images/template/s-3.png");}
+
+.payment-steps-wrap span{
+    width: 441px;
+    height: 21px;
+    display: block;
+    margin: 10px auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+@media (max-device-width : 736px){
+    .payment-steps-wrap span{
+        width: 100%;
+        background-size: 100%;
+    }
+}
+
+
+.payment-content-wrap input[type="text"]{
+    background-color: #fff;
+    color: #999999;
+}
+
+.payment-error-text{
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.payment-content-wrap legend{
+    margin-bottom: 15px;
+}
+.payment-content-wrap .btn-red,.payment-content-wrap .btn-green{
+    width: 35%;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4%;
+}
+.btn-block{
+    display: block !important;
+    margin: 4% auto !important;
+}
+.w-80p{
+    width: 80%;
+    margin: 5% auto 0;
+}
+.w-50p{
+    width: 50%;
+    margin: 5% auto 0;
+}
+.step3 .w-50p{
+    margin-top: 0;
+}
+.bg-solid{
+    padding: 5%;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+.logo-pago-facil{
+    background-image: url("../images/template/logo-pago-facil.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 187px;
+    height: 105px;
+    display: block;
+    margin: 5% auto;
+}
+
+.mb-25-childs > div{
+    margin-bottom: 25px;
+}
+.btn-red.reduce-padding{
+    padding: 1%;
+}
+
+
+.ta-center {
+    text-align: center !important;
+}
+
+.ta-right {
+    text-align: right !important;
+}
+
+input[type="text"], textarea {
+    background-color: #dbdbdb;
+    border: medium none;
+    color: #999999;
+    display: block;
+    font-size: 1.4rem;
+    margin: 3% auto 0;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+
+@media (max-width:768px) {
+
+    #steps-dk{
+        display: none !important;
+    }
+
+    .steps-mb{
+        display: block !important;
+        width: 33.33333333%;
+        padding-left: 10px;
+        padding-right: 10px;
+        float: left;
+    }
+
+    .payment-content-wrap .grid-6-12{
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer-content.w-site .grid-3-12.ta-center.grid-xs-12-12{
+        margin-top: 1%;
+    }
+
+    .footer-content.w-site .grid-3-12{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-wrap{
+        margin-top: 0;
+    }
+
+    .payment-content-wrap li{
+        text-align: center;
+    }
+}
+
+
+.card-errors{
+    color: #ff2626;
+}

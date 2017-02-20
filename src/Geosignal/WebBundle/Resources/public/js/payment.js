@@ -1,21 +1,6 @@
 
 $(document).ready(function () {
 
-if(locale_path === "br"){
-    locale_path = 'pt';
-}
-
-    if (locale_path !== "uk") {
-        $.ajaxSetup({cache: true});
-        $.getScript('/bundles/celltrackweb/validate/localization/messages_' + locale_path + '.js');
-    }
-    ga('send', {
-        hitType: 'event',
-        eventCategory: 'Acción',
-        eventAction: 'LLego a payment',
-        eventLabel: 'payment'
-    });
-
 
     Conekta.setPublishableKey(conekta_public_key);
 

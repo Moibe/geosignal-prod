@@ -13,16 +13,16 @@
     {% endstylesheets %}
 {% endblock %}
 {% block content %}
-
+  {% block header %}
     {% include 'GeosignalWebBundle:Default:header.html.twig' %}
-
+ {% endblock %}
     {% block body %}
     {% endblock %}
 
     <div class="bg-lock"></div>
-
-    {% include 'GeosignalWebBundle:Default:footer.html.twig' %}
-
+    {% block footer %}
+        {% include 'GeosignalWebBundle:Default:footer.html.twig' %}
+    {% endblock %}
     {% block remarketing %}
 
     {% endblock %}

@@ -1,117 +1,123 @@
 {% extends 'GeosignalWebBundle::base.html.twig' %}
+{% block stylesheets %}
+    {% stylesheets
+    "https://fonts.googleapis.com/css?family=Titillium+Web:400,700,600,200"
+    "bundles/geosignalweb/css/payment/reset.css"
+    "bundles/geosignalweb/css/payment/jquery-ui.min.css"
+    "bundles/geosignalweb/css/payment/style.css"
+    "bundles/geosignalweb/fancybox/jquery.fancybox.css"
+    "bundles/geosignalweb/css/payment/mediaqueries.css"
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
 {% block body %}
-    adsadsd
     <div id="showForm" >
         <div class='payment-wrap payment-step-1'>
             <div class='payment-header-wrap'>
                 <span class='ico-lock'></span>
-                <h3>{%trans%}Transacción Segura{%endtrans%}</h3>
+                <h1>{%trans%}Transacción Segura{% endtrans %}</h1>
                 <div class='payment-steps-wrap'>
                     <span class='step-wrap'></span>
-                    <ul class='step-list-wrap'>
-                        <li>{%trans%}Cliente{%endtrans%}</li>
-                        <li class='ta-center'>{%trans%}Pago{%endtrans%}</li>
-                        <li class='ta-right'>{%trans%}Completado{%endtrans%}</li>
+                    <ul id="steps-dk" class='step-list-wrap'>
+                        <li>{%trans%}Cliente{% endtrans %}</li>
+                        <li class='ta-center'>{%trans%}Pago{% endtrans %}</li>
+                        <li class='ta-right'>{%trans%}Completado{% endtrans %}</li>
                     </ul>
+                    <div class="steps-mb" style="display:none;text-align:left;">
+                        <p>{%trans%}Cliente{% endtrans %}</p>
+                    </div>
+                    <div class="steps-mb" style="display:none;text-align:center;">
+                        <p>{%trans%}Pago{% endtrans %}</p>
+                    </div>
+                    <div class="steps-mb" style="display:none;text-align:right;">
+                        <p>{%trans%}Completado{% endtrans %}</p>
+                    </div>
                 </div>
             </div>
             <div class='payment-content-wrap'>
-                <div class='grid-6-12 col-sm-push-12'>
+                <div class='grid-6-12 col-sm-push-6'>
                     <div class='w-80p'>
-                        <h3>{% trans %}Detalles sobre su Orden{% endtrans %}:</h3>
+                        <h1>{%trans%}Detalles sobre su Orden{% endtrans %}:</h1>
                         <div class='bg-solid bg-white mb-25-childs'>
-                            <div class='grid-6-12'><p>{% trans %}Producto{% endtrans %}:</p></div><div class='grid-6-12'><p>{%trans %}GPS Localization{% endtrans %}</p></div>
-                            <div class='grid-6-12'><p>{% trans %}Total{% endtrans %}:</p></div><div class='grid-6-12'><p>{{producto.currency.symbol}}{{producto.price|number_format(2, '.', ',')}} {{producto.currency.code}}</p></div>
+                            <div class='grid-6-12'><p>{%trans%}Nombre{% endtrans %}:</p></div><div class='grid-6-12'><p>{{producto.name}}</p></div>
+                            <div class='grid-6-12'><p>{%trans%}Total{% endtrans %}</p></div><div class='grid-6-12'><p>{{producto.currency.symbol}}{{producto.price|number_format(2, '.', ',')}} {{producto.currency.code}}</p></div>
                         </div>
                     </div>
                 </div>
-                <div class='grid-6-12 col-sm-pull-12'>
+                <div class='grid-6-12 col-sm-pull-6'>
                     <p class="payment-error-text">{{errores ? errores.error:''}}</p>
                     <form id="myCCForm" method="post" action="" class="w-80p">
                         <div class="step1">
                             <fieldset>
-                                <legend>{% trans %}Los campos señalados con * son obligatorios{%endtrans%}</legend>
-                                <input type='text' class="required" name="card-name" data-conekta="card[name]" placeholder='{% trans %}Nombre*{% endtrans %}' />
-                                <textarea style="background-color: #ffffff;" class="required" placeholder='{% trans %}Dirección*{% endtrans %}' name='address' data-conekta="card[address][street1]"></textarea>
-                                <input type='text' class="required" name='city' placeholder='{% trans %}Ciudad*{% endtrans %}' data-conekta="card[address][city]" />
-                                <input type='text' class="required" name='zipCode' placeholder='{% trans %}C.P*{% endtrans %}' data-conekta="card[address][zip]" />
-                                <input type="hidden" name="country" value="{% trans %}México{% endtrans %}" data-conekta="card[address][country]" />
-                                <input type='text' class="required email" name='email' placeholder='{% trans %}Email*{%endtrans%}' />
-                                <input type='text' class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='phone' placeholder='{% trans %}Teléfono*{%endtrans%}' />
+                                <legend>{%trans%}Los campos señalados con * son obligatorios{% endtrans %}</legend>
+                                <input type='text' class="required" name="card-name" data-conekta="card[name]" placeholder='{%trans%}Nombre{% endtrans %}*' />
+                                <textarea style="background-color: #ffffff;" class="required" placeholder='{%trans%}Dirección{% endtrans %}*' name='address' data-conekta="card[address][street1]"></textarea>
+                                <input type='text' class="required" name='city' placeholder='{%trans%}Ciudad{% endtrans %}*' data-conekta="card[address][city]" />
+                                <input type='text' class="required" name='state' placeholder='{%trans%}Estado{% endtrans %}*' data-conekta="card[address][state]" />
+                                <input type='text' class="required" name='zipCode' placeholder='{%trans%}C.P{% endtrans %}*' data-conekta="card[address][zip]" />
+                                <input type="hidden" name="country" value="México" data-conekta="card[address][country]" />
+                                <input type='text' class="required email" name='email' placeholder='{%trans%}Email{% endtrans %}*' />
+                                <input type='text' class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='phone' placeholder='{%trans%}Teléfono{% endtrans %}*' />
                             </fieldset>
-                            <input type='button' value='{%trans%}Continuar{%endtrans%}' class='btn-red btn-payment-step-forward btn-block submit' />
+                            <input type='button' value='{%trans%}Continuar{% endtrans %}' class='btn-red btn-payment-step-forward btn-block submit' />
                         </div>
 
                         <div class="step2 hidden">
                             <fieldset>
                                 <input name="token" type="hidden" value="" />
-                                <legend>{% trans %}Los campos señalados con * son obligatorios{%endtrans%}</legend>
-                                <p class="card-errors error"></p>
-                                <input id="ccNo" value="" autocomplete="off" required type='text' data-conekta="card[number]" class="required creditcard" placeholder='{% trans %}Número de tarjeta*{% endtrans %}' />
-                                <p style="margin-top:10px">{% trans %}Fecha de expiración{% endtrans %}</p>
-                                <select name="" id="expMonth" style="padding: .6rem;font-size:1.4rem;width:45%;display:inline;margin-right: 5%;"  data-conekta="card[exp_month]">
-                                    <option>{% trans %}MM*{% endtrans %}</option>
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                    <select name="" id="expYear" style="padding: .6rem;font-size: 1.4rem;width:50%;display:inline;"  data-conekta="card[exp_year]">
-                                    <option>{% trans %}AA*{% endtrans %}</option>
-                                    {% for i in "now"|date('Y') .. "now"|date('Y')+20  %}
-                                    <option value="{{i}}">{{i}}</option>
-                                    {% endfor %}
-                                </select>
-                                <input id="cvv" type="text" class="cvc" value="" autocomplete="off" data-conekta="card[cvc]" required placeholder="{% trans %}CV{% endtrans %}" />
+                                <legend>{%trans%}Los campos señalados con * son obligatorios{% endtrans %}</legend>
+                                <input id="ccNo" value="" autocomplete="off" required type='text' data-conekta="card[number]" class="required" placeholder='{%trans%}Número de tarjeta{% endtrans %}*' />
+                                <p>Fecha de expiración</p>
+                                <input id="expMonth" style="width:45%;display:inline;margin-right: 5%;" type="text" data-conekta="card[exp_month]" size="2" required placeholder="MM" />
+                                <input id="expYear" style="width:50%;display:inline" type="text" data-conekta="card[exp_year]" size="4" required  required placeholder="{%trans%}AAAA{% endtrans %}" />
+                                <input id="cvv" type="text" value="" autocomplete="off" data-conekta="card[cvc]" required placeholder="CV" />
                             </fieldset>
-                            <input type='submit' value='{% trans %}Continuar{% endtrans %}' id="pay-button" class='submit btn-red btn-block' />
+                            <input type='submit' value='Continuar' id="pay-button" class='submit btn-red btn-block' />
                         </div>
                     </form>
                 </div>
 
+
+
                 <div class='hidden step3'>
                     <div class='resume-wrap bg-solid bg-whit'>
                         <div class='w-50p'>
-                            <h1>¡Gracias!</h1>
-                            <p>Tu pago fue exitoso</p>
-                            <p>Producto: {{producto.name}}</p>
-                            <p>Total: {{producto.currency.symbol}}{{producto.price|number_format(2, '.', ',')}} {{producto.currency.code}}</p>
-                            <p>Nos comunicaremos contigo a la brevedad</p>
-                            <p>Cualquier duda o comentario escribe a support@geosignal.com</p>
-                            <a href='{{path('homepage')}}' class='btn-red reduce-padding'>Finalizar</a>
+                            <h1>{%trans%}¡Gracias!{% endtrans %}</h1>
+                            <p>{%trans%}Tu pago fue exitoso{% endtrans %}</p>
+                            <p>{%trans%}Producto{% endtrans %}: {{producto.name}}</p>
+                            <p>{%trans%}Total{% endtrans %}: {{producto.currency.symbol}}{{producto.price|number_format(2, '.', ',')}} {{producto.currency.code}}</p>
+                            <p>{%trans%}Nos comunicaremos contigo a la brevedad{% endtrans %}</p>
+                            <p>{%trans%}Cualquier duda o comentario escribe a{% endtrans %} support@one2one-services.com</p>
+                            <a href='{{path('homepage')}}' class='btn-red reduce-padding'>{%trans%}Finalizar{% endtrans %}</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block header %}
 {% endblock %}
 
 {% block javascripts %}
-    {{parent()}}
     {% javascripts
+    "@GeosignalWebBundle/Resources/public/js/jquery-1.11.3.min.js"
+    "@GeosignalWebBundle/Resources/public/js/jquery.cookie.js"
+    "@GeosignalWebBundle/Resources/public/bootstrap/js/bootstrap.min.js"
+    "@GeosignalWebBundle/Resources/public/bxslider/jquery.bxslider.min.js"
+    "@GeosignalWebBundle/Resources/public/fancybox/jquery.fancybox.pack.js"
+    "@GeosignalWebBundle/Resources/public/fancybox/helpers/jquery.fancybox-thumbs.js"
+    "@GeosignalWebBundle/Resources/public/js/bowser.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/jquery.validate.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/additional-methods.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/localization/messages_es.min.js"
+    "@GeosignalWebBundle/Resources/public/js/jquery-ui.js"
     "https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"
     "@GeosignalWebBundle/Resources/public/js/payment.js"
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
-{% endblock %}
-
-{% block stylesheets %}
-    {{parent()}}
-    {% stylesheets
-    "bundles/ssweb/css/payment.css"
-    filter='cssrewrite' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
 {% endblock %}

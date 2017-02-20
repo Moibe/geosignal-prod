@@ -203,4 +203,9 @@ class Currency {
     {
         return $this->code;
     }
+    
+    
+    public function __tostring(){
+        return $this->getName();
+    }
 }
