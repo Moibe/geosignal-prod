@@ -8,6 +8,7 @@ class AppKernel extends Kernel
       public function init() {
         date_default_timezone_set('America/Mexico_City');
         parent::init();
+        error_reporting(E_ALL);
     }
     
     public function registerBundles()
@@ -25,6 +26,7 @@ class AppKernel extends Kernel
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
             new FOS\UserBundle\FOSUserBundle(),   
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Artesanus\ConektaBundle\ConektaBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

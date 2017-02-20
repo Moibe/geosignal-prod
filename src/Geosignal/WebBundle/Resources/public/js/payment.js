@@ -32,13 +32,6 @@ $(document).ready(function () {
                         $('.payment-wrap').removeClass('payment-step-1');
                         $('.payment-wrap').addClass('payment-step-2');
 
-                        ga('send', {
-                            hitType: 'event',
-                            eventCategory: 'Acción',
-                            eventAction: 'Avanzo al paso 2 de payment',
-                            eventLabel: 'payment'
-                        });
-
 
 
                     } else {
@@ -50,13 +43,7 @@ $(document).ready(function () {
                         $('.payment-wrap').addClass('payment-step-1');
                     }
                 } else {
-                    ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'Acción',
-                        eventAction: 'Hay errores en el formulario',
-                        eventLabel: 'payment'
-                    });
-
+                 
                     if (!$('.payment-wrap').find('.step1').is(':visible')) {
                         var current_step = $(this).parents('.step2');
                         current_step.fadeOut('fast', function () {
@@ -77,12 +64,7 @@ $(document).ready(function () {
             var $form = $(this);
             window.onbeforeunload = null;
 
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'Acción',
-                eventAction: 'Intento generar token de tarjeta',
-                eventLabel: 'payment'
-            });
+          
 
             $form.find("#pay-button").prop("disabled", true);
             Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
@@ -101,12 +83,7 @@ $(document).ready(function () {
         console.log("Token de la tarjeta, generado");
         $form.get(0).submit();
 
-        ga('send', {
-            hitType: 'event',
-            eventCategory: 'Acción',
-            eventAction: 'Genere token de tarjeta',
-            eventLabel: 'payment'
-        });
+       
     };
 
     var conektaErrorResponseHandler = function (response) {
@@ -116,12 +93,7 @@ $(document).ready(function () {
         $form.find(".card-errors").text(response.message);
         $form.find("#pay-button").prop("disabled", false);
 
-        ga('send', {
-            hitType: 'event',
-            eventCategory: 'Error',
-            eventAction: response.message,
-            eventLabel: 'payment'
-        });
+     
     };
 
 

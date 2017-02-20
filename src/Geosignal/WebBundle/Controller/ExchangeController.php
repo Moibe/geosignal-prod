@@ -31,45 +31,62 @@ class ExchangeController extends \Symfony\Bundle\FrameworkBundle\Controller\Cont
         $errores = null;
         if ($request->getMethod() == 'POST') {
 
-            \Conekta::setApiKey($this->container->getParameter('conekta_api_private_key'));
+            $conekta = $this->get('conekta');
 
             try {
-                $charge = \Conekta_Charge::create(array(
-                            'description' => $producto->getName(),
-                            'reference_id' => $producto->getName() . ' ' . $producto->getId(),
-                            'amount' => $producto->getPrice() * 100,
-                            'currency' => $producto->getLocale() != "es_MX" ? 'USD' : 'MXN',
-                            'card' => $request->get('conektaTokenId'),
-                            'details' => array(
-                                'name' => $request->get('card-name'),
-                                'phone' => $request->get('phone'),
-                                'email' => $request->get('email'),
-                                'line_items' => array(
-                                    array(
-                                        'name' => $producto->getName(),
-                                        'description' => $producto->getName(),
-                                        'unit_price' => $producto->getPrice() * 100,
-                                        'quantity' => 1,
-                                        'sku' => $producto->getId(),
-                                        'type' => 'service'
-                                    )
-                                ),
-                                'billing_address' => array(
-                                    'street1' => $request->get('address'),
-                                    'street2' => null,
-                                    'street3' => null,
-                                    'city' => $request->get('city'),
-                                    'state' => $request->get('city'),
-                                    'zip' => $request->get('zipCode'),
-                                    'country' => $request->get('country'),
-                                    'phone' => $request->get('phone'),
-                                    'email' => $request->get('email')
-                                )
+                $charge = $conekta->charge(array(
+                    'description' => $producto->getName(),
+                    'reference_id' => $producto->getName() . ' ' . $producto->getId(),
+                    'amount' => $producto->getPrice() * 100,
+                    'currency' => $producto->getLocale() != "es_MX" ? 'USD' : 'MXN',
+                    'card' => $request->get('conektaTokenId'),
+                    'details' => array(
+                        'name' => $request->get('card-name'),
+                        'phone' => $request->get('phone'),
+                        'email' => $request->get('email'),
+                        'line_items' => array(
+                            array(
+                                'name' => $producto->getName(),
+                                'description' => $producto->getName(),
+                                'unit_price' => $producto->getPrice() * 100,
+                                'quantity' => 1,
+                                'sku' => $producto->getId(),
+                                'type' => 'service'
                             )
+                        ),
+                        'billing_address' => array(
+                            'street1' => $request->get('address'),
+                            'street2' => null,
+                            'street3' => null,
+                            'city' => $request->get('city'),
+                            'state' => $request->get('city'),
+                            'zip' => $request->get('zipCode'),
+                            'country' => $request->get('country'),
+                            'phone' => $request->get('phone'),
+                            'email' => $request->get('email')
+                        ),
+                        'shipment' =>
+                        array(
+                            "carrier" => "geosignal",
+                            "service" => "tracking",
+                            "price" => $producto->getPrice() * 100,
+                            'address' => array(
+                                'street1' => $request->get('address'),
+                                'street2' => null,
+                                'street3' => null,
+                                'city' => $request->get('city'),
+                                'state' => $request->get('city'),
+                                'zip' => $request->get('zipCode'),
+                                'country' => $request->get('country'),
+                                'phone' => $request->get('phone'),
+                                'email' => $request->get('email')
+                            )
+                        )
+                    )
                 ));
 
 
-                return $this->redirect($this->generateUrl('generate_result'));
+                return $this->redirect($this->generateUrl('result'));
             } catch (\Conekta_Error $e) {
                 $errores = array(
                     'error' => $e->message_to_purchaser
@@ -94,6 +111,5 @@ class ExchangeController extends \Symfony\Bundle\FrameworkBundle\Controller\Cont
 
         return array('producto' => $producto);
     }
-
 
 }

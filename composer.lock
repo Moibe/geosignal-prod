@@ -4,12 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "15b8f58fee466666e0fdbcde45a4dbc6",
-    "content-hash": "f42d605d0e1ae876df0d8ca1a571fc6f",
+    "hash": "a351789f72c49d516e4ef3d25e9f003b",
+    "content-hash": "b31c187437c469ac305f081065af6e52",
     "packages": [
         {
+            "name": "artesanus/conekta-bundle",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artesanus/conekta-bundle.git",
+                "reference": "f029d50f92f66252f0937119977eea5b93051d61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artesanus/conekta-bundle/zipball/f029d50f92f66252f0937119977eea5b93051d61",
+                "reference": "f029d50f92f66252f0937119977eea5b93051d61",
+                "shasum": ""
+            },
+            "require": {
+                "conekta/conekta-php": "^3.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Artesanus\\ConektaBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Angulo Nova",
+                    "email": "cristianangulonova@gmail.com",
+                    "homepage": "http://cristianangulo.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ConektaBundle",
+            "homepage": "https://www.artesan.us",
+            "keywords": [
+                "ConektaBundle",
+                "conekta",
+                "gateway",
+                "payment"
+            ],
+            "time": "2017-01-02 16:19:25"
+        },
+        {
             "name": "conekta/conekta-php",
-            "version": "dev-master",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/conekta/conekta-php.git",
@@ -2530,7 +2575,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "jms/i18n-routing-bundle": 20,
-        "conekta/conekta-php": 20,
         "hwi/oauth-bundle": 20,
         "friendsofsymfony/user-bundle": 20
     },
