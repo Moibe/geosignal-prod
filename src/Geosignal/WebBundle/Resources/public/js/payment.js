@@ -1,6 +1,16 @@
 
 $(document).ready(function () {
 
+    if (locale_path === "br") {
+        locale_path = 'pt';
+    }
+
+    if (locale_path === "uk" || locale_path === "en") {
+
+    } else {
+        $.ajaxSetup({cache: true});
+        $.getScript('/bundles/geosignalweb/validate/localization/messages_' + locale_path + '.js');
+    }
 
     Conekta.setPublishableKey(conekta_public_key);
 
@@ -43,7 +53,7 @@ $(document).ready(function () {
                         $('.payment-wrap').addClass('payment-step-1');
                     }
                 } else {
-                 
+
                     if (!$('.payment-wrap').find('.step1').is(':visible')) {
                         var current_step = $(this).parents('.step2');
                         current_step.fadeOut('fast', function () {
@@ -64,7 +74,7 @@ $(document).ready(function () {
             var $form = $(this);
             window.onbeforeunload = null;
 
-          
+
 
             $form.find("#pay-button").prop("disabled", true);
             Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
@@ -83,22 +93,22 @@ $(document).ready(function () {
         console.log("Token de la tarjeta, generado");
         $form.get(0).submit();
 
-       
+
     };
 
     var conektaErrorResponseHandler = function (response) {
         var $form = $("#myCCForm");
 
         /* Muestra los errores en la forma */
-        $form.find(".card-errors").text(response.message);
+        $form.find(".card-errors").text(response.message_to_purchaser);
         $form.find("#pay-button").prop("disabled", false);
 
-     
+
     };
 
 
     // FIN DE LA CONFIGURACIÓN DE CONEKTA
-}); 
+});
 
 $.validator.addMethod("cvc", function (value, element) {
     return this.optional(element) || /^(?!000)\d{3,4}$/.test(value);

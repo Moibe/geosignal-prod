@@ -305,7 +305,6 @@ function registrarPosicion() {
     if (registrandoPosicion) {
         registrandoPosicion = false;
         navigator.geolocation.clearWatch(idRegistroPosicion);
-        limpiarUbicacion();
     } else {
         idRegistroPosicion = navigator.geolocation.watchPosition(exitoRegistroPosicion, falloRegistroPosicion, {
             enableHighAccuracy: true,
@@ -394,7 +393,6 @@ function prevFancy() {
 
 function falloRegistroPosicion() {
     alert('No se pudo determinar la ubicación');
-    limpiarUbicacion();
 }
 
 
@@ -507,13 +505,13 @@ function doMarker(coord) {
 
 
     var iconFile = primary_domain + 'images/ico-cel.png';
-           
+
 
     var marker = new google.maps.Marker({
-            position: pos,
-            map: map,
-            icon: iconFile
-        });
+        position: pos,
+        map: map,
+        icon: iconFile
+    });
     markers.push(marker);
 
 
@@ -534,4 +532,4 @@ jQuery.validator.addMethod("internationalPhone", function (value, element) {
 
 $(function () {
     $("#tabs").tabs();
-});c
+});

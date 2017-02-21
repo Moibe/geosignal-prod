@@ -30,6 +30,9 @@
 {% endblock %}
 
 {% block javascripts %}
+    <script type="text/javascript">
+        var locale_path = "{{app.request.locale|slice(0, 2)}}";
+    </script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCixPtKsC9qK0F45BYhdIX83Z4PAI1SzAU&libraries=geometry"></script>
     {% javascripts
     "@GeosignalWebBundle/Resources/public/js/jquery-1.11.3.min.js"
@@ -41,7 +44,6 @@
     "@GeosignalWebBundle/Resources/public/js/bowser.min.js"
     "@GeosignalWebBundle/Resources/public/validate/jquery.validate.min.js"
     "@GeosignalWebBundle/Resources/public/validate/additional-methods.min.js"
-    "@GeosignalWebBundle/Resources/public/validate/localization/messages_es.min.js"
     "@GeosignalWebBundle/Resources/public/js/jquery-ui.js"
     "@GeosignalWebBundle/Resources/public/js/main.js"
     %}

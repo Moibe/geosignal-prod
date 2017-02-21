@@ -56,7 +56,7 @@
                                 <input type='text' class="required" name='city' placeholder='{%trans%}Ciudad{% endtrans %}*' data-conekta="card[address][city]" />
                                 <input type='text' class="required" name='state' placeholder='{%trans%}Estado{% endtrans %}*' data-conekta="card[address][state]" />
                                 <input type='text' class="required" name='zipCode' placeholder='{%trans%}C.P{% endtrans %}*' data-conekta="card[address][zip]" />
-                                <input type="hidden" name="country" value="México" data-conekta="card[address][country]" />
+                                <input type="text" class="required" name="country" placeholder='{%trans%}Pais{% endtrans %}*' data-conekta="card[address][country]" />
                                 <input type='text' class="required email" name='email' placeholder='{%trans%}Email{% endtrans %}*' />
                                 <input type='text' class="required" data-rule-digits="true" data-rule-minlength="7" data-rule-maxlength="10" name='phone' placeholder='{%trans%}Teléfono{% endtrans %}*' />
                             </fieldset>
@@ -67,13 +67,33 @@
                             <fieldset>
                                 <input name="token" type="hidden" value="" />
                                 <legend>{%trans%}Los campos señalados con * son obligatorios{% endtrans %}</legend>
-                                <input id="ccNo" value="" autocomplete="off" required type='text' data-conekta="card[number]" class="required" placeholder='{%trans%}Número de tarjeta{% endtrans %}*' />
-                                <p>Fecha de expiración</p>
-                                <input id="expMonth" style="width:45%;display:inline;margin-right: 5%;" type="text" data-conekta="card[exp_month]" size="2" required placeholder="MM" />
-                                <input id="expYear" style="width:50%;display:inline" type="text" data-conekta="card[exp_year]" size="4" required  required placeholder="{%trans%}AAAA{% endtrans %}" />
-                                <input id="cvv" type="text" value="" autocomplete="off" data-conekta="card[cvc]" required placeholder="CV" />
+                                <p class="card-errors error"></p>
+                                <input id="ccNo" value="" autocomplete="off" required type='text' data-conekta="card[number]" class="required creditcard" placeholder='{% trans %}Número de tarjeta*{% endtrans %}' />
+                                <p style="margin-top:10px">{% trans %}Fecha de expiración{% endtrans %}</p>
+                                <select name="" id="expMonth" style="padding: .6rem;font-size:1.4rem;width:45%;display:inline;margin-right: 5%;"  data-conekta="card[exp_month]">
+                                    <option>{% trans %}MM*{% endtrans %}</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                    <select name="" id="expYear" style="padding: .6rem;font-size: 1.4rem;width:50%;display:inline;"  data-conekta="card[exp_year]">
+                                    <option>{% trans %}AA*{% endtrans %}</option>
+                                    {% for i in "now"|date('Y') .. "now"|date('Y')+20  %}
+                                    <option value="{{i}}">{{i}}</option>
+                                    {% endfor %}
+                                </select>
+                                <input id="cvv" type="text" class="cvc" value="" autocomplete="off" data-conekta="card[cvc]" required placeholder="{% trans %}CV{% endtrans %}" />
                             </fieldset>
-                            <input type='submit' value='Continuar' id="pay-button" class='submit btn-red btn-block' />
+                            <input type='submit' value='{%trans%}Continuar{%endtrans%}' id="pay-button" class='submit btn-red btn-block' />
                         </div>
                     </form>
                 </div>
@@ -103,6 +123,9 @@
 {% endblock %}
 
 {% block javascripts %}
+    <script type="text/javascript">
+        var locale_path = "{{app.request.locale|slice(0, 2)}}";
+    </script>
     {% javascripts
     "@GeosignalWebBundle/Resources/public/js/jquery-1.11.3.min.js"
     "@GeosignalWebBundle/Resources/public/js/jquery.cookie.js"
@@ -113,7 +136,6 @@
     "@GeosignalWebBundle/Resources/public/js/bowser.min.js"
     "@GeosignalWebBundle/Resources/public/validate/jquery.validate.min.js"
     "@GeosignalWebBundle/Resources/public/validate/additional-methods.min.js"
-    "@GeosignalWebBundle/Resources/public/validate/localization/messages_es.min.js"
     "@GeosignalWebBundle/Resources/public/js/jquery-ui.js"
     "https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"
     "@GeosignalWebBundle/Resources/public/js/payment.js"
