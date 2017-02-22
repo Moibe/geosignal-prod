@@ -39,7 +39,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         conekta_api_public_key: "%conekta_api_public_key%"
-        payment_conekta: false
+        payment_conekta: true
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
