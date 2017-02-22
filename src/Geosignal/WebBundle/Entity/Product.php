@@ -152,5 +152,17 @@ class Product {
     public function __tostring() {
         return $this->getName();
     }
+    
+    public function getCharge(){
+        
+        $charge = $this->getPrice();
+        
+        if($this->getCurrency()->getCode() != "USD" || $this->getCurrency()->getCode() != "MXN"){
+            $charge = $this->getCurrency()->getRate();
+        }
+        
+        return $charge;
+        
+    }
 
 }

@@ -393,7 +393,7 @@ function prevFancy() {
 }
 
 function falloRegistroPosicion() {
-    alert('No se pudo determinar la ubicación');
+    alert('No se pudo determinar la ubicaciÃ³n');
     limpiarUbicacion();
 }
 

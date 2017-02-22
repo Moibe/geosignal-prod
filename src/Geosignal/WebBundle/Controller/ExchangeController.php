@@ -37,7 +37,7 @@ class ExchangeController extends \Symfony\Bundle\FrameworkBundle\Controller\Cont
                 $charge = $conekta->charge(array(
                     'description' => $producto->getName(),
                     'reference_id' => $producto->getName() . ' ' . $producto->getId(),
-                    'amount' => $producto->getPrice() * 100,
+                    'amount' => $producto->getCharge() * 100,
                     'currency' => $producto->getLocale() != "es_MX" ? 'USD' : 'MXN',
                     'card' => $request->get('conektaTokenId'),
                     'details' => array(
@@ -48,7 +48,7 @@ class ExchangeController extends \Symfony\Bundle\FrameworkBundle\Controller\Cont
                             array(
                                 'name' => $producto->getName(),
                                 'description' => $producto->getName(),
-                                'unit_price' => $producto->getPrice() * 100,
+                                'unit_price' => $producto->getCharge() * 100,
                                 'quantity' => 1,
                                 'sku' => $producto->getId(),
                                 'type' => 'service'
