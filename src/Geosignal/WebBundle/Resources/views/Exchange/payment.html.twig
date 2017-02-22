@@ -15,8 +15,14 @@
     <div id="showForm" >
         <div class='payment-wrap payment-step-1'>
             <div class='payment-header-wrap'>
+
+                {% image '@GeosignalWebBundle/Resources/public/images/logo.png' %}
+                <img src="{{ asset_url }}" alt="" class="logo-payment" />
+                {% endimage %}
                 <span class='ico-lock'></span>
-                <h1>{%trans%}Transacción Segura{% endtrans %}</h1>
+                <h1>
+                    {%trans%}Transacción Segura{% endtrans %}
+                </h1>
                 <div class='payment-steps-wrap'>
                     <span class='step-wrap'></span>
                     <ul id="steps-dk" class='step-list-wrap'>
@@ -85,10 +91,10 @@
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                    <select name="" id="expYear" style="padding: .6rem;font-size: 1.4rem;width:50%;display:inline;"  data-conekta="card[exp_year]">
+                                <select name="" id="expYear" style="padding: .6rem;font-size: 1.4rem;width:50%;display:inline;"  data-conekta="card[exp_year]">
                                     <option>{% trans %}AA*{% endtrans %}</option>
                                     {% for i in "now"|date('Y') .. "now"|date('Y')+20  %}
-                                    <option value="{{i}}">{{i}}</option>
+                                        <option value="{{i}}">{{i}}</option>
                                     {% endfor %}
                                 </select>
                                 <input id="cvv" type="text" class="cvc" value="" autocomplete="off" data-conekta="card[cvc]" required placeholder="{% trans %}CV{% endtrans %}" />

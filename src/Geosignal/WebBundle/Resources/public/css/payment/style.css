@@ -1780,25 +1780,25 @@ label.error{
 
 /* Small */
 
-.paypal-button-logo { 
+.paypal-button-logo {
     width: 16px !important;
     height: 16px !important;
 }
 
-.paypal-button-logo img { 
+.paypal-button-logo img {
     width: 9px !important;
     height: 9px !important;
     margin: 3px 0 0 -1px;
 }
 
-.paypal-button-content { 
+.paypal-button-content {
     height: 16px !important;
     display:inline-block;
     font-size: 5px !important;
     padding: 2px 2px !important;
 }
 
-.paypal-button-content img { 
+.paypal-button-content img {
     width: 30px !important;
     height: 8px !important;
     margin: 1px 0 0 1px !important;
@@ -1806,4 +1806,8 @@ label.error{
 
 body{
     background-color: #e8e8e8;
+}
+.logo-payment{
+    vertical-align: middle;
+    margin: 0 1.5% 0 1%;
 }
