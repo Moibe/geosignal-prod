@@ -1834,7 +1834,7 @@ body{
 }
 
 .header-wrap .header-content{
-    padding: 0;   
+    padding: 0;
 }
 
 .header-wrap .logo{
@@ -1847,4 +1847,8 @@ body{
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.img-responsive{
+    width: 100%;
 }
