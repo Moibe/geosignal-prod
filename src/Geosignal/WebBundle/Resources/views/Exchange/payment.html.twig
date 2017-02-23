@@ -57,14 +57,12 @@
                         <div class='bg-solid bg-white mb-25-childs'>
                             <div class='grid-6-12'><p>{%trans%}Nombre{% endtrans %}:</p></div><div class='grid-6-12'><p>{{producto.name}}</p></div>
                             <div class='grid-6-12'><p>{%trans%}Total{% endtrans %}</p></div><div class='grid-6-12'><p>{{producto.currency.symbol}}{{producto.price|number_format(2, '.', ',')}} {{producto.currency.code}}</p></div>
-                            <div class='grid-12-12'>
+                            <div class='grid-12-12 text-center'>
                                 <div class="image-wrap">
                                     {% image '@GeosignalWebBundle/Resources/public/images/map/preview.jpg' %}
-                                    <img src="{{ asset_url }}" alt="" class="img-responsive" />
+                                    <img src="{{ asset_url }}" alt="" />
                                     {% endimage %}
                                 </div>
-                            </div>
-                            <div class='grid-12-12'>
                                 <p><strong>{% trans %}Tu mapa esta listo{% endtrans %}</strong></p>
                             </div>
                         </div>
