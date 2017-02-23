@@ -12,13 +12,22 @@
     {% endstylesheets %}
 {% endblock %}
 {% block body %}
+    <div class="header-wrap">
+        <div class="header-content container">
+            <a href="{% block url_home %} {{ path('homepage') }} {% endblock %}" class="logo"></a>
+            {#
+            <ul class="nav-main list-inline">
+                <li><a href="#">Sobre  Localizador de Móviles</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+            #}
+            <a href="#" class="ico-menu"></a>
+        </div>
+    </div>
     <div id="showForm" >
         <div class='payment-wrap payment-step-1'>
             <div class='payment-header-wrap'>
 
-                {% image '@GeosignalWebBundle/Resources/public/images/logo.png' %}
-                <img src="{{ asset_url }}" alt="" class="logo-payment" />
-                {% endimage %}
                 <span class='ico-lock'></span>
                 <h1>
                     {%trans%}Transacción Segura{% endtrans %}
@@ -114,7 +123,7 @@
                             <p>{%trans%}Producto{% endtrans %}: {{producto.name}}</p>
                             <p>{%trans%}Total{% endtrans %}: {{producto.currency.symbol}}{{producto.price|number_format(2, '.', ',')}} {{producto.currency.code}}</p>
                             <p>{%trans%}Nos comunicaremos contigo a la brevedad{% endtrans %}</p>
-                            <p>{%trans%}Cualquier duda o comentario escribe a{% endtrans %} support@one2one-services.com</p>
+                            <p>{%trans%}Cualquier duda o comentario escribe a{% endtrans %} support@geosignal.com</p>
                             <a href='{{path('homepage')}}' class='btn-red reduce-padding'>{%trans%}Finalizar{% endtrans %}</a>
                         </div>
                     </div>

@@ -1811,3 +1811,40 @@ body{
     vertical-align: middle;
     margin: 0 1.5% 0 1%;
 }
+
+
+.header-wrap{
+    top: 0;
+}
+
+.logo{
+    background-image: url("../images/logo.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 158px;
+    height: 63px;
+    display: block;
+    font-size: 0;
+}
+
+.header-wrap{
+    background-color: #efefef;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.header-wrap .header-content{
+    padding: 0;   
+}
+
+.header-wrap .logo{
+    margin: 0;
+}
+
+.header-wrap .header-content.container{
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
