@@ -17,34 +17,13 @@
                 {#<p>{%trans%}Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'. {%endtrans%}</p>#}
             </form>
         {% else %}
-<form class="hidden paypalForm" method="post" action="https://gateway.payulatam.com/ppp-web-gateway/pb.zul" accept-charset="UTF-8">
-
-  <input alt="" src="https://geopositioningservices.com/button_obtener-ubicacion.png" onclick="this.form.urlOrigen.value = window.location.href;" type="image" border="0">
-  <input name="buttonId" value="WE6tSAj3xve8RbW722PgNwJGcOQP0aCQPMY+kqNg3TH5XG32YZgnsQ==" type="hidden">
-  <input name="merchantId" value="615822" type="hidden">
-  <input name="accountId" value="618562" type="hidden">
-  <input name="description" value="Geosignal Service" type="hidden">
-  <input name="referenceCode" value="O100" type="hidden">
-  <input name="amount" value="60.00" type="hidden">
-  <input name="tax" value="0.00" type="hidden">
-  <input name="taxReturnBase" value="0" type="hidden">
-  <input name="currency" value="MXN" type="hidden">
-  <input name="lng" value="es" type="hidden">
-  <input name="approvedResponseUrl" value="https://geopositioningservices.com/es/output-success" type="hidden">
-  <input name="declinedResponseUrl" value="https://geopositioningservices.com/otros.htm" type="hidden">
-  <input name="pendingResponseUrl" value="https://geopositioningservices.com/pendiente.htm" type="hidden">
-  <input name="paymentMethods" value="OXXO,SEVEN_ELEVEN" type="hidden">
-  <input name="displayShippingInformation" value="NO" type="hidden">
-  <input name="sourceUrl" id="urlOrigen" value="https://geopositioningservices.com/en/" type="hidden">
-  <input name="buttonType" value="SIMPLE" type="hidden">
-  <input name="signature" value="7b3e2be89b57b585cfa01ca06d763cd3831e63566b095f1758d038e8d5c2e47c" type="hidden">
-         
-<p>El servicio tiene un costo de $60 pesos. Da click en el botón para más información.</p>     
-<p>Imprime tu comprobante para pagar fácilmente en Oxxo o 7-Eleven.</p>
-<p>Proporciona correctamente tu correo electrónico para recibir la información.</p>      
-
-</form>
-
+            <form class='hidden paypalForm' action="{{payment_url}}" method="post" target="_top">
+                <input type="hidden" name="idd" value="{{product.reference}}">
+                <p>{%trans%}El servicio tiene un costo que se puede pagar a través de Paypal.{%endtrans%}</p>}
+                <input type="submit" class="btn-locate"  value="{%trans%}Obtener Ubicación{%endtrans%}">
+                <p>{%trans%}Da click en el botón para obtener más información.{%endtrans%}</p>
+                {#<p>{%trans%}Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'. {%endtrans%}</p>#}
+            </form>
         {% endif %}
     </div>
 </div>

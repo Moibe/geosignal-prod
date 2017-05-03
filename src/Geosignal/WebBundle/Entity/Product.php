@@ -43,6 +43,13 @@ class Product {
     private $locale;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="reference", type="integer")
+     */
+    private $reference;
+
+    /**
      * @var \Entity\Currency
      *
      * @ORM\ManyToOne(targetEntity="Currency", inversedBy="products")
@@ -152,17 +159,40 @@ class Product {
     public function __tostring() {
         return $this->getName();
     }
-    
-    public function getCharge(){
-        
+
+    public function getCharge() {
+
         $charge = $this->getPrice();
-        
-        if($this->getCurrency()->getCode() != "USD" || $this->getCurrency()->getCode() != "MXN"){
+
+        if ($this->getCurrency()->getCode() != "USD" || $this->getCurrency()->getCode() != "MXN") {
             $charge = $this->getCurrency()->getRate();
         }
-        
+
         return $charge;
-        
     }
 
+
+    /**
+     * Set reference
+     *
+     * @param integer $reference
+     *
+     * @return Product
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Get reference
+     *
+     * @return integer
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
 }

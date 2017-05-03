@@ -9,7 +9,8 @@ parameters:
     locale: es
     httpProtocol: http
     conekta_api_public_key: key_GN7x9Dt8yoh3nWihzz5sDzw
-    conekta_api_private_key: key_pSupGhGiXRcLbfhWBrR6iA    
+    conekta_api_private_key: key_pSupGhGiXRcLbfhWBrR6iA  
+    payment_url: "%payment_domain%%payment_path%"
 framework:
     #esi:             ~
     translator:      { fallbacks: ["%locale%"] }
@@ -39,7 +40,8 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         conekta_api_public_key: "%conekta_api_public_key%"
-        payment_conekta: true
+        payment_conekta: false
+        payment_url: "%payment_url%"
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
