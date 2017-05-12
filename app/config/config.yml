@@ -42,6 +42,8 @@ twig:
         conekta_api_public_key: "%conekta_api_public_key%"
         payment_conekta: false
         payment_url: "%payment_url%"
+        payment_domain: "%payment_domain%"
+        payment_path: "%payment_path%"
 
 # Assetic Configuration
 assetic:

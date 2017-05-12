@@ -17,7 +17,7 @@
                 {#<p>{%trans%}Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'. {%endtrans%}</p>#}
             </form>
         {% else %}
-            <form class='hidden paypalForm' action="{{payment_url}}" method="post" target="_top">
+            <form class='hidden paypalForm' action="{{payment_domain}}{{ app.request.attributes.get('_locale') }}/{{ payment_path }}" method="post" target="_top">
                 <input type="hidden" name="idd" value="{{product.reference}}">
                 <p>{%trans%}El servicio tiene un costo que se puede pagar a través de Paypal.{%endtrans%}</p>}
                 <input type="submit" class="btn-locate"  value="{%trans%}Obtener Ubicación{%endtrans%}">
