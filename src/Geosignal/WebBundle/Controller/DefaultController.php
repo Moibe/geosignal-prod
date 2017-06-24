@@ -9,15 +9,23 @@ use \Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller {
 
+     /**
+     * @Route("/", name="alt")
+     * @Template("GeosignalWebBundle:Alt:index.html.twig")
+     */
+    public function altAction(Request $request) {
+        return array();
+    }
+
     /**
-     * @Route("/", name="homepage")
+     * @Route("/inicio", name="homepage")
      * @Template("GeosignalWebBundle::index.html.twig")
      */
     public function indexAction(Request $request) {
-        
+
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
-        
+
         return array('product' => $producto);
     }
 

@@ -1,0 +1,142 @@
+{% extends 'GeosignalWebBundle::base.html.twig' %}
+{% block body %}
+
+    <div class='main-wrap minH100'>
+        <div class='container minH100'>
+            <div class='row minH100'>
+                <div class='col-md-14 p-absolute p-xs-x-middle p-xs-y-middle p-sm-x-middle p-sm-y-middle'>
+                    <div class='slider-wrap'>
+                        <div class='slider-content' data-auto='false' data-pager='false' data-controls='false' data-mode='fade' data-infinite-loop='false'>
+                            <div class="slide-wrap">
+                                <h2>Implementación de localización vía HTML5 y Google Maps</h2>
+                                <div class='bg-en bg-em'>
+                                    <a href="#" class='btn btn-stable btn-next-slide'>Continuar</a>
+                                </div>
+                            </div>
+
+                            <div class="slide-wrap">
+                                <h2>A través de HTML5 puedes ubicar las coordenadas del dispositivo que está usando.</h2>
+                                <div class='bg-en bg-em'>
+                                    <a href="#" class='btn btn-stable btn-next-slide'>¡Intentalo!</a>
+                                </div>
+                            </div>
+
+                            <div class="slide-wrap">
+                                <div class='bg-en'>
+                                    <p>Tus coordenadas son:</p>
+                                    <p class='text-center'><span>19.4341097, -99.1411799</span></p>
+                                    <p>Está representado en el sistema de coordenadas UTM, mismo estandar utilizado por los sistemas de posicionamiento global (GPS).</p>
+                                    <p>El siguiente paso es ubicar éstas coordenadas en un mapa.</p>
+                                    <div class='text-center'>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>Siguiente paso</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-wrap">
+                                <div class='bg-en'>
+                                    <p>Google Maps te permite mapear cualquier lugar del mundo.</p>
+                                    <img src='{{ asset('/bundles/geosignalweb/images/alt/map.png') }}' alt='mapa' class='responsive-image' />
+                                    <div class='text-center'>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>Siguiente paso</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-wrap">
+                                <div class='bg-en'>
+                                    <p>Ahora podemos combinar tus coordenadas con el mapa.</p>
+                                    <div class='clearfix'>
+                                        <div class='col-xs-12'>
+                                            <p><span>19.4341097, -99.1411799</span></p>
+                                        </div>
+                                        <div class='col-xs-12'>
+                                            <img  src='{{ asset('/bundles/geosignalweb/images/alt/map-thumb.png') }}' alt='mapa' class='responsive-image' />
+                                        </div>
+                                    </div>
+                                    <div class='text-center'>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>¡Combinalos!</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='slide-wrap'>
+                                <div class='bg-en'>
+                                    <p>Como puedes ver, ahora tienes un mapa de tu localización.</p>
+                                    <div class="">
+                                        <img  src='{{ asset('/bundles/geosignalweb/images/alt/map-f.png') }}' alt='mapa' class='responsive-image' />
+                                    </div>
+                                    <p>Esto es muy facil de implementar con un poco de lineas de código.</p>
+                                    <div class='text-center'>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>Más información</a>
+                                    </div>
+                                    <p>Para más información sobre el costo y contenido de la implementación en código da click en "Más información".</p>
+                                </div>
+                            </div>
+
+                            <div class="slide-wrap">
+                                <div class='bg-en'>
+                                    <div class='clearfix'>
+                                        <div class='col-xs-12 col-xs-offset-6'>
+                                            <img  src='{{ asset('/bundles/geosignalweb/images/alt/files.png') }}' alt='mapa' class='responsive-image' />
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Contenido:<br>
+                                        Un Archivo PHP combinado con un front en JavaScript. Con instrucciones para su armado e implementación.
+                                    </p>
+
+                                    <p>Éste tiene un costo de $14USD. Con una garantia de reembolso total si no cumple tus expectativas.</p>
+                                    <div class='text-center'>
+                                        <a href="#" class='btn btn-stable'>Comprar</a>
+                                    </div>
+                                    <p>También puedes revisar el cátalogo completo de implementaciones en nuestro sitio.</p>
+
+                                    <a href="https://coding-depot.com" target='_blank'>
+                                        <img  src='{{ asset('/bundles/geosignalweb/images/alt/logo.png') }}' alt=''/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        var locale_path = "{{app.request.locale|slice(0, 2)}}";
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCixPtKsC9qK0F45BYhdIX83Z4PAI1SzAU&libraries=geometry"></script>
+    {% javascripts
+    "@GeosignalWebBundle/Resources/public/js/jquery-1.11.3.min.js"
+    "@GeosignalWebBundle/Resources/public/js/jquery.cookie.js"
+    "@GeosignalWebBundle/Resources/public/bootstrap/js/bootstrap.min.js"
+    "@GeosignalWebBundle/Resources/public/bxslider/jquery.bxslider.min.js"
+    "@GeosignalWebBundle/Resources/public/fancybox/jquery.fancybox.pack.js"
+    "@GeosignalWebBundle/Resources/public/fancybox/helpers/jquery.fancybox-thumbs.js"
+    "@GeosignalWebBundle/Resources/public/js/bowser.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/jquery.validate.min.js"
+    "@GeosignalWebBundle/Resources/public/validate/additional-methods.min.js"
+    "@GeosignalWebBundle/Resources/public/js/jquery-ui.js"
+    "@GeosignalWebBundle/Resources/public/js/alt.js"
+    %}
+    <script src="{{ asset_url }}"></script>
+
+    {% endjavascripts %}
+    <!--[if lt IE 9]>
+          <script src="html5shiv/html5shiv.min.js"></script>
+          <script src="respond/respond.min.js"></script>
+    <![endif]-->
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets "bundles/geosignalweb/css/alt.css" filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}  
