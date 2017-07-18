@@ -37,3 +37,7 @@ h2{
     min-height: 100%;
     height: 100%;
 }
+
+.legend-paypal{
+    display: none;
+}

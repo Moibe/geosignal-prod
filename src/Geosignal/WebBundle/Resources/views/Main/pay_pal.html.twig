@@ -16,7 +16,7 @@
                 <p>{%trans%}Da click en el botón para obtener más información.{%endtrans%}</p>
                 {#<p>{%trans%}Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'. {%endtrans%}</p>#}
             </form>
-        {% else %}
+        {% elseif payment_type == "coding" %}
             <form class='hidden paypalForm' action="{{payment_domain}}{{ app.request.attributes.get('_locale') }}/{{ payment_path }}" method="post" target="_top">
                 <input type="hidden" name="idd" value="{{product.reference}}">
                 <p>{%trans%}El servicio tiene un costo que se puede pagar a través de Paypal.{%endtrans%}</p>}
@@ -24,6 +24,8 @@
                 <p>{%trans%}Da click en el botón para obtener más información.{%endtrans%}</p>
                 {#<p>{%trans%}Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'. {%endtrans%}</p>#}
             </form>
+        {% else %}
+            {% include 'GeosignalWebBundle:Main:paypal_button.html.twig' %}
         {% endif %}
     </div>
 </div>

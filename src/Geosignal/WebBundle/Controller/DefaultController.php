@@ -30,6 +30,32 @@ class DefaultController extends Controller {
      * @Template("GeosignalWebBundle::result.html.twig")
      */
     public function resultAction(Request $request) {
+
+        if ($this->container->getParameter('payment_type') == "regular") {
+            $filename = "codigomapas.zip";
+
+            /**
+             * $basePath can be either exposed (typically inside web/)
+             * or "internal"
+             */
+            $basePath = $this->container->getParameter('kernel.root_dir') . '/Resources/downloables';
+
+            $filePath = $basePath . '/' . $filename;
+
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/vnd.android.package-archive');
+            header('Content-Disposition: inline; filename=' . basename($filename));
+            header('Content-Transfer-Encoding: binary');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($filePath));
+            @ob_clean();
+            flush();
+            readfile($filePath);
+        }
+
+
         $cookies = $request->cookies;
         $location = array($cookies->get('cookie_user_result_latitude'), $cookies->get('cookie_user_result_longitude'));
         return array('resultado' => $location);
