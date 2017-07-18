@@ -24,7 +24,7 @@
                             <div class="slide-wrap">
                                 <div class='bg-en'>
                                     <p>Tus coordenadas son:</p>
-                                    <p class='text-center'><span>19.4341097, -99.1411799</span></p>
+                                    <p class='text-center'><span class="position"></span></p>
                                     <p>Está representado en el sistema de coordenadas UTM, mismo estandar utilizado por los sistemas de posicionamiento global (GPS).</p>
                                     <p>El siguiente paso es ubicar éstas coordenadas en un mapa.</p>
                                     <div class='text-center'>
@@ -36,7 +36,7 @@
                             <div class="slide-wrap">
                                 <div class='bg-en'>
                                     <p>Google Maps te permite mapear cualquier lugar del mundo.</p>
-                                    <img src='{{ asset('/bundles/geosignalweb/images/alt/map.png') }}' alt='mapa' class='responsive-image' />
+                                    <div id="map-canvas" style="width:  500px; height: 300px;margin: auto;"></div>
                                     <div class='text-center'>
                                         <a href="#" class='btn btn-stable btn-next-slide'>Siguiente paso</a>
                                     </div>
@@ -47,11 +47,11 @@
                                 <div class='bg-en'>
                                     <p>Ahora podemos combinar tus coordenadas con el mapa.</p>
                                     <div class='clearfix'>
-                                        <div class='col-xs-12'>
-                                            <p><span>19.4341097, -99.1411799</span></p>
+                                        <div class=''>
+                                            <p><span class="position"></span></p>
                                         </div>
-                                        <div class='col-xs-12'>
-                                            <img  src='{{ asset('/bundles/geosignalweb/images/alt/map-thumb.png') }}' alt='mapa' class='responsive-image' />
+                                        <div class='map-container'>
+                                                
                                         </div>
                                     </div>
                                     <div class='text-center'>
@@ -63,8 +63,8 @@
                             <div class='slide-wrap'>
                                 <div class='bg-en'>
                                     <p>Como puedes ver, ahora tienes un mapa de tu localización.</p>
-                                    <div class="">
-                                        <img  src='{{ asset('/bundles/geosignalweb/images/alt/map-f.png') }}' alt='mapa' class='responsive-image' />
+                                    <div class="map-container2">
+                                        
                                     </div>
                                     <p>Esto es muy facil de implementar con un poco de lineas de código.</p>
                                     <div class='text-center'>
@@ -77,8 +77,8 @@
                             <div class="slide-wrap">
                                 <div class='bg-en'>
                                     <div class='clearfix'>
-                                        <div class='col-xs-12 col-xs-offset-6'>
-                                            <img  src='{{ asset('/bundles/geosignalweb/images/alt/files.png') }}' alt='mapa' class='responsive-image' />
+                                        <div class='col-xs-12 col-xs-offset-6 map-container3'>
+                                            
                                         </div>
                                     </div>
                                     <p>
