@@ -11,6 +11,9 @@ parameters:
     conekta_api_public_key: key_GN7x9Dt8yoh3nWihzz5sDzw
     conekta_api_private_key: key_pSupGhGiXRcLbfhWBrR6iA  
     payment_url: "%payment_domain%%locale%/%payment_path%"
+    #[regular,static,coding,conekta]
+    payment_type: "regular"
+
 framework:
     #esi:             ~
     translator:      { fallbacks: ["%locale%"] }
@@ -40,7 +43,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         conekta_api_public_key: "%conekta_api_public_key%"
-        payment_conekta: false
+        payment_type: %payment_type%
         payment_url: "%payment_url%"
         payment_domain: "%payment_domain%"
         payment_path: "%payment_path%"

@@ -9,22 +9,18 @@ use \Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller {
 
-     /**
-     * @Route("/", name="alt")
-     * @Template("GeosignalWebBundle:Alt:index.html.twig")
-     */
-    public function altAction(Request $request) {
-        return array();
-    }
-
     /**
-     * @Route("/inicio", name="homepage")
+     * @Route("/", name="homepage")
      * @Template("GeosignalWebBundle::index.html.twig")
      */
     public function indexAction(Request $request) {
 
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
+
+        if ($this->container->getParameter('payment_type') == "regular") {
+            return $this->render("GeosignalWebBundle:Alt:index.html.twig", array('product' => $producto));
+        }
 
         return array('product' => $producto);
     }

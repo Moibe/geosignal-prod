@@ -9,7 +9,7 @@
                 <input type="submit" value="{%trans%}Buscar{%endtrans%}" />
             </form>
         </div>
-        {% if payment_conekta == "true" %}
+        {% if payment_type == "conekta" %}
             <form class='hidden paypalForm' action="{{path('do_payment',{'id':product.id})}}" method="get" target="_top">
                 <p>{%trans%}El servicio tiene un costo que se puede pagar a través de Paypal.{%endtrans%}</p>}
                 <input type="submit" class="btn-locate"  value="{%trans%}Obtener Ubicación{%endtrans%}">
