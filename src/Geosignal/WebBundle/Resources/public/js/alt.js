@@ -61,6 +61,9 @@ $(document).ready(function () {
 });
 
 function registrarPosicion() {
+    
+    $('.loader').removeClass('hidden');
+    
     if (registrandoPosicion) {
         registrandoPosicion = false;
         navigator.geolocation.clearWatch(idRegistroPosicion);
