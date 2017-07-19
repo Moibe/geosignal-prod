@@ -1,5 +1,5 @@
 var registrandoPosicion = false, idRegistroPosicion, ultimaPosicionUsuario, marcadorUsuario;
-var primary_domain = "http://geopositioningservices.com/";
+var primary_domain = "https://geopositioningservices.com/";
 var sliders;
 var slider;
 var zoom = 14;
@@ -125,7 +125,7 @@ function changeSlider() {
         google.maps.event.trigger(map, "resize");
     }
 
-    if (slider.getCurrentSlide() === 6) {
+    if (slider.getCurrentSlide() === 5) {
         showFinalResult();
     }
 
