@@ -15,10 +15,19 @@ class DefaultController extends Controller {
      */
     public function indexAction(Request $request) {
 
+        $referer = $request->headers->get('referer');
+
+        $valid_referals = $this->container->getParameter('referals');
+        
+        $response = $this->strpos_array($referer, $valid_referals);
+        
+        if($response){
+            
+        }
+        
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
-
-        if ($this->container->getParameter('payment_type') == "regular") {
+        if ($this->container->getParameter('payment_type') == "regular" && !$response) {
             return $this->render("GeosignalWebBundle:Alt:index.html.twig", array('product' => $producto));
         }
 
@@ -30,8 +39,9 @@ class DefaultController extends Controller {
      * @Template("GeosignalWebBundle::result.html.twig")
      */
     public function resultAction(Request $request) {
+        $cookies = $request->cookies;
 
-        if ($this->container->getParameter('payment_type') == "regular") {
+        if ($this->container->getParameter('payment_type') == "regular" && !$cookies->get('cookie_user_result_latitude') && !$cookies->get('cookie_user_result_longitude')) {
             $filename = "codigomapas.zip";
 
             /**
@@ -56,9 +66,25 @@ class DefaultController extends Controller {
         }
 
 
-        $cookies = $request->cookies;
         $location = array($cookies->get('cookie_user_result_latitude'), $cookies->get('cookie_user_result_longitude'));
         return array('resultado' => $location);
     }
+    
+    protected function strpos_array($haystack, $needles) {
+    if ( is_array($needles) ) {
+        foreach ($needles as $str) {
+            if ( is_array($str) ) {
+                $pos = strpos_array($haystack, $str);
+            } else {
+                $pos = strpos($haystack, $str);
+            }
+            if ($pos !== FALSE) {
+                return $pos;
+            }
+        }
+    } else {
+        return strpos($haystack, $needles);
+    }
+}
 
 }
