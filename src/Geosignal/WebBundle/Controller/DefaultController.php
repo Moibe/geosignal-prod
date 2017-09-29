@@ -20,7 +20,6 @@ class DefaultController extends Controller {
         $valid_referals = $this->container->getParameter('referals');
         
         $response = $this->strpos_array($referer, $valid_referals);
-        $response = true;
         
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
