@@ -18,13 +18,13 @@ class DefaultController extends Controller {
         $referer = $request->headers->get('referer');
 
         $valid_referals = $this->container->getParameter('referals');
-
+        
         $response = $this->strpos_array($referer, $valid_referals);
-
+        
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
-        echo $this->container->getParameter('payment_type') . ' response ' . $response;
-        if ($this->container->getParameter('payment_type') == "regular" || $response === false) {
+        echo $this->container->getParameter('payment_type') . ' response '.$response;
+        if ($this->container->getParameter('payment_type') == "regular" || !$response) {
             return $this->render("GeosignalWebBundle:Alt:index.html.twig", array('product' => $producto));
         }
 
@@ -66,22 +66,22 @@ class DefaultController extends Controller {
         $location = array($cookies->get('cookie_user_result_latitude'), $cookies->get('cookie_user_result_longitude'));
         return array('resultado' => $location);
     }
-
+    
     protected function strpos_array($haystack, $needles) {
-        if (is_array($needles)) {
-            foreach ($needles as $str) {
-                if (is_array($str)) {
-                    $pos = strpos_array($haystack, $str);
-                } else {
-                    $pos = strpos($haystack, $str);
-                }
-                if ($pos !== FALSE) {
-                    return $pos;
-                }
+    if ( is_array($needles) ) {
+        foreach ($needles as $str) {
+            if ( is_array($str) ) {
+                $pos = strpos_array($haystack, $str);
+            } else {
+                $pos = strpos($haystack, $str);
             }
-        } else {
-            return strpos($haystack, $needles);
+            if ($pos !== FALSE) {
+                return $pos;
+            }
         }
+    } else {
+        return strpos($haystack, $needles);
     }
+}
 
 }
