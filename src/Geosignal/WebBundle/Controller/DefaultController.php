@@ -23,7 +23,6 @@ class DefaultController extends Controller {
         
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
-        echo $this->container->getParameter('payment_type') . ' response '.$response;
         if ($this->container->getParameter('payment_type') == "regular" || !$response) {
             return $this->render("GeosignalWebBundle:Alt:index.html.twig", array('product' => $producto));
         }
