@@ -13,7 +13,7 @@ parameters:
     payment_url: "%payment_domain%%locale%/%payment_path%"
     #[regular,static,coding,conekta]
     payment_type: "coding"
-    referals: [google.com,paypal.com]
+    referals: [google,youtube,duckduckgo,yahoo,facebook,adyou,ask,zapmeta,informationvine]
 
 framework:
     #esi:             ~
