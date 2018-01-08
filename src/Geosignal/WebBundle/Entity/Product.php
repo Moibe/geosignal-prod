@@ -38,7 +38,7 @@ class Product {
     /**
      * @var string
      *
-     * @ORM\Column(name="locale", type="string", length=4)
+     * @ORM\Column(name="locale", type="string", length=10)
      */
     private $locale;
 
