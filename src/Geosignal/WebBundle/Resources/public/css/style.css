@@ -214,7 +214,18 @@ form.do{
     width: 100%;
     text-align: center;
 }
-
+.paypalFormDouble{
+    width: 50%;
+}
+.paypalFormDouble.btnConekta{
+    right: 0;
+}
+.paypalFormDouble p.extended{
+    width: 200%;
+}
+.paypalForm.paypalFormDouble{
+    bottom: 5%;
+}
 
 .btn-full{
     width: 39px;
