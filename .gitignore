@@ -3,6 +3,5 @@
 !app/cache/.gitkeep
 /app/logs/*
 !app/logs/.gitkeep
-/composer.phar
 /vendor/
 /tmp/sessions/*
