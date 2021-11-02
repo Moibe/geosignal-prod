@@ -1,0 +1,187 @@
+/*
+    Created on : Jul 11, 2015, 2:46:27 AM
+    Author     : ZER0
+*/
+/*iPad in portrait & landscape*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+
+/*iPad in landscape*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+/*iPad in portrait*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+/*iPad 3 & 4 Media Queries*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) { /* STYLES GO HERE */}
+
+/*Retina iPad in landscape*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) { /* STYLES GO HERE */}
+
+/*Retina iPad in portrait*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) { /* STYLES GO HERE */ }
+
+/*iPad 1 & 2 Media Queries*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1){ /* STYLES GO HERE */}
+
+/*iPad 1 & 2 in landscape*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  { /* STYLES GO HERE */}
+
+/*iPad 1 & 2 in portrait*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1) { /* STYLES GO HERE */ }
+
+/*iPhone 6 in portrait & landscape*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) { /* STYLES GO HERE */}
+
+/*iPhone 6 in landscape*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+/*iPhone 6 in portrait*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+/*iPhone 6 Plus in portrait & landscape*/
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) { /* STYLES GO HERE */}
+
+/*iPhone 6 Plus in landscape*/
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+/*iPhone 6 Plus in portrait*/
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+/*iPhone 5 & 5S in portrait & landscape*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) { /* STYLES GO HERE */}
+
+/*iPhone 5 & 5S in landscape*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+/*iPhone 5 & 5S in portrait*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+/*iPhone 2G-4S in portrait & landscape*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) { /* STYLES GO HERE */}
+
+/*iPhone 2G-4S in landscape*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+/*iPhone 2G-4S in portrait*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+
+/*Phones*/
+@media only screen and (max-device-width : 736px){
+    /*
+        Created on : Jul 10, 2015, 8:38:46 PM
+        Author     : zero
+    */
+    html.mobile{
+        font-size: 16px;
+    }
+
+    .mobile .ico-menu{
+        background-image: url(../images/ico-menu.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    .mobile .nav-main{
+        position: relative;
+        right: auto;
+        width: 100%;
+        background-color: #efefef;
+        display: none;
+        margin: 3rem;
+    }
+    .mobile .nav-main.active{
+        display: block;
+    }
+    .mobile .nav-main li{
+        display: block;
+        margin: 2rem;
+        font-size: 3rem;
+    }
+    .mobile .footer-wrap li{
+        font-size: 0;
+    }
+    .mobile .steps{
+        min-height: 690px;
+        padding: 4rem 2rem 0;
+    }
+
+    .mobile #paypalContentInner{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+/*Desktop*/
+@media only screen and (min-device-width : 1024px){ /* STYLES GO HERE */ }
+
+/*Laptop*/
+@media only screen and (min-device-width : 1100px) and (max-device-width : 1280px){ /* STYLES GO HERE */ }
