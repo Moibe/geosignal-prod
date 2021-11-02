@@ -1,46 +1,99 @@
-"Localizador de Móviles": "Mobiele telefoon vinder"
-"Escribe tu número para localizarte.": "Schrijf je nummer in om je te kunnen bereiken."
-"(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)": "(Op dit moment zullen wij geen kosten in rekening brengen, dit is alleen om de dichtstbijzijnde antenne te vinden)"
-"Iniciar": "Begin"
-"Evaluación de dispositivo y navegador.": "Evalueren."
-"Revisando el dispositivo.": "Toestel vergelijking."
-"Su dispositivo y navegador cumplen con los requerimientos necesarios.": "Jouw toestel voldoet aan de minimumeisen."
-"Buscar": "Vinden"
-"Localizar": "Vinden"
-"Leyendo antenas.": "Antennes aan het zoeken."
-"Leyendo frecuencia.": "GSM frequentie aan het lezen."
-"Calculando posición.": "Positie berekening."
-"Creando mapa.": "Kaart aan het creëren."
-"Tu ubicación.": "Jouw plaats."
-"Antenas celulares cercanas.": "Dichtstbijzijnde antennes."
-"Ésta es tu posición, ahora ingresa el número que deseas buscar.": "Dit is uw plaats , typt u nu het telefoonnummer dat u wilt zoeken."
-"Dispositivo localizado.": "Nummer gevonden."
-"Obtener Ubicación": "Plaats aan het zoeken."
-"Para obtener la ubicación realiza el pago a través de un mensaje de texto.": "Om de plaats te krijgen, betaling verrichten door middel van een SMS bericht."
-"Solo se te cobrará una vez una pequeña cantidad.": "Alleen een kleine bedrag zal in rekening gebracht worden."
-"Da click en el botón para obtener más información.": "Click op de toets voor verdere informatie."
-"Ubica cualquier teléfono móvil.": "Andere mobiele telefoon zoeken."
-"Solo escribe el número y ve el mapa.": "Alleen toetst het nummer in en bekijk de kaart."
-"Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.": "Met dit web applicatie kan je iedere mobiele telefoon vinden."
-"Completa éste campo.": ""
-"El servicio tiene un costo que se puede pagar a través de Paypal.": "De kosten kunnen via PayPal betaald worden."
-"PayPal, la forma más segura y rápida de pagar en línea.": "PayPal, la forma más segura y rápida de pagar en línea."
-"FET837BK4G5D2": ""
-"Dispositivo": "Device"
-"Antenas Celulares": "Cell Towers"
-"Selecciona tu forma de pago": "Choose your payment method"
-"Pagar con PayPal": "Pay with PayPal"
-"Pagar con tarjeta": "Pay with card"
-"Transacción Segura": "Secure transaction"
-"Los campos señalados con * son obligatorios": "Fields marked with * are required"
-"Cantidad a Pagar": "Due amount"
-"Nombre": "Name"
-"Apellidos": "Surnames"
-"Número de tarjeta*": "Card number*"
-"AA": "YY"
-"CVT": "CVC"
-"Obtener Ubicación": "Get Location"
-"Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'.": "This service has a cost , for more information press the button ' Get Location ' ."
-"Fecha de Expiración": "Expiry Date"
-"Nombre del Titular de la Tarjeta": "Name of Cardholder"
-"Codigo de Seguridad": "CVC"
+'Localizador de Móviles': 'Mobiele telefoon vinder'
+'Escribe tu número para localizarte.': 'Schrijf je nummer in om je te kunnen bereiken.'
+'(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)': '(Op dit moment zullen wij geen kosten in rekening brengen, dit is alleen om de dichtstbijzijnde antenne te vinden)'
+Iniciar: Begin
+'Evaluación de dispositivo y navegador.': Evalueren.
+'Revisando el dispositivo.': 'Toestel vergelijking.'
+'Su dispositivo y navegador cumplen con los requerimientos necesarios.': 'Jouw toestel voldoet aan de minimumeisen.'
+Buscar: Vinden
+Localizar: Vinden
+'Leyendo antenas.': 'Antennes aan het zoeken.'
+'Leyendo frecuencia.': 'GSM frequentie aan het lezen.'
+'Calculando posición.': 'Positie berekening.'
+'Creando mapa.': 'Kaart aan het creëren.'
+'Tu ubicación.': 'Jouw plaats.'
+'Antenas celulares cercanas.': 'Dichtstbijzijnde antennes.'
+'Ésta es tu posición, ahora ingresa el número que deseas buscar.': 'Dit is uw plaats , typt u nu het telefoonnummer dat u wilt zoeken.'
+'Dispositivo localizado.': 'Nummer gevonden.'
+'Obtener Ubicación': 'Plaats aan het zoeken.'
+'Para obtener la ubicación realiza el pago a través de un mensaje de texto.': 'Om de plaats te krijgen, betaling verrichten door middel van een SMS bericht.'
+'Solo se te cobrará una vez una pequeña cantidad.': 'Alleen een kleine bedrag zal in rekening gebracht worden.'
+'Da click en el botón para obtener más información.': 'Click op de toets voor verdere informatie.'
+'Ubica cualquier teléfono móvil.': 'Andere mobiele telefoon zoeken.'
+'Solo escribe el número y ve el mapa.': 'Alleen toetst het nummer in en bekijk de kaart.'
+'Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.': 'Met dit web applicatie kan je iedere mobiele telefoon vinden.'
+'Completa éste campo.': ''
+'El servicio tiene un costo que se puede pagar a través de Paypal.': 'De kosten kunnen via PayPal betaald worden.'
+'PayPal, la forma más segura y rápida de pagar en línea.': 'PayPal, la forma más segura y rápida de pagar en línea.'
+FET837BK4G5D2: ''
+Dispositivo: Device
+'Antenas Celulares': 'Cell Towers'
+'Selecciona tu forma de pago': 'Choose your payment method'
+'Pagar con PayPal': 'Pay with PayPal'
+'Pagar con tarjeta': 'Pay with card'
+'Transacción Segura': 'Secure transaction'
+'Los campos señalados con * son obligatorios': 'Fields marked with * are required'
+'Cantidad a Pagar': 'Due amount'
+Nombre: Name
+Apellidos: Surnames
+'Número de tarjeta*': 'Card number*'
+AA: YY
+CVT: CVC
+'Éste servicio tiene un costo, para obtener más información oprimir el botón de ''Obtener Ubicación''.': 'This service has a cost , for more information press the button '' Get Location '' .'
+'Fecha de Expiración': 'Expiry Date'
+'Nombre del Titular de la Tarjeta': 'Name of Cardholder'
+'Codigo de Seguridad': CVC
+Cliente: __Cliente
+Pago: __Pago
+Completado: __Completado
+'Detalles sobre su Orden': '__Detalles sobre su Orden'
+Total: __Total
+'Tu mapa esta listo': '__Tu mapa esta listo'
+Dirección: __Dirección
+Ciudad: __Ciudad
+Estado: __Estado
+C.P: __C.P
+Pais: __Pais
+Email: __Email
+Teléfono: __Teléfono
+Continuar: __Continuar
+'Fecha de expiración': '__Fecha de expiración'
+'MM*': '__MM*'
+'AA*': '__AA*'
+CV: __CV
+¡Gracias!: __¡Gracias!
+'Tu pago fue exitoso': '__Tu pago fue exitoso'
+Producto: __Producto
+'Nos comunicaremos contigo a la brevedad': '__Nos comunicaremos contigo a la brevedad'
+'Cualquier duda o comentario escribe a': '__Cualquier duda o comentario escribe a'
+Finalizar: __Finalizar
+'Fecha de Expiración*': '__Fecha de Expiración*'
+'Codigo de Seguridad*': '__Codigo de Seguridad*'
+'CVT*': '__CVT*'
+'Nombre del Titular de la Tarjeta*': '__Nombre del Titular de la Tarjeta*'
+'Nombre*': '__Nombre*'
+'Apellidos*': '__Apellidos*'
+'Email*': '__Email*'
+'Teléfono*': '__Teléfono*'
+'Celular*': '__Celular*'
+'Calle y número*': '__Calle y número*'
+'Pais*': '__Pais*'
+'Colonia*': '__Colonia*'
+'Estado*': '__Estado*'
+'Municipio*': '__Municipio*'
+'CP*': '__CP*'
+'Geosignal Services': '__Geosignal Services'
+'PAGAR AHORA': '__PAGAR AHORA'
+'Pago exitoso': '__Pago exitoso'
+'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.': '__El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.'
+'El servicio tiene un costo que se puede pagar de forma segura via Paypal.': '__El servicio tiene un costo que se puede pagar de forma segura via Paypal.'
+'Pagar con Paypal': '__Pagar con Paypal'
+'Pagar con Conekta': '__Pagar con Conekta'
+'El servicio tiene un costo que se puede pagar de forma segura.': '__El servicio tiene un costo que se puede pagar de forma segura.'
+'Implementación de localización vía HTML5 & Google Maps': '__Implementación de localización vía HTML5 & Google Maps'
+'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': '__A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.'
+'Tus coordenadas son:': '__Tus coordenadas son:'
+'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': '__Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': '__Ahora, el siguiente paso es ubicar estas coordenadas en un mapa'
+'Siguiente paso': '__Siguiente paso'
+'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': '__La API de Mapas de Google te permite mapear cualquier lugar del mundo.'

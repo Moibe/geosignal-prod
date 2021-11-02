@@ -1,47 +1,100 @@
-"Localizador de Móviles": "تحديد موقع هواتف نقالة."
-"Escribe tu número para localizarte.": "اكتب رقمك لتحديد موقعك."
-"(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)": "(هذه العملية الأولى مجانية وغرضها تحديد الهوائيات القريبة)."
-"Iniciar": "ابدأ."
-"Evaluación de dispositivo y navegador.": "يتم التقييم."
-"Revisando el dispositivo.": "مقارنة الجهاز."
-"Su dispositivo y navegador cumplen con los requerimientos necesarios.": "يوافق جهازك لأقل متطلبات التشغيل."
-"Buscar": "Search"
-"Localizar": "تحديد الموقع."
-"Leyendo antenas.": "يتم البحث على هوائيات."
-"Leyendo frecuencia.": "يتم قراءة تردد جس أس أم."
-"Calculando posición.": "يتم تحديد الموقع"
-"Creando mapa.": "يتم إنشاء الخريطة"
-"Tu ubicación.": "موقعك."
-"Antenas celulares cercanas.": "هوائيات جوية قريبة."
-"Ésta es tu posición, ahora ingresa el número que deseas buscar.": "هذا هو موقعك، الآن قم بإدخال رقم الهاتف الذي تريد العثور عليه."
-"Dispositivo localizado.": "تم تحديد موقع الهاتف."
-"Obtener Ubicación": "الحصول على الموقع."
-"Para obtener la ubicación realiza el pago a través de un mensaje de texto.": "للحصول على الموقع قم بالدفع بواسطة رسالة قصيرة."
-"Solo se te cobrará una vez una pequeña cantidad.": "يتدفع كمية صغيرة مرة واحدة فقط."
-"Da click en el botón para obtener más información.": "اضغط على الزر للحصول على المزيد من المعلومات."
-"Ubica cualquier teléfono móvil.": "حدد موقع أي هاتف نقال"
-"Solo escribe el número y ve el mapa.": "ادخل رقم هاتف وشاهد الخريطة"
-"Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.": "يمكن هذا التطبيق ويب من تحديد مكان أي هاتف نقال."
-"Completa éste campo.": ""
-"El servicio tiene un costo que se puede pagar a través de Paypal.": "يمكن دفع سعر الخدمة بواسطة باي بال."
-"PayPal, la forma más segura y rápida de pagar en línea.": "PayPal, la forma más segura y rápida de pagar en línea."
-"FET837BK4G5D2": ""
-"Dispositivo": "Device"
-"Antenas Celulares": "Cell Towers"
-"Selecciona tu forma de pago": "Choose your payment method"
-"Pagar con PayPal": "Pay with PayPal"
-"Pagar con tarjeta": "Pay with card"
-"Transacción Segura": "Secure transaction"
-"Los campos señalados con * son obligatorios": "Fields marked with * are required"
-"Cantidad a Pagar": "Due amount"
-"Nombre": "Name"
-"Apellidos": "Surnames"
-"Número de tarjeta": "Card number"
-"MM": "MM"
-"AA": "YY"
-"CVT": "CVC"
-"Obtener Ubicación": "Get Location"
-"Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'.": "This service has a cost , for more information press the button ' Get Location ' ."
-"Fecha de Expiración": "Expiry Date"
-"Nombre del Titular de la Tarjeta": "Name of Cardholder"
-"Codigo de Seguridad": "CVC"
+'Localizador de Móviles': 'تحديد موقع هواتف نقالة.'
+'Escribe tu número para localizarte.': 'اكتب رقمك لتحديد موقعك.'
+'(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)': '(هذه العملية الأولى مجانية وغرضها تحديد الهوائيات القريبة).'
+Iniciar: ابدأ.
+'Evaluación de dispositivo y navegador.': 'يتم التقييم.'
+'Revisando el dispositivo.': 'مقارنة الجهاز.'
+'Su dispositivo y navegador cumplen con los requerimientos necesarios.': 'يوافق جهازك لأقل متطلبات التشغيل.'
+Buscar: Search
+Localizar: 'تحديد الموقع.'
+'Leyendo antenas.': 'يتم البحث على هوائيات.'
+'Leyendo frecuencia.': 'يتم قراءة تردد جس أس أم.'
+'Calculando posición.': 'يتم تحديد الموقع'
+'Creando mapa.': 'يتم إنشاء الخريطة'
+'Tu ubicación.': موقعك.
+'Antenas celulares cercanas.': 'هوائيات جوية قريبة.'
+'Ésta es tu posición, ahora ingresa el número que deseas buscar.': 'هذا هو موقعك، الآن قم بإدخال رقم الهاتف الذي تريد العثور عليه.'
+'Dispositivo localizado.': 'تم تحديد موقع الهاتف.'
+'Obtener Ubicación': 'الحصول على الموقع.'
+'Para obtener la ubicación realiza el pago a través de un mensaje de texto.': 'للحصول على الموقع قم بالدفع بواسطة رسالة قصيرة.'
+'Solo se te cobrará una vez una pequeña cantidad.': 'يتدفع كمية صغيرة مرة واحدة فقط.'
+'Da click en el botón para obtener más información.': 'اضغط على الزر للحصول على المزيد من المعلومات.'
+'Ubica cualquier teléfono móvil.': 'حدد موقع أي هاتف نقال'
+'Solo escribe el número y ve el mapa.': 'ادخل رقم هاتف وشاهد الخريطة'
+'Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.': 'يمكن هذا التطبيق ويب من تحديد مكان أي هاتف نقال.'
+'Completa éste campo.': ''
+'El servicio tiene un costo que se puede pagar a través de Paypal.': 'يمكن دفع سعر الخدمة بواسطة باي بال.'
+'PayPal, la forma más segura y rápida de pagar en línea.': 'PayPal, la forma más segura y rápida de pagar en línea.'
+Dispositivo: Device
+'Antenas Celulares': 'Cell Towers'
+'Selecciona tu forma de pago': 'Choose your payment method'
+'Pagar con PayPal': 'Pay with PayPal'
+'Pagar con tarjeta': 'Pay with card'
+'Transacción Segura': 'Secure transaction'
+'Los campos señalados con * son obligatorios': 'Fields marked with * are required'
+'Cantidad a Pagar': 'Due amount'
+Nombre: Name
+Apellidos: Surnames
+'Número de tarjeta': 'Card number'
+MM: MM
+AA: YY
+CVT: CVC
+'Éste servicio tiene un costo, para obtener más información oprimir el botón de ''Obtener Ubicación''.': 'This service has a cost , for more information press the button '' Get Location '' .'
+'Fecha de Expiración': 'Expiry Date'
+'Nombre del Titular de la Tarjeta': 'Name of Cardholder'
+'Codigo de Seguridad': CVC
+Cliente: __Cliente
+Pago: __Pago
+Completado: __Completado
+'Detalles sobre su Orden': '__Detalles sobre su Orden'
+Total: __Total
+'Tu mapa esta listo': '__Tu mapa esta listo'
+Dirección: __Dirección
+Ciudad: __Ciudad
+Estado: __Estado
+C.P: __C.P
+Pais: __Pais
+Email: __Email
+Teléfono: __Teléfono
+Continuar: __Continuar
+'Número de tarjeta*': '__Número de tarjeta*'
+'Fecha de expiración': '__Fecha de expiración'
+'MM*': '__MM*'
+'AA*': '__AA*'
+CV: __CV
+¡Gracias!: __¡Gracias!
+'Tu pago fue exitoso': '__Tu pago fue exitoso'
+Producto: __Producto
+'Nos comunicaremos contigo a la brevedad': '__Nos comunicaremos contigo a la brevedad'
+'Cualquier duda o comentario escribe a': '__Cualquier duda o comentario escribe a'
+Finalizar: __Finalizar
+'Fecha de Expiración*': '__Fecha de Expiración*'
+'Codigo de Seguridad*': '__Codigo de Seguridad*'
+'CVT*': '__CVT*'
+'Nombre del Titular de la Tarjeta*': '__Nombre del Titular de la Tarjeta*'
+'Nombre*': '__Nombre*'
+'Apellidos*': '__Apellidos*'
+'Email*': '__Email*'
+'Teléfono*': '__Teléfono*'
+'Celular*': '__Celular*'
+'Calle y número*': '__Calle y número*'
+'Pais*': '__Pais*'
+'Colonia*': '__Colonia*'
+'Estado*': '__Estado*'
+'Municipio*': '__Municipio*'
+'CP*': '__CP*'
+'Geosignal Services': '__Geosignal Services'
+'PAGAR AHORA': 'اشتر الآن'
+'Pago exitoso': '__Pago exitoso'
+'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.': '__El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.'
+'El servicio tiene un costo que se puede pagar de forma segura via Paypal.': '__El servicio tiene un costo que se puede pagar de forma segura via Paypal.'
+'Pagar con Paypal': '__Pagar con Paypal'
+'Pagar con Conekta': '__Pagar con Conekta'
+'El servicio tiene un costo que se puede pagar de forma segura.': 'الخدمة لها تكلفة'
+'Implementación de localización vía HTML5 & Google Maps': '__Implementación de localización vía HTML5 & Google Maps'
+'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': '__A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.'
+'Tus coordenadas son:': '__Tus coordenadas son:'
+'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': '__Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': '__Ahora, el siguiente paso es ubicar estas coordenadas en un mapa'
+'Siguiente paso': '__Siguiente paso'
+'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': '__La API de Mapas de Google te permite mapear cualquier lugar del mundo.'

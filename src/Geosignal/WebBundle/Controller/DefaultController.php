@@ -15,8 +15,9 @@ class DefaultController extends Controller {
      */
     public function indexAction(Request $request) {
 
+        
         $referer = $request->headers->get('referer');
-
+        
         $valid_referals = $this->container->getParameter('referals');
         
         $response = $request->get('test') ? true:$this->strpos_array($referer, $valid_referals);
@@ -27,7 +28,7 @@ class DefaultController extends Controller {
             return $this->render("GeosignalWebBundle:Alt:index.html.twig", array('product' => $producto));
         }
 
-        return array('product' => $producto);
+        return array('product' => $producto); 
     }
 
     /**

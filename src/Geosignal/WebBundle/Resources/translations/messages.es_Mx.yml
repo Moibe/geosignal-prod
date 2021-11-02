@@ -1,0 +1,80 @@
+Dispositivo: Dispositivo
+'Antenas Celulares': 'Antenas Celulares'
+'Transacción Segura': 'Transacción Segura'
+Cliente: Cliente
+Pago: Pago
+Completado: Completado
+'Detalles sobre su Orden': 'Detalles sobre su Orden'
+Nombre: Nombre
+Total: Total
+'Tu mapa esta listo': 'Tu mapa esta listo'
+'Los campos señalados con * son obligatorios': 'Los campos señalados con * son obligatorios'
+Dirección: Dirección
+Ciudad: Ciudad
+Estado: Estado
+C.P: C.P
+Pais: País
+Email: Email
+Teléfono: Teléfono
+Continuar: Continuar
+'Número de tarjeta*': 'Número de tarjeta*'
+'Fecha de expiración': 'Fecha de expiración'
+'MM*': 'MM*'
+'AA*': 'AA*'
+CV: CV
+¡Gracias!: ¡Gracias!
+'Tu pago fue exitoso': 'Tu pago fue exitoso'
+Producto: Producto
+'Nos comunicaremos contigo a la brevedad': 'Nos comunicaremos contigo a la brevedad'
+'Cualquier duda o comentario escribe a': 'Cualquier duda o comentario escribe a'
+Finalizar: Finalizar
+'Selecciona tu forma de pago': 'Selecciona tu forma de pago'
+'El servicio tiene un costo que se puede pagar a través de Paypal.': 'El servicio tiene un costo que se puede pagar a través de Paypal.'
+'Pagar con PayPal': 'Pagar con PayPal'
+'Da click en el botón para obtener más información.': 'Da click en el botón para obtener más información.'
+'Pagar con tarjeta': 'Pagar con tarjeta'
+'Localizador de Móviles': 'Localizador de Móviles'
+'Escribe tu número para localizarte.': 'Escribe tu número para localizarte.'
+Iniciar: Iniciar
+Buscar: Buscar
+'Evaluación de dispositivo y navegador.': 'Evaluación de dispositivo y navegador.'
+'Revisando el dispositivo.': 'Revisando el dispositivo.'
+'Su dispositivo y navegador cumplen con los requerimientos necesarios.': 'Su dispositivo y navegador cumplen con los requerimientos necesarios.'
+'Leyendo antenas.': 'Leyendo antenas.'
+'Leyendo frecuencia.': 'Leyendo frecuencia.'
+'Calculando posición.': 'Calculando posición.'
+'Creando mapa.': 'Creando mapa.'
+'Fecha de Expiración*': 'Fecha de Expiración*'
+'Codigo de Seguridad*': 'Código de Seguridad*'
+'CVT*': 'CVT*'
+'Nombre del Titular de la Tarjeta*': 'Nombre del Titular de la Tarjeta*'
+'Nombre*': 'Nombre*'
+'Apellidos*': 'Apellidos*'
+'Email*': 'Email*'
+'Teléfono*': 'Teléfono*'
+'Celular*': 'Celular*'
+'Calle y número*': 'Calle y número*'
+'Pais*': 'País*'
+'Colonia*': 'Colonia*'
+'Estado*': 'Estado*'
+'Municipio*': 'Municipio*'
+'CP*': 'CP*'
+'Geosignal Services': 'Geosignal Services'
+'PAGAR AHORA': 'PAGAR AHORA'
+'Pago exitoso': 'Pago exitoso'
+'Obtener Ubicación': 'Obtener Ubicación'
+'Tu ubicación.': 'Tu ubicación.'
+'Ésta es tu posición, ahora ingresa el número que deseas buscar.': 'Ésta es tu posición, ahora ingresa el número que deseas buscar.'
+'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.': 'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.'
+'El servicio tiene un costo que se puede pagar de forma segura via Paypal.': 'El servicio tiene un costo que se puede pagar de forma segura via Paypal.'
+'Pagar con Paypal': 'Pagar con Paypal'
+'Pagar con Conekta': 'Pagar con Conekta'
+'El servicio tiene un costo que se puede pagar de forma segura.': 'El servicio tiene un costo que se puede pagar de forma segura.'
+'Dispositivo localizado.': 'Dispositivo localizado.'
+'Implementación de localización vía HTML5 & Google Maps': 'Implementación de localización vía HTML5 & Google Maps'
+'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': 'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.'
+'Tus coordenadas son:': 'Tus coordenadas son:'
+'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': '__Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': 'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa'
+'Siguiente paso': 'Siguiente paso'
+'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': 'La API de Mapas de Google te permite mapear cualquier lugar del mundo.'

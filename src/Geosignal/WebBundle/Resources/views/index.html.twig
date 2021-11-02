@@ -1,6 +1,14 @@
 {% extends 'GeosignalWebBundle::base.html.twig' %}
 {% block body %}
-    <div id="map-canvas"></div>
+
+    mapa {
+    z-index: 800;
+}
+
+    <mapa>  
+    <center><div id="map-canvas" class="map" style="width: 100%; height: 600px;"></div></center>
+    </mapa>
+
     {% include 'GeosignalWebBundle:Main:payment.html.twig' %}
     {% include 'GeosignalWebBundle:Main:payment_selector.html.twig' %}
     {% include 'GeosignalWebBundle:Main:register.html.twig' %}

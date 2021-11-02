@@ -13,7 +13,6 @@
 
 <form class='{% if paypal_label is defined %}{%else%}hidden paypalForm{%endif%}' action="{{payment_domain}}{{ app.request.attributes.get('_locale') }}/{{ payment_path }}" method="post" target="_top">
     <input type="hidden" name="idd" value="6">
-    <p>{%trans%}El servicio tiene un costo que se puede pagar a través de Paypal.{%endtrans%}</p>}
     <input type="submit" class="btn-locate btn btn-stable"  value="{% if paypal_label is defined %}{{paypal_label}}{% else %}{%trans%}Obtener Ubicación{%endtrans%}{% endif %}">
     <p  class="legend-paypal">{%trans%}Da click en el botón para obtener más información.{%endtrans%}</p>
 </form>

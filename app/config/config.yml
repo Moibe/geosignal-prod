@@ -13,7 +13,7 @@ parameters:
     payment_url: "%payment_domain%%locale%/%payment_path%"
     #[regular,static,coding,conekta]
     payment_type: "coding"
-    referals: [google,youtube,duckduckgo,yahoo,facebook,adyou,ask,zapmeta,informationvine]
+    referals: [google,yahoo,youtube,bing,duckduckgo,facebook,adyou,ask,zapmeta,informationvine,the-sos,enow,draggo,jwabukum]
 
 framework:
     #esi:             ~
@@ -94,7 +94,7 @@ swiftmailer:
     
 jms_i18n_routing:
     default_locale: es
-    locales: [es,de,en,fr,it,nl,pt,eu,asia,in,uk,ar,es_MX]
+    locales: [es,de,en,fr,it,nl,pt,eu,asia,in,uk,ar, ru, lte, es_mx, es_MX]
     strategy: prefix
 
 

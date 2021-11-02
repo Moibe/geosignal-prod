@@ -1,0 +1,80 @@
+Dispositivo: __Dispositivo
+'Antenas Celulares': '__Antenas Celulares'
+'Transacción Segura': '__Transacción Segura'
+Cliente: __Cliente
+Pago: __Pago
+Completado: __Completado
+'Detalles sobre su Orden': '__Detalles sobre su Orden'
+Nombre: __Nombre
+Total: __Total
+'Tu mapa esta listo': '__Tu mapa esta listo'
+'Los campos señalados con * son obligatorios': '__Los campos señalados con * son obligatorios'
+Dirección: __Dirección
+Ciudad: __Ciudad
+Estado: __Estado
+C.P: __C.P
+Pais: __Pais
+Email: __Email
+Teléfono: __Teléfono
+Continuar: __Continuar
+'Número de tarjeta*': '__Número de tarjeta*'
+'Fecha de expiración': '__Fecha de expiración'
+'MM*': '__MM*'
+'AA*': '__AA*'
+CV: __CV
+¡Gracias!: __¡Gracias!
+'Tu pago fue exitoso': '__Tu pago fue exitoso'
+Producto: __Producto
+'Nos comunicaremos contigo a la brevedad': '__Nos comunicaremos contigo a la brevedad'
+'Cualquier duda o comentario escribe a': '__Cualquier duda o comentario escribe a'
+Finalizar: __Finalizar
+'Selecciona tu forma de pago': '__Selecciona tu forma de pago'
+'El servicio tiene un costo que se puede pagar a través de Paypal.': '__El servicio tiene un costo que se puede pagar a través de Paypal.'
+'Pagar con PayPal': '__Pagar con PayPal'
+'Da click en el botón para obtener más información.': '__Da click en el botón para obtener más información.'
+'Pagar con tarjeta': '__Pagar con tarjeta'
+'Localizador de Móviles': '__Localizador de Móviles'
+'Escribe tu número para localizarte.': '__Escribe tu número para localizarte.'
+Iniciar: __Iniciar
+Buscar: __Buscar
+'Evaluación de dispositivo y navegador.': '__Evaluación de dispositivo y navegador.'
+'Revisando el dispositivo.': '__Revisando el dispositivo.'
+'Su dispositivo y navegador cumplen con los requerimientos necesarios.': '__Su dispositivo y navegador cumplen con los requerimientos necesarios.'
+'Leyendo antenas.': '__Leyendo antenas.'
+'Leyendo frecuencia.': '__Leyendo frecuencia.'
+'Calculando posición.': '__Calculando posición.'
+'Creando mapa.': '__Creando mapa.'
+'Fecha de Expiración*': '__Fecha de Expiración*'
+'Codigo de Seguridad*': '__Codigo de Seguridad*'
+'CVT*': '__CVT*'
+'Nombre del Titular de la Tarjeta*': '__Nombre del Titular de la Tarjeta*'
+'Nombre*': '__Nombre*'
+'Apellidos*': '__Apellidos*'
+'Email*': '__Email*'
+'Teléfono*': '__Teléfono*'
+'Celular*': '__Celular*'
+'Calle y número*': '__Calle y número*'
+'Pais*': '__Pais*'
+'Colonia*': '__Colonia*'
+'Estado*': '__Estado*'
+'Municipio*': '__Municipio*'
+'CP*': '__CP*'
+'Geosignal Services': '__Geosignal Services'
+'PAGAR AHORA': '__PAGAR AHORA'
+'Pago exitoso': '__Pago exitoso'
+'Obtener Ubicación': '__Obtener Ubicación'
+'Tu ubicación.': '__Tu ubicación.'
+'Ésta es tu posición, ahora ingresa el número que deseas buscar.': '__Ésta es tu posición, ahora ingresa el número que deseas buscar.'
+'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.': '__El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.'
+'El servicio tiene un costo que se puede pagar de forma segura via Paypal.': '__El servicio tiene un costo que se puede pagar de forma segura via Paypal.'
+'Pagar con Paypal': '__Pagar con Paypal'
+'Pagar con Conekta': '__Pagar con Conekta'
+'El servicio tiene un costo que se puede pagar de forma segura.': '__El servicio tiene un costo que se puede pagar de forma segura.'
+'Dispositivo localizado.': '__Dispositivo localizado.'
+'Implementación de localización vía HTML5 & Google Maps': '__Implementación de localización vía HTML5 & Google Maps'
+'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': '__A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.'
+'Tus coordenadas son:': '__Tus coordenadas son:'
+'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': '__Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': '__Ahora, el siguiente paso es ubicar estas coordenadas en un mapa'
+'Siguiente paso': '__Siguiente paso'
+'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': '__La API de Mapas de Google te permite mapear cualquier lugar del mundo.'

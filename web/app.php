@@ -15,6 +15,9 @@ $loader->unregister();
 $apcLoader->register(true);
 */
 
+$time = rand(1,5);
+sleep($time);
+
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 

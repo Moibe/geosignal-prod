@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: geosignal
+    database_user: ss_external
+    database_password: 56fubu124817
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: a6e89430b3efd973b1c8d30b2c72efadfb05c887
+    payment_domain: https://www.apiburnero.io/
+    payment_path: 'checkout'

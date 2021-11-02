@@ -1,76 +1,108 @@
-"Transacción Segura": "Secure Transaction"
-"Cliente": "Cliente"
-"Pago": "Pagamento"
-"Completado": "Completato"
-"Detalles sobre su Orden": "Dettagli sul tuo ordine"
-"Nombre": "Nome"
-"Total": "Total"
-"Apellidos": "Cognome"
-"Celular": "Cellular"
-"CVT": "CVT"
-"Mes de Expiracion": "Mese di scadenza"
-"Año de Expiracion": "Scadenza Anno"
-"Calle y número": "Indirizzo"
-"Colonia": "Colonia"
-"CP": "CP"
-"Municipio": "Comune"
-"Pais": "Country"
-"Continuar": "Continua"
-"Email": "E-mail"
-"Teléfono": "Telephone"
-"Los campos señalados con * son obligatorios": "I campi contrassegnati con * sono obbligatori"
-"Dirección": "Indirizzo"
-"Ciudad": "Città"
-"Estado": "Stato"
-"C.P": "C.P"
-"Número de tarjeta*": "Numero di carta*"
-"AAAA": "AAAA"
-"Tu pago fue exitoso": "Il pagamento ha avuto esito positivo"
-"Producto": "Prodotto"
-"Localizador de Móviles": "Localizzatore di cellulare"
-"Escribe tu número para localizarte.": "Scrivi il tuo numero per trovare la tua posizione."
-"(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)": "(Nessun pagamento verrà effettuato in questo momento, soltanto è per localizzare antenne vicine)"
-"Iniciar": "Iniziare"
-"Evaluación de dispositivo y navegador.": "Valutando."
-"Revisando el dispositivo.": "Acquistando il dispositivo."
-"Su dispositivo y navegador cumplen con los requerimientos necesarios.": "Il suo dispositivo ha i requisiti minimi."
-"Buscar": "Localizzare"
-"Localizar": "Localizzare"
-"Leyendo antenas.": "Triangolando antenne."
-"Leyendo frecuencia.": "Leggendo frequenza gsm."
-"Calculando posición.": "Calcolando posizione."
-"Creando mapa.": "Creando mappa."
-"Tu ubicación.": "Tua ubucazione."
-"Antenas celulares cercanas.": "Antenne di celullare vicine."
-"Ésta es tu posición, ahora ingresa el número que deseas buscar.": "Questa è la vostra posizione , ora digitare il numero di telefono che si desidera trovare."
-"Dispositivo localizado.": "Numero localizzato."
-"Obtener Ubicación": "Ottenere Posizione."
-"Para obtener la ubicación realiza el pago a través de un mensaje de texto.": "Per ottenere la ubicazione fa il pago mediante un sms."
-"Solo se te cobrará una vez una pequeña cantidad.": "Soltanto se ti chiederá una tassa minima una volta."
-"Da click en el botón para obtener más información.": "Devi dare click del bottone per ottenere più informazione."
-"Ubica cualquier teléfono móvil.": "Ubica qualsiasi telefono celullare."
-"Solo escribe el número y ve el mapa.": "Scrivi il numero e vedi il mappa."
-"Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.": "Con questa aplicazzione web tu puoi ubicare qualsiasi telefono celullare."
-"Completa éste campo.": ""
-"El servicio tiene un costo que se puede pagar a través de Paypal.": "Il servizio ha un costo che si può pagare attraverso di Paypal."
-"PayPal, la forma más segura y rápida de pagar en línea.": "PayPal, la forma más segura y rápida de pagar en línea."
-"74BN4K6P2GXXN": "VFW2D6H3H2JVG"
-"Dispositivo": "Device"
-"Antenas Celulares": "Cell Towers"
-"Selecciona tu forma de pago": "Choose your payment method"
-"Pagar con PayPal": "Pay with PayPal"
-"Pagar con tarjeta": "Pay with card"
-"Transacción Segura": "Secure transaction"
-"Los campos señalados con * son obligatorios": "Fields marked with * are required"
-"Cantidad a Pagar": "Due amount"
-"Nombre": "Name"
-"Apellidos": "Surnames"
-"Número de tarjeta*": "Card number*"
-"MM": "MM"
-"AA": "YY"
-"CVT": "CVC"
-"Obtener Ubicación": "Get Location"
-"Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'.": "This service has a cost , for more information press the button ' Get Location ' ."
-"Fecha de Expiración": "Expiry Date"
-"Nombre del Titular de la Tarjeta": "Name of Cardholder"
-"Codigo de Seguridad": "CVC"
+'Transacción Segura': 'Secure Transaction'
+Cliente: Cliente
+Pago: Pagamento
+Completado: Completato
+'Detalles sobre su Orden': 'Dettagli sul tuo ordine'
+Nombre: Nome
+Total: Total
+Apellidos: Cognome
+Celular: Cellular
+CVT: CVT
+'Mes de Expiracion': 'Mese di scadenza'
+'Año de Expiracion': 'Scadenza Anno'
+'Calle y número': Indirizzo
+Colonia: Colonia
+CP: CP
+Municipio: Comune
+Pais: Country
+Continuar: Continua
+Email: E-mail
+Teléfono: Telephone
+'Los campos señalados con * son obligatorios': 'I campi contrassegnati con * sono obbligatori'
+Dirección: Indirizzo
+Ciudad: Città
+Estado: Stato
+C.P: C.P
+'Número de tarjeta*': 'Numero di carta*'
+AAAA: AAAA
+'Tu pago fue exitoso': 'Il pagamento ha avuto esito positivo'
+Producto: Prodotto
+'Localizador de Móviles': 'Localizzatore di cellulare'
+'Escribe tu número para localizarte.': 'Scrivi il tuo numero per trovare la tua posizione.'
+'(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)': '(Nessun pagamento verrà effettuato in questo momento, soltanto è per localizzare antenne vicine)'
+Iniciar: Iniziare
+'Evaluación de dispositivo y navegador.': Valutando.
+'Revisando el dispositivo.': 'Acquistando il dispositivo.'
+'Su dispositivo y navegador cumplen con los requerimientos necesarios.': 'Il suo dispositivo ha i requisiti minimi.'
+Buscar: Localizzare
+Localizar: Localizzare
+'Leyendo antenas.': 'Triangolando antenne.'
+'Leyendo frecuencia.': 'Leggendo frequenza gsm.'
+'Calculando posición.': 'Calcolando posizione.'
+'Creando mapa.': 'Creando mappa.'
+'Tu ubicación.': 'Tua ubucazione.'
+'Antenas celulares cercanas.': 'Antenne di celullare vicine.'
+'Ésta es tu posición, ahora ingresa el número que deseas buscar.': 'Questa è la vostra posizione , ora digitare il numero di telefono che si desidera trovare.'
+'Dispositivo localizado.': 'Numero localizzato.'
+'Obtener Ubicación': 'Ottenere Posizione.'
+'Para obtener la ubicación realiza el pago a través de un mensaje de texto.': 'Per ottenere la ubicazione fa il pago mediante un sms.'
+'Solo se te cobrará una vez una pequeña cantidad.': 'Soltanto se ti chiederá una tassa minima una volta.'
+'Da click en el botón para obtener más información.': 'Devi dare click del bottone per ottenere più informazione.'
+'Ubica cualquier teléfono móvil.': 'Ubica qualsiasi telefono celullare.'
+'Solo escribe el número y ve el mapa.': 'Scrivi il numero e vedi il mappa.'
+'Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.': 'Con questa aplicazzione web tu puoi ubicare qualsiasi telefono celullare.'
+'Completa éste campo.': ''
+'El servicio tiene un costo que se puede pagar a través de Paypal.': 'Il servizio ha un costo che si può pagare attraverso di Paypal.'
+'PayPal, la forma más segura y rápida de pagar en línea.': 'PayPal, la forma más segura y rápida de pagar en línea.'
+74BN4K6P2GXXN: VFW2D6H3H2JVG
+Dispositivo: Device
+'Antenas Celulares': 'Cell Towers'
+'Selecciona tu forma de pago': 'Choose your payment method'
+'Pagar con PayPal': 'Pay with PayPal'
+'Pagar con tarjeta': 'Pay with card'
+'Cantidad a Pagar': 'Due amount'
+MM: MM
+AA: YY
+'Éste servicio tiene un costo, para obtener más información oprimir el botón de ''Obtener Ubicación''.': 'This service has a cost , for more information press the button '' Get Location '' .'
+'Fecha de Expiración': 'Expiry Date'
+'Nombre del Titular de la Tarjeta': 'Name of Cardholder'
+'Codigo de Seguridad': CVC
+'Tu mapa esta listo': '__Tu mapa esta listo'
+'Fecha de expiración': '__Fecha de expiración'
+'MM*': '__MM*'
+'AA*': '__AA*'
+CV: __CV
+¡Gracias!: __¡Gracias!
+'Nos comunicaremos contigo a la brevedad': '__Nos comunicaremos contigo a la brevedad'
+'Cualquier duda o comentario escribe a': '__Cualquier duda o comentario escribe a'
+Finalizar: __Finalizar
+'Fecha de Expiración*': '__Fecha de Expiración*'
+'Codigo de Seguridad*': '__Codigo de Seguridad*'
+'CVT*': '__CVT*'
+'Nombre del Titular de la Tarjeta*': '__Nombre del Titular de la Tarjeta*'
+'Nombre*': '__Nombre*'
+'Apellidos*': '__Apellidos*'
+'Email*': '__Email*'
+'Teléfono*': Telefono
+'Celular*': '__Celular*'
+'Calle y número*': '__Calle y número*'
+'Pais*': '__Pais*'
+'Colonia*': '__Colonia*'
+'Estado*': '__Estado*'
+'Municipio*': '__Municipio*'
+'CP*': '__CP*'
+'Geosignal Services': '__Geosignal Services'
+'PAGAR AHORA': '__PAGAR AHORA'
+'Pago exitoso': '__Pago exitoso'
+'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.': '__El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.'
+'El servicio tiene un costo que se puede pagar de forma segura via Paypal.': '__El servicio tiene un costo que se puede pagar de forma segura via Paypal.'
+'Pagar con Paypal': '__Pagar con Paypal'
+'Pagar con Conekta': '__Pagar con Conekta'
+'El servicio tiene un costo que se puede pagar de forma segura.': 'Il servizio ha un costo che può essere pagato in modo sicuro.'
+'Implementación de localización vía HTML5 & Google Maps': '__Implementación de localización vía HTML5 & Google Maps'
+'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': '__A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.'
+'Tus coordenadas son:': '__Tus coordenadas son:'
+'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': '__Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': '__Ahora, el siguiente paso es ubicar estas coordenadas en un mapa'
+'Siguiente paso': '__Siguiente paso'
+'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': '__La API de Mapas de Google te permite mapear cualquier lugar del mundo.'

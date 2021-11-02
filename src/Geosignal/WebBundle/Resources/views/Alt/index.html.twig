@@ -8,47 +8,48 @@
                     <div class='slider-wrap'>
                         <div class='slider-content' data-auto='false' data-pager='false' data-controls='false' data-mode='fade' data-infinite-loop='false'>
                             <div class="slide-wrap">
-                                <h2>Implementación de localización vía HTML5 y Google Maps</h2>
                                 <div class='bg-en bg-em'>
+                                    <h2>{% trans %}Implementación de localización vía HTML5 & Google Maps{% endtrans %}</h2>
                                     <a href="#" class='btn btn-stable btn-next-slide'>Continuar</a>
                                 </div>
                             </div>
 
                             <div class="slide-wrap">
-                                <h2>A través de HTML5 puedes ubicar las coordenadas del dispositivo que está usando.</h2>
-                                <div class='bg-en bg-em' style="padding-top: 2rem;">
+                                    <div class='bg-en bg-em' style="padding-top: 2rem;">
+                                    <h2>{% trans %}A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.{% endtrans %}</h2>
                                     <div class="text-center">
                                     <div class="loader hidden"></div> 
                                     </div>
-                                    <a href="#" class='btn btn-stable btn-next-slide'>¡Intentalo!</a>
+                                    <a href="#" class='btn btn-stable btn-next-slide'>¡Inténtalo!</a>
                                 </div>
                             </div>
 
                             <div class="slide-wrap">
                                 <div class='bg-en'>
-                                    <p>Tus coordenadas son:</p>
+                                    <p>{% trans %}Tus coordenadas son:{% endtrans %}</p>
                                     <p class='text-center'><span class="position"></span></p>
-                                    <p>Está representado en el sistema de coordenadas UTM, mismo estandar utilizado por los sistemas de posicionamiento global (GPS).</p>
-                                    <p>El siguiente paso es ubicar éstas coordenadas en un mapa.</p>
+                                    <p>{% trans %}Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS){% endtrans %}.</p>
+                                    <p>{% trans %}Ahora, el siguiente paso es ubicar éstas coordenadas en un mapa{% endtrans %}.</p>
                                     <div class='text-center'>
-                                        <a href="#" class='btn btn-stable btn-next-slide'>Siguiente paso</a>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>{% trans %}Siguiente paso{% endtrans %}</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="slide-wrap">
                                 <div class='bg-en'>
-                                    <p>Google Maps te permite mapear cualquier lugar del mundo.</p>
+                                    <p>{% trans %}La API de Mapas de Google te permite mapear cualquier lugar del mundo.{% endtrans %}</p>
                                     <div id="map-canvas" style="width:  500px; height: 300px;margin: auto;"></div>
                                     <div class='text-center'>
-                                        <a href="#" class='btn btn-stable btn-next-slide'>Siguiente paso</a>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>{% trans %}Siguiente paso{% endtrans %}</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="slide-wrap">
                                 <div class='bg-en'>
-                                    <p>Ahora podemos combinar tus coordenadas con el mapa.</p>
+                                    <div class="text-center"></div>
+                                    <p>{% trans %}Ahora ya podemos combinar las coordenadas previamente obtenidas, con el mapa generado por la API.{% endtrans %}</p>
                                     <div class='clearfix'>
                                         <div class=''>
                                             <p><span class="position"></span></p>
@@ -58,23 +59,22 @@
                                         </div>
                                     </div>
                                     <div class='text-center'>
-                                        <a href="#" class='btn btn-stable btn-next-slide'>¡Combinalos!</a>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>{% trans %}¡Combínalos!{% endtrans %}</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class='slide-wrap'>
                                 <div class='bg-en'>
-                                    <p>Como puedes ver, ahora tienes un mapa de tu localización.</p>
+                                    <p>{% trans %}Como puedes ver, ahora tienes un mapa de tu localización.{% endtrans %}</p>
                                     <div class="map-container2">
 
                                     </div>
-                                    <p>Esto es muy facil de implementar con un poco de lineas de código.</p>
+                                    <p>{% trans %}Esto es muy fácil de implementar con un poco de líneas de código.{% endtrans %}</p>
+                                    <p>{% trans %}Puedes obtener el código completo para implementarlo fácil y rápidamente. Para más información sobre el costo y contenido de la implementación del código da click en el botón.{% endtrans %}</p>
                                     <div class='text-center'>
-                                        <a href="#" class='btn btn-stable btn-next-slide'>Más información</a>
+                                        <a href="#" class='btn btn-stable btn-next-slide'>{% trans %}Más información{% endtrans %}</a>
                                     </div>
-                                    <p>Puedes obtener el código completo para implementarlo en 10 minutos.</p>
-                                    <p>Para más información sobre el costo y contenido de la implementación en código da click en "Más información".</p>
                                 </div>
                             </div>
 
@@ -86,18 +86,18 @@
                                         </div>
                                     </div>
                                     <p>
-                                        Contenido:<br>
-                                        Un Archivo PHP combinado con un front en JavaScript. Con instrucciones para su armado e implementación.
+                                        {% trans %}Contenido:{% endtrans %}<br>
+                                        {% trans %}Un Archivo PHP combinado con un FrontEnd en JavaScript. Con instrucciones para su armado e implementación.{% endtrans %}
                                     </p>
 
-                                    <p>Éste tiene un costo de $14USD. Con una garantia de reembolso total si no cumple tus expectativas.</p>
+                                    <p>{% trans %}Éste tiene un costo de $24USD. Con una garantía de reembolso total si no cumple tus expectativas.{% endtrans %}</p>
                                     <div class='text-center'>
                                         {% include 'GeosignalWebBundle:Main:paypal_button.html.twig' with {'paypal_label':"Comprar"} %}
                                     </div>
-                                    <p>También puedes revisar el cátalogo completo de implementaciones en nuestro sitio.</p>
+                                    <p>{% trans %}También puedes revisar el cátalogo completo de implementaciones en:{% endtrans %}</p>
 
                                     <div class="text-center">
-                                        <a href="https://www.coding-depot.com" target='_blank'>
+                                        <a href="https://www.coding-depot.dev" target='_blank'>
                                             <img style="margin: auto;"  src='{{ asset('/bundles/geosignalweb/images/alt/logo.png') }}' alt=''/>
                                         </a>
                                     </div>
@@ -111,7 +111,10 @@
     </div>
 
 
+
 {% endblock %}
+
+
 
 {% block javascripts %}
     <script type="text/javascript">

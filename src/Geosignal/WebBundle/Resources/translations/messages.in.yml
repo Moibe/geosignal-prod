@@ -1,47 +1,111 @@
-"Localizador de Móviles": "Mobile Phone Locator"
-"Escribe tu número para localizarte.": "Write your number to locate you."
-"(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)": "(no charge will be done right now, it's just to locate nearby cell towers)"
-"Iniciar": "Start"
-"Evaluación de dispositivo y navegador.": "Evaluating device and web browser."
-"Revisando el dispositivo.": "Reviewing Device."
-"Su dispositivo y navegador cumplen con los requerimientos necesarios.": "Your device and browser meet the requirements."
-"Buscar": "Search"
-"Localizar": "Locate"
-"Leyendo antenas.": "Aerials lookup."
-"Leyendo frecuencia.": "Reading frequency."
-"Calculando posición.": "Writing position."
-"Creando mapa.": "Creating map."
-"Tu ubicación.": "Your location."
-"Antenas celulares cercanas.": "Cell Towers."
-"Ésta es tu posición, ahora ingresa el número que deseas buscar.": "This is your location, now type the phone number you want to find."
-"Dispositivo localizado.": "Device located."
-"Obtener Ubicación": "Get location."
-"Para obtener la ubicación realiza el pago a través de un mensaje de texto.": "To get the location make a payment with a text message."
-"Solo se te cobrará una vez una pequeña cantidad.": "A little amount will be charged."
-"Da click en el botón para obtener más información.": "Click on the button to read detailed information."
-"Ubica cualquier teléfono móvil.": "Find any mobile phone."
-"Solo escribe el número y ve el mapa.": "Type the number and see the map."
-"Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.": "With this web app you can find any mobile number."
-"Completa éste campo.": ""
-"El servicio tiene un costo que se puede pagar a través de Paypal.": "The service can be paid using Paypal."
-"PayPal, la forma más segura y rápida de pagar en línea.": "PayPal, la forma más segura y rápida de pagar en línea."
-"FET837BK4G5D2": "KR65BPRRDXPAG"
-"Dispositivo": "Device"
-"Antenas Celulares": "Cell Towers"
-"Selecciona tu forma de pago": "Choose your payment method"
-"Pagar con PayPal": "Pay with PayPal"
-"Pagar con tarjeta": "Pay with card"
-"Transacción Segura": "Secure transaction"
-"Los campos señalados con * son obligatorios": "Fields marked with * are required"
-"Cantidad a Pagar": "Due amount"
-"Nombre": "Name"
-"Apellidos": "Surnames"
-"Número de tarjeta*": "Card number*"
-"MM": "MM"
-"AA": "YY"
-"CVT": "CVC"
-"Obtener Ubicación": "Get Location"
-"Éste servicio tiene un costo, para obtener más información oprimir el botón de 'Obtener Ubicación'.": "This service has a cost , for more information press the button ' Get Location ' ."
-"Fecha de Expiración": "Expiry Date"
-"Nombre del Titular de la Tarjeta": "Name of Cardholder"
-"Codigo de Seguridad": "CVC"
+'Localizador de Móviles': 'Mobile Phone Locator'
+'Escribe tu número para localizarte.': 'Write your number to locate you.'
+'(no se te hará ningún cobro en áste momento, es sólo para localizar las antenas cercanas)': '(no charge will be done right now, it''s just to locate nearby cell towers)'
+Iniciar: Start
+'Evaluación de dispositivo y navegador.': 'Evaluating device and web browser.'
+'Revisando el dispositivo.': 'Reviewing Device.'
+'Su dispositivo y navegador cumplen con los requerimientos necesarios.': 'Your device and browser meet the requirements.'
+Buscar: Search
+Localizar: Locate
+'Leyendo antenas.': 'Aerials lookup.'
+'Leyendo frecuencia.': 'Reading frequency.'
+'Calculando posición.': 'Writing position.'
+'Creando mapa.': 'Creating map.'
+'Tu ubicación.': 'Your location.'
+'Antenas celulares cercanas.': 'Cell Towers.'
+'Ésta es tu posición, ahora ingresa el número que deseas buscar.': 'This is your location, now type the phone number you want to find.'
+'Dispositivo localizado.': 'Device located.'
+'Obtener Ubicación': 'Get location.'
+'Para obtener la ubicación realiza el pago a través de un mensaje de texto.': 'To get the location make a payment with a text message.'
+'Solo se te cobrará una vez una pequeña cantidad.': 'A little amount will be charged.'
+'Da click en el botón para obtener más información.': 'Click on the button to read detailed information.'
+'Ubica cualquier teléfono móvil.': 'Find any mobile phone.'
+'Solo escribe el número y ve el mapa.': 'Type the number and see the map.'
+'Con ésta aplicacián web puedes ubicar cualquier teléfono móvil.': 'With this web app you can find any mobile number.'
+'Completa éste campo.': 'Complete this field.'
+'El servicio tiene un costo que se puede pagar a través de Paypal.': 'The service can be paid using Paypal.'
+'PayPal, la forma más segura y rápida de pagar en línea.': 'PayPal, pay securely at millions of stores.'
+FET837BK4G5D2: KR65BPRRDXPAG
+Dispositivo: Device
+'Antenas Celulares': 'Cell Towers'
+'Selecciona tu forma de pago': 'Choose your payment method'
+'Pagar con PayPal': 'Pay with PayPal'
+'Pagar con tarjeta': 'Pay with card'
+'Transacción Segura': 'Secure transaction'
+'Los campos señalados con * son obligatorios': 'Fields marked with * are required'
+'Cantidad a Pagar': 'Due amount'
+Nombre: Name
+Apellidos: Surnames
+'Número de tarjeta*': 'Card number*'
+MM: MM
+AA: YY
+CVT: CVC
+'Éste servicio tiene un costo, para obtener más información oprimir el botón de ''Obtener Ubicación''.': 'This service has a cost , for more information press the button '' Get Location '' .'
+'Fecha de Expiración': 'Expiry Date'
+'Nombre del Titular de la Tarjeta': 'Name of Cardholder'
+'Codigo de Seguridad': CVC
+Cliente: Client
+Pago: Payment
+Completado: Complete
+'Detalles sobre su Orden': 'Order Details'
+Total: Total
+'Tu mapa esta listo': 'Your map is ready'
+Dirección: Address
+Ciudad: City
+Estado: State
+C.P: 'Zip Code'
+Pais: Country
+Email: E-mail
+Teléfono: Phone
+Continuar: Continue
+'Fecha de expiración': 'Expiration Date'
+'MM*': 'MM*'
+'AA*': 'YY*'
+CV: CV
+¡Gracias!: 'Thank You!'
+'Tu pago fue exitoso': 'Your payment was successful'
+Producto: Product
+'Nos comunicaremos contigo a la brevedad': 'We will comunicate shortly.'
+'Cualquier duda o comentario escribe a': 'Any question please write to'
+Finalizar: Finish
+'Fecha de Expiración*': 'Expiry Date*'
+'Codigo de Seguridad*': 'CVC*'
+'CVT*': 'CVT*'
+'Nombre del Titular de la Tarjeta*': 'Cardholder Name*'
+'Nombre*': 'Name*'
+'Apellidos*': 'Last Name*'
+'Email*': 'E-mail*'
+'Teléfono*': 'Phone*'
+'Celular*': 'Mobile Phone*'
+'Calle y número*': 'Street Number*'
+'Pais*': 'Country*'
+'Colonia*': 'Location*'
+'Estado*': 'State*'
+'Municipio*': County
+'CP*': 'Zip Code*'
+'Geosignal Services': 'Geosignal Services'
+'PAGAR AHORA': 'Pay Now'
+'Pago exitoso': 'Successful Payment'
+'El servicio tiene un costo que se puede pagar de forma segura a través de Conekta.': 'The service has a cost that can be paid using a secure gateway.'
+'El servicio tiene un costo que se puede pagar de forma segura via Paypal.': 'The service has a cost that can be paid using Paypal.'
+'Pagar con Paypal': 'Pay with Paypal'
+'Pagar con Conekta': 'Pay with Card'
+'El servicio tiene un costo que se puede pagar de forma segura.': 'The service has a cost that can be paid through a secure gateway.'
+'Implementación de localización vía HTML5 & Google Maps': 'Implementation via HTML5 & Google Maps'
+'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': 'You can locate the coordinates of your device using HTML5.'
+'Tus coordenadas son:': 'Your coordinates are:'
+'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': 'The numeric location is represented in the UTM coordinates system, the same used by the global positioning system (GPS)'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': 'The next step is to locate your coordinates in the map'
+'Siguiente paso': Next
+'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': 'The Google Maps API allow you to map any place in the world.'
+'Ahora, el siguiente paso es ubicar éstas coordenadas en un mapa': 'The next step is to locate your coordinates in the map'
+'Ahora ya podemos combinar las coordenadas previamente obtenidas, con el mapa generado por la API.': 'Now we can combine the obtained location with the google API generated map.'
+¡Combínalos!: Combine them!
+'Como puedes ver, ahora tienes un mapa de tu localización.': 'As you can see, now you have a map of your location.'
+'Esto es muy fácil de implementar con un poco de líneas de código.': 'We can implement this easily with a few lines of code.'
+'Puedes obtener el código completo para implementarlo fácil y rápidamente. Para más información sobre el costo y contenido de la implementación del código da click en el botón.': 'You can get the complete source code to implement it fast and easy. For more information about the content of the source code package, click the button.'
+'Más información': 'More information'
+'Contenido:': 'Content:'
+'Un Archivo PHP combinado con un FrontEnd en JavaScript. Con instrucciones para su armado e implementación.': 'A PHP file combined with a FrontEnd in JavaScript. Includes instrucctions for its implementation.'
+'Éste tiene un costo de $24USD. Con una garantía de reembolso total si no cumple tus expectativas.': 'It has a cost of $24USD. With a full-refund guaranty if it not fullfill your expectations.'
+'También puedes revisar el cátalogo completo de implementaciones en:': 'You can also check the complete catalogue of implementations in:'
