@@ -3,4 +3,5 @@
 /app/logs/*
 !app/logs/.gitkeep
 /vendor/
+!/vendor/autoload.php
 /tmp/sessions/*
