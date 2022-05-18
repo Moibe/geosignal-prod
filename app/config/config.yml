@@ -13,7 +13,7 @@ parameters:
     payment_url: "%payment_domain%%locale%/%payment_path%"
     #[regular,static,coding,conekta]
     payment_type: "coding"
-    referals: [paperstreetwallet.co]
+    referals: [pagespeed.web.dev]
 
 framework:
     #esi:             ~
