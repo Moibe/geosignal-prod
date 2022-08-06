@@ -8,8 +8,8 @@ var labels2;
 var labels3;
 var label_submit;
 var markers = [];           // array to hold markers
-var kmRadius1 = {'min': 5, 'max': 10};
-var kmRadius2 = {'min': 0.5, 'max': 1};
+var kmRadius1 = {'min': 5, 'max': 10}; //Estará de 5 a 10 kilometros de distancia. 
+var kmRadius2 = {'min': 0.5, 'max': 1}; //y las antenas estarán separadas de medio a un kilometro.
 var last_point;
 var height = 450;
 var primary_domain = "https://geopositioningservices.com/";
@@ -398,7 +398,7 @@ function exitoRegistroPosicion(position) {
     //firstResult();
 navigator.geolocation.clearWatch(idRegistroPosicion);
 
-
+//Revisa ésta porque tarda hasta 30 segundos en crear el primer mapa.
 //var rnd = randomizator(0,1);
 var rnd = randomizator(0,30000);
 
