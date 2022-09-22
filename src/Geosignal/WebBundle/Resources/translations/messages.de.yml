@@ -106,6 +106,6 @@ Finalizar: __Finalizar
 'A través de HTML5 puedes ubicar las coordenadas del dispositivo que estas usando.': 'Über HTML5 können Sie die Koordinaten des von Ihnen verwendeten Geräts finden.'
 'Tus coordenadas son:': 'Ihre Koordinaten sind:'
 'Esta posición numérica está representada en el sistema de coordenadas UTM, mismo estándar utilizado por los sistemas de posicionamiento global (GPS)': 'Diese numerische Position wird im UTM-Koordinatensystem dargestellt, dem gleichen Standard, der von globalen Positionierungssystemen (GPS) verwendet wird.'
-'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa': 'Der nächste Schritt besteht nun darin, diese Koordinaten auf einer Karte zu lokalisieren'
+'Ahora, el siguiente paso es ubicar estas coordenadas en un mapa.': 'Der nächste Schritt besteht nun darin, diese Koordinaten auf einer Karte zu lokalisieren.'
 'Siguiente paso': 'Nächster Schritt'
 'La API de Mapas de Google te permite mapear cualquier lugar del mundo.': 'Mit der Google Maps-API können Sie überall auf der Welt Karten erstellen.'
