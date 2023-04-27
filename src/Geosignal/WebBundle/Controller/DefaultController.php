@@ -18,14 +18,15 @@ class DefaultController extends Controller {
         
         $referer = $request->headers->get('referer');
         
-        $valid_referals = $this->container->getParameter('referals');
+        //La búsqueda de referals no es necesaria de hacer cuando no se ejecuta needles.
+        //$valid_referals = $this->container->getParameter('referals');
         
         //$response = $request->get('test') ? true:$this->strpos_array($referer, $valid_referals);
         
         //True directo para no hacer la prueba de referals. 
-        //$response = true;
+        $response = true;
         //Test para que no ejecute needles pero mande a alt.
-        $response = false;
+        //$response = false;
 
         $em = $this->getDoctrine()->getManager();
         $producto = $em->getRepository('GeosignalWebBundle:Product')->findOneBy(array('locale' => $request->getLocale()));
