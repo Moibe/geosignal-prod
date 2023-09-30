@@ -13,7 +13,8 @@ parameters:
     payment_url: "%payment_domain%%locale%/%payment_path%"
     #[regular,static,coding,conekta]
     payment_type: "coding"
-    referals: [google,yahoo,youtube,bing,duckduckgo,facebook,adyou,ask,yandex,topbrandsforyou,siftforresults, pingdom]
+    #referals: [google,yahoo,youtube,bing,duckduckgo,facebook,adyou,ask,yandex,topbrandsforyou,siftforresults, pingdom]
+    referals: []
     #quitarlos no significa que entran de todos lados, más bien que nadie entra!
 
 framework:
